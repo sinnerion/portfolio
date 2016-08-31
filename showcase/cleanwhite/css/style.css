@@ -1,0 +1,342 @@
+/*General*/
+
+body {
+  color: #303030;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'gothambold1';
+  src: url('../fonts/gothambold1.eot');
+  src: local('gothambold1'), url('../fonts/gothambold1.woff') format('woff'),
+  url('../fonts/gothambold1.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_5903">Text with this font applied</p> */
+.fontsforweb_fontid_5903 {
+  font-family: 'gothambold1' !important;
+}
+
+@font-face {
+    font-family: 'gotham_boldregular';
+    src: url('../fonts/gotham-bold-webfont.eot');
+    src: url('../fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold-webfont.woff') format('woff'),
+         url('../fonts/gotham-bold-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-bold-webfont.svg#gotham_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.heading {
+  font-family: 'gothambold1';
+  font-size: 30px;
+  color: #303030;
+}
+
+.heading:after {
+  content: "";
+  display: block;
+  width: 240px;
+  height: 3px;
+  background: #303030;
+  margin: 19px auto 33px;
+}
+
+.sub-heading {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-size: 16px;
+  color: #5a5a5a;
+  margin-bottom: 50px;
+}
+
+/*Header*/
+
+.main-header {
+  line-height: 102px;
+}
+
+.nav.main-menu {
+  float: right;
+}
+
+.nav.main-menu li {
+  display: inline-block;
+}
+
+.nav.main-menu a {
+  color: #a7a7a7;
+  font-size: 12px;
+  padding: 0 50px;
+}
+
+/*Hero*/
+
+.hero {
+  background: url(../images/hero-bg.png) no-repeat center center;
+  background-size: cover;
+  padding-top: 170px;
+  padding-bottom: 50px;
+}
+
+.hero .hero-text {
+  margin-bottom: 80px;
+}
+
+.hero .hero-title {
+  font-size: 40px;
+  color: #303030;
+  font-family: 'gothambold1';
+}
+
+.hero .hero-sub-title {
+  font-family: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #5a5a5a;
+  font-style: italic;
+}
+
+.hero-btn-block {
+  position: relative;
+}
+
+.hero .hero-btn {
+  position: relative;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 1px 1px 5px #bfc2c1,
+              -1px 1px 5px #bfc2c1;
+}
+
+.hero .hero-btn-bg {
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+  left: 46.6%;
+  z-index: 0;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  opacity: .6;
+}
+
+.hero .hero-btn:hover {
+  background: #fff;
+  box-shadow: 2px 1px 6px #bfc2c1,
+              -2px 1px 6px #bfc2c1;
+}
+
+.hero .hero-btn:active {
+  box-shadow: inset 1px 1px 5px #bfc2c1,
+              inset -1px 1px 5px #bfc2c1;
+}
+
+.hero .hero-btn:active,
+.hero .hero-btn:focus {
+  outline: none;
+}
+
+.hero .hero-btn-icon {
+  top: 3px;
+}
+
+/*Work*/
+
+.work {
+  padding: 50px 0 20px;
+}
+
+.page-thumbnail {
+  margin-bottom: 60px;
+}
+
+/*Team*/
+
+.team {
+  background: #f3f3f3;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.team .team-member {
+  background: #fff;
+  width: 17.9%;
+  padding: 15px 0;
+  box-shadow: 1px 1px 5px #cecece,
+              -1px 1px 5px #cecece;
+}
+
+.team .team-member:not(:last-child) {
+  margin-right: 9.453%;
+}
+
+.team .member-name {
+  font-family: 'gothambold1';
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.team .member-post {
+  font-family: normal;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.team .member-social {
+  font-size: 0;
+}
+
+.team .social-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/team-social-sprite.png) no-repeat;
+}
+
+.team .social-icon:not(:last-child) {
+  margin-right: 20px;
+}
+
+.team .social-tw {
+  background-position: 0px 0px;
+}
+
+.team .social-drb {
+  background-position: -22px 0px;
+}
+
+.team .social-in {
+  background-position: -41px 0px;
+}
+
+.team .social-sk {
+  background-position: -61px 0px;
+}
+
+/*Contact*/
+
+.contact {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.contact .contact-map {
+  width: 40%;
+  margin-right: 5%;
+}
+
+.contact .map-body,
+.contact iframe {
+  max-width: 100%;
+}
+
+.contact iframe {
+  max-height: 400px;
+}
+
+.contact .map-title,
+.contact .form-title {
+  margin-bottom: 25px;
+}
+
+.contact .contact-form {
+  width: 55%;
+}
+
+.contact .contact-textarea,
+.contact .contact-form input[type="email"] {
+  font-style: italic;
+  font-size: 16px;
+  font-family: normal;
+}
+
+.contact .contact-textarea {
+  padding: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: none;
+  margin-bottom: 25px;
+  background: #f2f2f2;
+  font-family: normal;
+}
+
+.contact .contact-textarea:focus,
+.contact .contact-textarea:active {
+  box-shadow: 0 0 4px 1px #c2c2c2;
+}
+
+.contact .contact-form input[type="email"],
+.contact .send-btn {
+  width: 100%;
+}
+
+.contact .send-btn:focus,
+.contact .send-btn:active {
+  outline: none;
+}
+
+.contact .contact-form input[type="email"] {
+  padding: 30px;
+  border-radius: 2px;
+  background: #f2f2f2;
+}
+
+.contact .send-btn {
+  text-shadow: 1px 1px #346074;
+  padding: 0;
+  line-height: 60px;
+  font-size: 16px;
+  font-family: 'gothambold1';
+  color: #fff;
+  text-transform: uppercase;
+  background: #6995a9 url(../images/contact-btn-icon.png) no-repeat 60px center;
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 4px 1px #eeeeee,
+              -1px 1px 4px 1px #eeeeee;
+}
+
+.contact .send-btn:hover {
+  transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  background-position: center center;
+  background-size: 10%;
+  font-size: 0;
+  transition: transform, background-position .7s;
+  -moz-transition: transform, background-position .7s;
+  -webkit-transition: transform, background-position .7s;
+  -o-transition: transform, background-position .7s;
+}
+
+.contact .send-btn:active {
+  transform: scale(.97);
+  -moz-transform: scale(.97);
+  -webkit-transform: scale(.97);
+  -o-transform: scale(.97);
+  transition: transform .2s;
+  -moz-transition: transform .2s;
+  -webkit-transition: transform .2s;
+  -o-transition: transform .2s;
+}
+
+/*Footer*/
+
+.main-footer {
+  background: #4f4f4f;
+  line-height: 80px;
+  color: #6e6e6e;
+  font-size: 16px;
+}
+
+.main-footer .footer-adress span {
+  color: #949494;
+}
