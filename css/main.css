@@ -13007,7 +13007,32 @@ a {
 .content h2 {
   font-size: 20px;
 }
-/* line 21, ../sass/_index-content.scss */
+/* line 18, ../sass/_index-content.scss */
+.content h1 {
+  position: relative;
+}
+/* line 20, ../sass/_index-content.scss */
+.content h1 .lang-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1rem;
+  font-size: 20px;
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+/* line 29, ../sass/_index-content.scss */
+.content h1 .lang-btn:hover {
+  text-decoration: none;
+  background: #464646;
+  -webkit-transition: background, .2s;
+  -moz-transition: background, .2s;
+  -ms-transition: background, .2s;
+  -o-transition: background, .2s;
+  transition: background, .2s;
+}
+/* line 40, ../sass/_index-content.scss */
 .content .my-photo,
 .content .about-me {
   box-sizing: border-box;
@@ -13015,11 +13040,11 @@ a {
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
 }
-/* line 28, ../sass/_index-content.scss */
+/* line 47, ../sass/_index-content.scss */
 .content .my-photo {
   font-size: 0;
 }
-/* line 30, ../sass/_index-content.scss */
+/* line 49, ../sass/_index-content.scss */
 .content .my-photo img {
   text-align: center;
   max-width: 80%;
@@ -13028,13 +13053,13 @@ a {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 39, ../sass/_index-content.scss */
+/* line 58, ../sass/_index-content.scss */
 .content .about-me {
   margin-right: 0;
   position: relative;
   color: #f2f2f2;
 }
-/* line 43, ../sass/_index-content.scss */
+/* line 62, ../sass/_index-content.scss */
 .content .about-me-list {
   margin: 0 0 50px 0;
   padding: 0;
@@ -13042,38 +13067,38 @@ a {
   font-size: 30px;
   color: #d1d1d1;
 }
-/* line 50, ../sass/_index-content.scss */
+/* line 69, ../sass/_index-content.scss */
 .content .about-me-list span {
   font-size: 25px;
   font-weight: bold;
   color: #fefefe;
 }
-/* line 55, ../sass/_index-content.scss */
+/* line 74, ../sass/_index-content.scss */
 .content .about-me-list a {
   text-decoration: none;
   color: #d7d7d7;
 }
-/* line 59, ../sass/_index-content.scss */
+/* line 78, ../sass/_index-content.scss */
 .content .about-me-list .email-link:hover {
   color: #25a5c9;
 }
-/* line 62, ../sass/_index-content.scss */
+/* line 81, ../sass/_index-content.scss */
 .content .about-me .social-links {
   display: table;
   width: 100%;
 }
-/* line 66, ../sass/_index-content.scss */
+/* line 85, ../sass/_index-content.scss */
 .content .about-me .social {
   display: table-cell;
   font-size: 4rem;
   padding-right: 2px;
   background-size: cover;
 }
-/* line 71, ../sass/_index-content.scss */
+/* line 90, ../sass/_index-content.scss */
 .content .about-me .social:last-child {
   padding-right: 0;
 }
-/* line 74, ../sass/_index-content.scss */
+/* line 93, ../sass/_index-content.scss */
 .content .about-me .social:hover {
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
@@ -13238,13 +13263,31 @@ a {
 }
 @media screen and (max-width: 767px) {
   /* line 12, ../sass/_media.scss */
+  h1 {
+    padding-bottom: 5rem;
+  }
+  /* line 14, ../sass/_media.scss */
+  h1 .lang-btn {
+    top: auto !important;
+    right: auto;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 22, ../sass/_media.scss */
   .my-info .my-photo {
     text-align: center;
     margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 20, ../sass/_media.scss */
+  /* line 29, ../sass/_media.scss */
+  .content h1 {
+    font-size: 25px;
+  }
+
+  /* line 33, ../sass/_media.scss */
   .my-info .about-me li,
   .my-info .about-me span {
     font-size: 18px;
