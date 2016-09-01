@@ -1,5 +1,4 @@
 // Progress bar for summary
-
 jQuery(document).ready(function(){
     jQuery('.skillbar').each(function(){
         jQuery(this).find('.skillbar-bar').animate({
@@ -9,7 +8,6 @@ jQuery(document).ready(function(){
 });
 
 // Smooth transition of sections
-
 $(document).ready(function() {
     $("a.scrollto").click(function () {
         elementClick = $(this).attr("href")
@@ -18,8 +16,8 @@ $(document).ready(function() {
         return false;
     });
 });
-// Summary list-heading border-top
 
+// Summary list-heading border-top
 $(document).ready(function(){
     var sWidth = $(window).width();
     if (sWidth < 992) {
@@ -27,4 +25,14 @@ $(document).ready(function(){
     } else {
         $('.list-heading.summary-title').removeClass('summary-title');
     }
+});
+
+// Example-full-img
+$(document).ready(function(){
+    $('.example-preview').on('click', function(){
+       $('body').find('.hidden').removeClass('hidden');
+    });
+    $('.example-full-img').on('click', function(){
+        $(this).addClass('hidden');
+    });
 });
