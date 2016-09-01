@@ -12887,7 +12887,7 @@ html {
 body {
   min-height: 100%;
   position: relative;
-  background: #123;
+  background: #25a5c9;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -12921,7 +12921,7 @@ section {
 
 /* line 50, ../sass/_general.scss */
 a {
-  color: #123;
+  color: #25a5c9;
 }
 
 /* line 3, ../sass/_header.scss */
@@ -12930,7 +12930,7 @@ a {
 }
 /* line 5, ../sass/_header.scss */
 .main-header .container {
-  background: #777;
+  background: #393939;
   padding: 0;
 }
 
@@ -12949,8 +12949,8 @@ a {
   width: 60px;
   float: none;
   margin: 10px auto;
-  color: #777;
-  background: #123;
+  color: #393939;
+  background: #25a5c9;
   text-transform: uppercase;
   font-size: 16px;
 }
@@ -12967,8 +12967,8 @@ a {
 }
 /* line 35, ../sass/_header.scss */
 .main-menu a:hover {
-  color: #777;
-  background: #6095ca;
+  color: #393939;
+  background: #dbf2f8;
   transition: color, background .7s;
   -moz-transition: color, background .7s;
   -webkit-transition: color, background .7s;
@@ -12990,7 +12990,7 @@ a {
 
 /* line 3, ../sass/_index-content.scss */
 .content {
-  background: #777;
+  background: #393939;
   color: #f2f2f2;
   height: 100%;
   padding: 1.5rem;
@@ -13000,8 +13000,8 @@ a {
   text-align: center;
   font-size: 30px;
   line-height: 60px;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #123;
+  margin: 0 0 30px;
+  border-bottom: 2px solid #25a5c9;
 }
 /* line 15, ../sass/_index-content.scss */
 .content h2 {
@@ -13023,7 +13023,7 @@ a {
 .content .my-photo img {
   text-align: center;
   max-width: 80%;
-  border: 2px solid #123;
+  border: 2px solid #25a5c9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -13055,7 +13055,7 @@ a {
 }
 /* line 59, ../sass/_index-content.scss */
 .content .about-me-list .email-link:hover {
-  color: #123;
+  color: #25a5c9;
 }
 /* line 62, ../sass/_index-content.scss */
 .content .about-me .social-links {
@@ -13085,7 +13085,7 @@ a {
   -ms-transition: transform, color, .19s;
   -o-transition: transform, color, .19s;
   transition: transform, color, .19s;
-  color: #162c42;
+  color: #2bb2d8;
 }
 
 /* line 3, ../sass/_summary.scss */
@@ -13094,13 +13094,13 @@ a {
 }
 /* line 5, ../sass/_summary.scss */
 .summary-content .summary-title {
-  border-top: 1px solid #123;
+  border-top: 1px solid #25a5c9;
   padding-top: 1rem;
 }
 /* line 14, ../sass/_summary.scss */
 .summary-content .skillbar {
   position: relative;
-  border: 2px solid #aaaaaa;
+  border: 2px solid #6c6c6c;
   display: block;
   margin-bottom: 20px;
   width: 80%;
@@ -13126,7 +13126,7 @@ a {
   left: 0;
   width: 108px;
   color: #fff;
-  background: #123;
+  background: #25a5c9;
   -webkit-border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-topleft: 3px;
@@ -13150,7 +13150,7 @@ a {
 .summary-content .skillbar-bar {
   height: 24px;
   width: 0px;
-  background: #1e3c59;
+  background: #44bbdd;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -13171,7 +13171,7 @@ a {
   display: block;
   float: left;
   margin-bottom: 20px;
-  color: #123;
+  color: #25a5c9;
   text-decoration: none;
   text-align: center;
 }
@@ -13218,7 +13218,7 @@ a {
 }
 /* line 7, ../sass/_footer.scss */
 .main-footer .container {
-  background: #777;
+  background: #393939;
 }
 /* line 10, ../sass/_footer.scss */
 .main-footer .copyright {
