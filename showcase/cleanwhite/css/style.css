@@ -55,18 +55,26 @@ body {
   line-height: 102px;
 }
 
-.nav.main-menu {
-  float: right;
+.main-nav.navbar-default {
+  background: transparent;
+  border: none;
+  margin: 0;
 }
 
-.nav.main-menu li {
-  display: inline-block;
+.main-nav.navbar-default ul {
+  display: table;
 }
 
-.nav.main-menu a {
+.main-nav.navbar-default li {
+  display: table-cell;
+  float: none;
+}
+
+.main-nav.navbar-default a {
   color: #a7a7a7;
   font-size: 12px;
   padding: 0 50px;
+  line-height: 103px;
 }
 
 /*Hero*/
@@ -98,11 +106,18 @@ body {
 
 .hero-btn-block {
   position: relative;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
 }
 
 .hero .hero-btn {
-  position: relative;
+  position: absolute;
+  top: 16%;
   z-index: 2;
+  left: 16.6%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -110,18 +125,6 @@ body {
   background: #fff;
   box-shadow: 1px 1px 5px #bfc2c1,
               -1px 1px 5px #bfc2c1;
-}
-
-.hero .hero-btn-bg {
-  border-radius: 50%;
-  position: absolute;
-  top: -14px;
-  left: 46.6%;
-  z-index: 0;
-  width: 80px;
-  height: 80px;
-  background: #fff;
-  opacity: .6;
 }
 
 .hero .hero-btn:hover {
@@ -141,7 +144,7 @@ body {
 }
 
 .hero .hero-btn-icon {
-  top: 3px;
+  top: 30%;
 }
 
 /*Work*/
@@ -166,15 +169,14 @@ body {
 
 .team .team-member {
   background: #fff;
-  width: 17.9%;
   padding: 15px 0;
   box-shadow: 1px 1px 5px #cecece,
               -1px 1px 5px #cecece;
 }
 
-.team .team-member:not(:last-child) {
-  margin-right: 9.453%;
-}
+/*.team .team-member:not(:last-child) {*/
+  /*margin-right: 9.453%;*/
+/*}*/
 
 .team .member-name {
   font-family: 'gothambold1';
@@ -228,11 +230,6 @@ body {
   padding-bottom: 70px;
 }
 
-.contact .contact-map {
-  width: 40%;
-  margin-right: 5%;
-}
-
 .contact .map-body,
 .contact iframe {
   max-width: 100%;
@@ -245,10 +242,6 @@ body {
 .contact .map-title,
 .contact .form-title {
   margin-bottom: 25px;
-}
-
-.contact .contact-form {
-  width: 55%;
 }
 
 .contact .contact-textarea,
@@ -332,11 +325,44 @@ body {
 
 .main-footer {
   background: #4f4f4f;
-  line-height: 80px;
+  padding: 25px 0;
   color: #6e6e6e;
   font-size: 16px;
 }
 
 .main-footer .footer-adress span {
   color: #949494;
+}
+
+/*Media styles*/
+
+@media screen and (max-width: 991px) {
+  .team-member {
+    margin-bottom: 10px;
+  }
+  .contact-map {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .contact-form .form-control {
+    margin-bottom: 10px;
+  }
+  .form-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-nav.navbar-default .navbar-collapse {
+    border: none;
+    /*margin-left: -30px;*/
+  }
+
+  .main-nav.navbar-default .navbar-collapse a {
+    line-height: normal;
+    padding: 0 20px;
+  }
+  .main-footer {
+    text-align: center;
+  }
 }
