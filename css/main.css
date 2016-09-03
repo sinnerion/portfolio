@@ -12926,6 +12926,8 @@ a {
 
 /* line 55, ../sass/_general.scss */
 .example-preview {
+  position: relative;
+  width: 100%;
   display: block;
   border: none;
   max-height: 400px;
@@ -12933,15 +12935,15 @@ a {
   overflow: hidden;
   background: transparent;
 }
-/* line 62, ../sass/_general.scss */
+/* line 64, ../sass/_general.scss */
 .example-preview:active, .example-preview:focus {
   outline: none;
 }
-/* line 66, ../sass/_general.scss */
+/* line 68, ../sass/_general.scss */
 .example-preview img {
   max-width: 100%;
 }
-/* line 70, ../sass/_general.scss */
+/* line 72, ../sass/_general.scss */
 .example-full-img {
   cursor: pointer;
   z-index: 9999;
@@ -12951,25 +12953,25 @@ a {
   padding-top: 10%;
   background: rgba(37, 37, 37, 0.5);
 }
-/* line 78, ../sass/_general.scss */
+/* line 80, ../sass/_general.scss */
 .example-full-img img {
   width: 80%;
 }
-/* line 82, ../sass/_general.scss */
+/* line 84, ../sass/_general.scss */
 .example-description {
   font-size: 18px;
   color: #f1f1f1;
 }
-/* line 85, ../sass/_general.scss */
+/* line 87, ../sass/_general.scss */
 .example-description_name {
   font-size: 20px;
   font-weight: bold;
 }
-/* line 89, ../sass/_general.scss */
+/* line 91, ../sass/_general.scss */
 .example-description_txt {
   margin-bottom: 2rem;
 }
-/* line 92, ../sass/_general.scss */
+/* line 94, ../sass/_general.scss */
 .example-description a {
   color: #25a5c9;
 }
@@ -13257,12 +13259,14 @@ a {
 }
 /* line 15, ../sass/_examples.scss */
 .my-projects .project-image {
+  width: 100%;
+  position: relative;
   display: block;
   height: 300px;
   overflow: hidden;
   margin-bottom: 3px;
 }
-/* line 21, ../sass/_examples.scss */
+/* line 23, ../sass/_examples.scss */
 .my-projects .project:hover {
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
@@ -13276,11 +13280,11 @@ a {
   transition: transform, .15s;
   color: #f2f2f2;
 }
-/* line 34, ../sass/_examples.scss */
+/* line 36, ../sass/_examples.scss */
 .my-projects .project img {
   width: 100%;
 }
-/* line 37, ../sass/_examples.scss */
+/* line 39, ../sass/_examples.scss */
 .my-projects .project:nth-child(4n) {
   margin-right: 0;
 }
