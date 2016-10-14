@@ -1,0 +1,255 @@
+@import "variables";
+
+.blog {
+  color: $blog-text;
+  background-color: $main-text;
+  .blog-row {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .heading {
+    color: $blog-heading;
+  }
+  h2:after {
+    background: url("../img/blog-heading-shape.png") center no-repeat;
+  }
+
+  //article
+  article {
+    margin-bottom: 150px;
+  }
+  .article-img {
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+    }
+  }
+  .article-name {
+    font-size: 24px;
+    color: $blog-heading;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .article-data {
+    font-style: italic;
+    font-size: 11px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: $gray-text;
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .article-body {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    p {
+      padding: 0;
+      margin: 0 0 30px;
+    }
+    p:last-child {
+      border-bottom: 1px solid $blog-shape;
+      padding-bottom: 30px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  .article-tags {
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: 45px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $blog-shape;
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  //comments
+  .comments-quantity,
+  .reply-form-heading {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+  .comments {
+    margin: 0 0 65px;
+    padding: 0;
+    .comment {
+      position: relative;
+      display: block;
+      padding: 0 0 40px 90px;
+      border-bottom: 1px solid $blog-shape;
+      margin-bottom: 40px;
+    }
+    .comment-name {
+      font-size: 13px;
+      color: $portfolio;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .comment-date,
+    .comment-reply {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 11px;
+      display: inline-block;
+    }
+    .comment-date {
+      margin-bottom: 20px;
+      color: $gray-text;
+    }
+    .comment-reply {
+      color: $portfolio;
+    }
+    .comment-photo {
+      position: absolute;
+      left: 0;
+    }
+    .comment-text {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .comment.comment-answer {
+      padding-left: 180px;
+      .comment-photo {
+        left: 90px;
+      }
+    }
+  }
+  .reply-form-heading {
+    margin-bottom: 20px;
+  }
+  .reply-sub-heading {
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+  // reply-form
+  .user-info {
+    font-size: 0;
+  }
+  .reply-form input,
+  .reply-form textarea {
+    background: $blog-form-2;
+    color: $blog-form;
+  }
+  .reply-form textarea {
+    margin-bottom: 18px;
+  }
+  .reply-form .notice {
+    font-weight: 300;
+    color: $blog-form;
+    margin-bottom: 35px;
+  }
+
+  // aside
+  .sidebar-heading {
+    color: $blog-text;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .sidebar form {
+    margin-bottom: 60px;
+  }
+  .sidebar input[type="search"] {
+    border: medium none;
+    background: $blog-form-2;
+    width: 75%;
+    line-height: 30px;
+    padding: 14px 15px;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    margin-right: -51px;
+  }
+  .search-btn {
+    background: transparent none repeat scroll 0% 0%;
+    color: $portfolio;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+  .sidebar li {
+    margin-bottom: 35px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  .sidebar a {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $blog-nav;
+  }
+
+  // blog-carousel
+  .blog-carousel {
+    position: relative;
+    height: 100%;
+    &-inner {
+      height: 500px;
+      width: 3000px;
+      overflow: hidden;
+    }
+  }
+  .topic {
+    width: 9.35%;
+    margin-right: 1vw;
+    float: left;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    background: $blog-shape;
+    &_img {
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 4px 4px 0 0;
+    }
+    &_heading {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: $blog-heading;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    &_description {
+      margin-bottom: 25px;
+      color: $blog-text;
+      font-weight: 300;
+      font-size: 13px;
+      font-style: italic;
+    }
+    &_read-more {
+      color: $portfolio;
+      font-size: 13px;
+    }
+    figcaption {
+      padding: 0 25px 30px;
+    }
+  }
+  .ps-container > .ps-scrollbar-x-rail {
+    height: 19px;
+    opacity: 1;
+    border-radius: 10px;
+    background-color: $blog-shape;
+    .ps-scrollbar-x {
+      height: 19px;
+      border-radius: 10px;
+    }
+    .ps-scrollbar-x,
+    .ps-scrollbar-x:hover {
+      background-color: $portfolio;
+    }
+  }
+  .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    background-color: $portfolio;
+  }
+}
