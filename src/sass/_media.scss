@@ -1,0 +1,37 @@
+@media screen and (max-width: 991px) {
+  .my-info .about-me-list {
+    font-size: 24px;
+  }
+  .my-info .about-me-list span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    padding-bottom: 5rem;
+  }
+  h1 .lang-btn {
+    top: auto !important;
+    right: auto;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .my-info .my-photo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h1 {
+    font-size: 25px;
+  }
+
+  .my-info .about-me li,
+  .my-info .about-me span {
+    font-size: 18px;
+  }
+}
