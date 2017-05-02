@@ -3,10 +3,11 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
-const cache = require('gulp-cache');
 const cleanCss = require('gulp-clean-css');
+const cache = require('gulp-cache');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 const pngout = require('imagemin-pngout');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
@@ -52,6 +53,12 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('html-minify', function() {
+  return gulp.src('src/*.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('dist'));
+});
+
 gulp.task('css:minify', function () {
   return gulp.src('src/css/*.css')
     .pipe(cleanCss({ compatibility: 'ie8' }))
@@ -62,7 +69,7 @@ gulp.task('fonts', function () {
   return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('useref', function () {
+gulp.task('useref', ['html-minify'], function () {
   return gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
