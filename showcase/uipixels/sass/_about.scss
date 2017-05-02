@@ -1,0 +1,131 @@
+@import "variables";
+
+.about {
+  color: $main-text;
+  background: $about;
+  .small-photo {
+    font-size: 0;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .sub-heading {
+    color: $about-sub-heading;
+  }
+  h2 {
+    color: $main-text;
+    &:after {
+      background: url("../img/about-heading-shape.png") center no-repeat;
+    }
+  }
+  h3 {
+    color: $main-text;
+  }
+  .my-info {
+    color: $main-text;
+    font-size: 15px;
+    font-weight: 100;
+    p {
+      margin: 0 0 25px;
+    }
+  }
+  .avatar img {
+    max-width: 100%;
+  }
+  .about-social {
+    display: table;
+    list-style: none;
+    padding: 0;
+    font-size: 0;
+    li {
+      display: inline-block;
+      margin-right: 26px;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+    a {
+      display: block;
+      width: 48px;
+      height: 48px;
+      background: url("../img/icons/header-sprite.png") no-repeat;
+    }
+    a.tw {
+      background-position: 0px 0px;
+    }
+    a.db {
+      background-position: -74px 0px;
+    }
+    a.be {
+      background-position: -148px 0px;
+    }
+  }
+
+  // progressbar
+
+  .my-skills ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    .skill-type {
+      margin-bottom: 20px;
+      font-weight: 200;
+    }
+  }
+
+  .skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:14px;
+    width: 100%;
+    background: $about-light; //#645877
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+  }
+
+  .skillbar-title {
+    text-transform: uppercase;
+    font-size: 13px;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 40%;
+    color: $main-text;
+    background: $portfolio;
+  }
+
+  .skillbar-title span {
+    font-weight: 600;
+    display:block;
+    padding: 0 0 0 15px;
+    line-height: 43px;
+  }
+
+  .skillbar-bar {
+    height: 43px;
+    width: 0px;
+    background: $portfolio;
+  }
+
+  .skill-bar-percent {
+    font-weight: 600;
+    position:absolute;
+    left: 40%;
+    top:0;
+    font-size:11px;
+    height: 43px;
+    line-height:43px;
+    color: $about-light;
+  }
+}
