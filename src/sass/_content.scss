@@ -1,0 +1,127 @@
+.content {
+  background: $dark-txt;
+  color: darken($light-txt, 1%);
+  height: 100%;
+  padding: 1.5rem;
+  h1, .content h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    margin: 0 0 30px;
+    border-bottom: 2px solid $main-bg;
+  }
+  h2.section-heading {
+    font-size: 20px;
+    margin: 0 0 35px;
+  }
+  h1 {
+    position: relative;
+    .lang-btn {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 1rem;
+      font-size: 20px;
+      line-height: 5rem;
+      text-transform: uppercase;
+    }
+    .lang-btn:hover {
+      text-decoration: none;
+      background: darken($dark-txt, 10%);
+      -webkit-transition: background, .2s;
+      -moz-transition: background, .2s;
+      -ms-transition: background, .2s;
+      -o-transition: background, .2s;
+      transition: background, .2s;
+    }
+  }
+  .my-photo,
+  .about-me {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+  }
+  .my-photo {
+    font-size: 0;
+    text-align: center;
+    img {
+      text-align: center;
+      max-width: 80%;
+      border: 2px solid $main-bg;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+  .about-me {
+    margin-right: 0;
+    position: relative;
+    color: darken($light-txt, 1%);
+    .social-links {
+      display: table;
+      width: 100%;
+    }
+    .social {
+      display: table-cell;
+      font-size: 4rem;
+      padding-right: 2px;
+      background-size: cover;
+      opacity: .85;
+    }
+    .social-fb {
+      color: #4c5ae2;
+    }
+    .social-tw {
+      color: #2382ff;
+    }
+    .social-gp {
+      color: #ff564d;
+    }
+    .social-git {
+      color: rgba(0, 0, 0, 0.75);
+    }
+    .social-ln {
+      color: #006097;
+    }
+    .social-sp {
+      color: #2879ff;
+    }
+    .social:last-child {
+      padding-right: 0;
+    }
+    .social:hover {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      transform: scale(0.95);
+      -webkit-transition: transform, color, .19s;
+      -moz-transition: transform, color, .19s;
+      -ms-transition: transform, color, .19s;
+      -o-transition: transform, color, .19s;
+      transition: transform, color, .19s;
+      opacity: 1;
+    }
+    &-list {
+      margin: 0 0 70px 0;
+      padding: 0;
+      list-style: none;
+      font-size: 23px;
+      color: darken($light-txt, 15%);
+    }
+    &-list span {
+      font-size: 25px;
+      font-weight: bold;
+      color: darken($light-txt, 5%);
+    }
+    &-list a {
+      text-decoration: none;
+      color: darken($light-txt, 20%);
+    }
+    &-list .email-link:hover {
+      color: lighten($links, 5%);
+    }
+  }
+}
