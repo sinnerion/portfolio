@@ -8157,13 +8157,15 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+/* #469 */
+/* #48F */
 html {
   height: 100%; }
 
 body {
   min-height: 100%;
   position: relative;
-  background: #469;
+  background: #3d7899;
   font-family: 'Roboto Condensed', sans-serif; }
 
 .container {
@@ -8182,12 +8184,12 @@ body {
   text-decoration: none; }
 
 section {
-  padding: 1.5rem; }
+  margin-bottom: 15px; }
 
 a {
-  color: #48F; }
+  color: #ff8542; }
   a:hover {
-    color: #689fff; }
+    color: #ff9c66; }
 
 .example-full-img {
   cursor: pointer;
@@ -8200,6 +8202,10 @@ a {
   .example-full-img img {
     width: 80%; }
 
+.example-heading {
+  position: relative;
+  margin: 0 0 20px; }
+
 .example-description {
   font-size: 18px;
   color: #f1f1f1; }
@@ -8209,11 +8215,12 @@ a {
   .example-description_txt {
     margin-bottom: 2rem; }
   .example-description a {
-    color: #48F; }
+    color: #ff8542; }
 
 .example-preview {
   position: relative;
   width: 100%;
+  padding: 0;
   display: block;
   border: none;
   max-height: 400px;
@@ -8226,7 +8233,8 @@ a {
     max-width: 100%; }
 
 .main-header {
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-bottom: 15px; }
   .main-header .container {
     background: #515151;
     padding: 0; }
@@ -8238,13 +8246,14 @@ a {
     padding: 0; }
   .main-menu .menu-btn {
     display: block;
-    width: 60px;
     float: none;
     margin: 10px auto;
-    color: #515151;
-    background: #469;
+    color: #f1f1f1;
+    background: #3d7899;
     text-transform: uppercase;
     font-size: 16px; }
+  .main-menu .menu-btn:hover {
+    background: #4383a8; }
   .main-menu ul {
     display: table;
     width: 100%; }
@@ -8271,35 +8280,36 @@ a {
   background: #515151;
   color: #eeeeee;
   height: 100%;
-  padding: 1.5rem; }
-  .content h1, .content .content h2 {
+  padding: 10px 15px; }
+  .content .main-heading,
+  .content .section-heading {
     text-align: center;
     font-size: 30px;
     line-height: 60px;
     margin: 0 0 30px;
-    border-bottom: 2px solid #469; }
-  .content h2.section-heading {
+    border-bottom: 2px solid #ff8542; }
+  .content .section-heading {
     font-size: 20px;
     margin: 0 0 35px; }
-  .content h1 {
+  .content .main-heading {
     position: relative; }
-    .content h1 .lang-btn {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0 1rem;
-      font-size: 20px;
-      line-height: 5rem;
-      text-transform: uppercase; }
-    .content h1 .lang-btn:hover {
-      text-decoration: none;
-      background: #383838;
-      -webkit-transition: background, .2s;
-      -moz-transition: background, .2s;
-      -ms-transition: background, .2s;
-      -o-transition: background, .2s;
-      transition: background, .2s; }
+  .content .lang-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    font-size: 20px;
+    line-height: 5rem;
+    text-transform: uppercase; }
+  .content .lang-btn:hover {
+    text-decoration: none;
+    background: #383838;
+    -webkit-transition: background, .2s;
+    -moz-transition: background, .2s;
+    -ms-transition: background, .2s;
+    -o-transition: background, .2s;
+    transition: background, .2s; }
   .content .my-photo,
   .content .about-me {
     box-sizing: border-box;
@@ -8312,7 +8322,7 @@ a {
     .content .my-photo img {
       text-align: center;
       max-width: 80%;
-      border: 2px solid #469;
+      border: 2px solid #3d7899;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px; }
@@ -8369,12 +8379,12 @@ a {
       text-decoration: none;
       color: #bebebe; }
     .content .about-me-list .email-link:hover {
-      color: #5e98ff; }
+      color: #ff955c; }
 
 .summary-content {
   font-size: 18px; }
   .summary-content .summary-title {
-    border-top: 1px solid #469;
+    border-top: 1px solid #3d7899;
     padding-top: 1rem; }
   .summary-content .skillbar {
     position: relative;
@@ -8402,7 +8412,7 @@ a {
     left: 0;
     width: 108px;
     color: #fff;
-    background: #469;
+    background: #3d7899;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-bottom-left-radius: 4px;
     -moz-border-radius-topleft: 3px;
@@ -8422,7 +8432,7 @@ a {
   .summary-content .skillbar-bar {
     height: 24px;
     width: 0;
-    background: #5a7fb6;
+    background: #5093b9;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px; }
@@ -8431,9 +8441,10 @@ a {
   display: block;
   float: left;
   margin-bottom: 20px;
-  color: #4e8eff;
+  color: #ff8c4c;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0 0 15px #74aac8; }
   .my-projects .project-description {
     text-transform: uppercase;
     font-size: 16px; }
@@ -8455,12 +8466,23 @@ a {
     -ms-transition: transform, .15s;
     -o-transition: transform, .15s;
     transition: transform, .15s;
-    color: #5e98ff;
-    box-shadow: 0 0 20px #5a7fb6; }
+    color: #ff955c;
+    box-shadow: none;
+    background: #6b6b6b; }
   .my-projects .project img {
     width: 100%; }
   .my-projects .project:nth-child(4n) {
     margin-right: 0; }
+
+.btn.portfolio_more-btn,
+.btn.portfolio_less-btn {
+  background: #3d7899;
+  color: #fff; }
+  .btn.portfolio_more-btn:hover, .btn.portfolio_more-btn:focus,
+  .btn.portfolio_less-btn:hover,
+  .btn.portfolio_less-btn:focus {
+    background: #498fb6;
+    outline: none; }
 
 .main-footer {
   margin-bottom: 30px;
@@ -8479,17 +8501,30 @@ a {
     font-size: 21px; } }
 
 @media screen and (max-width: 767px) {
-  h1 {
-    padding-bottom: 5rem; }
-  h1 .lang-btn {
+  .main-header {
+    padding-top: 0; }
+  .main-footer {
+    margin-bottom: 0; }
+  .main-menu .navbar-collapse {
+    box-shadow: none;
+    border-top: 1px solid #3d7899; }
+  .content .main-heading {
+    padding-bottom: 5rem;
+    line-height: 30px;
+    font-size: 25px; }
+  .content .main-heading .lang-btn {
     top: auto !important;
     right: auto;
     bottom: 0;
     text-align: center;
     width: 100%; }
+  .summary-content .skillbar {
+    width: 100%; }
   .my-info .my-photo {
     text-align: center;
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+  .example-preview {
+    margin-bottom: 20px; } }
 
 @media screen and (max-width: 480px) {
   .content h1 {

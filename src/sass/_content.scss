@@ -2,39 +2,40 @@
   background: $dark-txt;
   color: darken($light-txt, 1%);
   height: 100%;
-  padding: 1.5rem;
-  h1, .content h2 {
+  padding: 10px 15px;
+  .main-heading,
+  .section-heading {
     text-align: center;
     font-size: 30px;
     line-height: 60px;
     margin: 0 0 30px;
-    border-bottom: 2px solid $main-bg;
+    border-bottom: 2px solid $links;
   }
-  h2.section-heading {
+  .section-heading {
     font-size: 20px;
     margin: 0 0 35px;
   }
-  h1 {
+  .main-heading {
     position: relative;
-    .lang-btn {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0 1rem;
-      font-size: 20px;
-      line-height: 5rem;
-      text-transform: uppercase;
-    }
-    .lang-btn:hover {
-      text-decoration: none;
-      background: darken($dark-txt, 10%);
-      -webkit-transition: background, .2s;
-      -moz-transition: background, .2s;
-      -ms-transition: background, .2s;
-      -o-transition: background, .2s;
-      transition: background, .2s;
-    }
+  }
+  .lang-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    font-size: 20px;
+    line-height: 5rem;
+    text-transform: uppercase;
+  }
+  .lang-btn:hover {
+    text-decoration: none;
+    background: darken($dark-txt, 10%);
+    -webkit-transition: background, .2s;
+    -moz-transition: background, .2s;
+    -ms-transition: background, .2s;
+    -o-transition: background, .2s;
+    transition: background, .2s;
   }
   .my-photo,
   .about-me {

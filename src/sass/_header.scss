@@ -1,5 +1,6 @@
 .main-header {
   padding-top: 30px;
+  margin-bottom: 15px;
   .container {
     background: $dark-txt;
     padding: 0;
@@ -14,13 +15,15 @@
   }
   .menu-btn {
     display: block;
-    width: 60px;
     float: none;
     margin: 10px auto;
-    color: $dark-txt;
+    color: $light-txt;
     background: $main-bg;
     text-transform: uppercase;
     font-size: 16px;
+  }
+  .menu-btn:hover {
+    background: lighten($main-bg, 4%);
   }
   ul {
     display: table;

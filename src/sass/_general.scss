@@ -29,7 +29,7 @@ body {
 }
 
 section {
-  padding: 1.5rem;
+  margin-bottom: 15px;
 }
 
 a {
@@ -52,6 +52,11 @@ a {
   }
 }
 
+.example-heading {
+  position: relative;
+  margin: 0 0 20px;
+}
+
 .example-description {
   font-size: 18px;
   color: $light-txt;
@@ -70,6 +75,7 @@ a {
 .example-preview {
   position: relative;
   width: 100%;
+  padding: 0;
   display: block;
   border: none;
   max-height: 400px;

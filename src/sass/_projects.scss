@@ -5,6 +5,7 @@
   color: lighten($links, 2%);
   text-decoration: none;
   text-align: center;
+  box-shadow: 0 0 15px lighten($main-bg, 20%);
   &-description {
     text-transform: uppercase;
     font-size: 16px;
@@ -29,7 +30,8 @@
     -o-transition: transform, .15s;
     transition: transform, .15s;
     color: lighten($links, 5%);
-    box-shadow: 0 0 20px lighten($main-bg, 10%);
+    box-shadow: none;
+    background: lighten($dark-txt, 10%);
 
   }
   img {
@@ -40,3 +42,13 @@
   }
 }
 
+.btn.portfolio_more-btn,
+.btn.portfolio_less-btn {
+  background: $main-bg;
+  color: #fff;
+  &:hover,
+  &:focus {
+    background: lighten($main-bg, 8%);
+    outline: none;
+  }
+}
