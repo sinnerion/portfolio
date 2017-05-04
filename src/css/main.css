@@ -8512,12 +8512,16 @@ a {
     padding-bottom: 5rem;
     line-height: 30px;
     font-size: 25px; }
-  .content .main-heading .lang-btn {
+  .lang-btn {
     top: auto !important;
     right: auto;
     bottom: 0;
     text-align: center;
     width: 100%; }
+  .example-heading {
+    text-align: center;
+    padding-bottom: 5rem;
+    margin-bottom: 0; }
   .summary-content .skillbar {
     width: 100%; }
   .my-info .my-photo {
