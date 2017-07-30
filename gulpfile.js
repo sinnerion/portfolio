@@ -21,11 +21,17 @@ gulp.task('browserSync', function () {
     server: {
       baseDir: './src',
       routes: {
-        '/node_modules': 'node_modules',
-      },
+        '/node_modules': 'node_modules'
+      }
     },
-    notify: false,
+    notify: false
   });
+});
+
+gulp.task('favicons', function() {
+  return gulp.src('src/*.png')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('showcase', function () {
@@ -48,7 +54,7 @@ gulp.task('images', function () {
       interlaced: true,
       progressive: true,
       svgoPlugins: [{ removeViewBox: false }],
-      use: [pngout()],
+      use: [pngout()]
     })))
     .pipe(gulp.dest('dist/img'));
 });
@@ -88,7 +94,7 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
 });
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'showcase', 'sass', 'css:minify', ['useref', 'images', 'fonts'], callback);
+  runSequence('clean:dist', 'showcase', 'favicons', 'sass', 'css:minify', ['useref', 'images', 'fonts'], callback);
 });
 
 gulp.task('default', function (callback) {
