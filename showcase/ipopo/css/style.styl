@@ -1,0 +1,1229 @@
+@import '_vars'
+@import '_fonts'
+@import '_reset'
+a
+  color inherit
+
+
+h1, h2, h3, h4, h5
+  font-size inherit
+
+body
+  color main-color
+  font main-font
+
+.text-center
+  text-align: center
+
+.my-btn
+  padding: 10px 20px
+  border-radius: 30px
+  display: inline-block
+  background-image: -moz-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+  box-shadow: 0 8px 9px 0 rgba(98, 36, 147, 0.85), 0px 5px 0px rgba(98, 36, 147, 1);
+  position: relative;
+  transition: top .25s ease-in-out;
+  color: #fff
+  font-family bloggersans-bold, arial, sans-serif
+  text-transform: uppercase
+  margin-bottom: 10px
+  &:active
+    top: 5px;
+    box-shadow: 0 0 4px 0 rgba(98, 36, 147, 0.85), 0px 0px 0px rgba(98, 36, 147, 1);
+
+  &:hover,
+  &:visited,
+  &:focus
+    text-decoration: none
+    outline: none
+    color: #fff
+
+.btn-gift
+  padding-left 56px
+  position: relative
+  font-size 1.5rem
+  &:after
+    content: ''
+    width: 25px
+    position: absolute
+    background: url(../img/svg/gift-purplewhite.svg) no-repeat 50% 50%
+    height: 25px
+    background-position: 0 0
+    background-size: contain
+    top: 7px
+    left: 18px
+
+.prod-name,
+.price
+  margin: 10px 0
+
+.prod-name
+  font-size: 20px
+  height: 45px
+  overflow: hidden
+
+.price
+  font-family ptsans-regular, arial, sans-serif
+  color: accent-color
+  font-size 2.4rem
+
+#menu
+  padding: 20px 0
+
+section#market, #product
+  background: #f4f4f4
+  padding: 20px 0
+
+#resp
+  position: absolute
+  background: #fff
+  top: 100%
+  padding: 10px 5px
+  left: 0
+  border: 1px solid
+  border-radius: 15px
+  width: 200%
+  z-index 15
+  a
+    padding 5px 10px
+
+.box
+  background-color: #fff
+  box-shadow 0 0 5px rgba(0, 0, 0, .1)
+  border-top 1px solid #cfcfcf
+  margin-bottom: 20px
+  & > div
+    border-bottom 1px solid #f4f4f4
+    padding: 10px
+
+.catalog
+  li
+    border-bottom: 1px solid #eee
+    &:last-child
+      border-bottom: none
+  a
+    display: inline-block
+    padding: 7px 5px
+    width: 100%
+
+//&:hover
+//  background lighten(main-color,80%)
+.menu-products
+  display none
+
+.cat-trigger
+  text-align: center
+  width: 100%
+
+.catalogue
+  position: relative
+  top: 10px
+  #catalogue
+    position: absolute
+    z-index 15
+    //padding: 10px
+    padding-right: 0
+    border 1px solid main-color
+    border-radius 4px
+    background #fff
+    width: 190px
+    li
+      &.active
+        background lighten(main-color, 80%)
+
+        & > ul,
+        & > .menu-products
+          display inline-block
+          position absolute
+          top: 0
+          white-space nowrap
+          //padding: 10px 5px 0
+          left: 100%
+          border 1px solid main-color
+          border-radius 4px
+          background #fff
+          min-height 100%
+          min-width 190px
+      a
+        padding: 7px 10px
+        padding-right: 20px
+        position: relative
+        &.childs
+          &:after
+            content: ''
+            display: block
+            width: 10px
+            font-size: 10px
+            height: 10px
+            border-top: 5px solid transparent
+            border-left: 5px solid
+            border-bottom: 5px solid transparent
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translate(0, -50%)
+
+#slider
+  margin: 20px auto;
+  width: 90%
+
+.ui-slider
+  position: relative
+  text-align: left
+  margin: 10px 0
+
+.ui-slider .ui-slider-handle
+  position: absolute
+  z-index: 2
+  width: 1.2em
+  height: 1.2em
+  cursor: default
+  -ms-touch-action: none
+  touch-action: none
+
+.ui-slider .ui-slider-range
+  position: absolute
+  z-index: 1
+  font-size: .7em
+  display: block
+  border: 0
+  height: 2px
+  background-position: 0 0
+  background-color: main-color
+
+.ui-slider-horizontal
+  height: 2px
+  background-color: neutral-color
+  border-radius: 2px
+
+.ui-slider-horizontal .ui-slider-handle
+  background-image: -moz-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+  background-image: -webkit-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+  background-image: -ms-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+  box-shadow: 0 8px 9px 0 rgba(98, 36, 147, 0.85), 0px 5px 0px #622493;
+  border-radius 50%
+  top: -10px
+  outline none
+  margin-left: -.6em
+  .ui-slider-range
+    top: 0
+    height: 5px
+  .ui-slider-range-min
+    left: 0
+  .ui-slider-range-max
+    right: 0
+
+.price-in
+  width: 25%
+  display: inline-block
+  border 1px solid neutral-color
+  padding: 3px
+  box-shadow inset 1px 2px 0 rgba(0, 0, 0, .15)
+  &:focus
+    outline none
+
+#price
+  padding: 0
+  border-radius: 5px
+  font-weight: bold
+  font-size 2rem
+  width: 30px
+  border: none
+  outline: none
+
+.shop-content, .product-content
+  background-color: #fff
+  box-shadow 0 0 5px rgba(0, 0, 0, .1)
+  border-top: 2px solid main-color
+  margin-bottom: 20px
+
+.no-padding
+  padding: 0
+
+.input-group
+  background transparent
+  padding: 5px 10px
+  display: block
+  border-radius: 20px
+  border 1px solid neutral-color
+  & > *:not(form)
+    display: inline-block
+  input
+    background none
+    border none
+    outline none
+    &:focus
+      border none
+      outline none
+    & + input
+      float: right;
+      border-left: 1px solid neutral-color;
+      padding-left: 10px;
+      width: 30px;
+      display: inline-block;
+      background: url(/img/svg/search.svg) no-repeat 100% 50%;
+
+.filter-sort
+  padding: 20px 20px 30px
+  text-align: right
+  color: neutral-color
+  .input-group
+    a
+      text-transform: capitalize
+      color: neutral-color
+      //font-weight: 600
+      display: inline-block
+      padding: 0 10px
+      border-right: 1px solid neutral-color
+      &:last-child
+        border-right: none
+      &.active
+        color: main-color
+        font-weight: bold
+
+.sort-label,
+.sort-label + .input-group
+  display: inline-block
+
+.items > div:nth-child(4n)
+  .prod-item
+    border-right 1px solid transparent
+    @media (max-width: 992px)
+      border-right 1px solid neutral-color
+
+.items > div:nth-child(3n)
+  .prod-item
+    @media (max-width: 992px)
+      border-right 1px solid transparent
+    @media (max-width: 768px)
+      border-right 1px solid neutral-color
+
+.items > div:nth-child(2n)
+  .prod-item
+    @media (max-width: 768px)
+      border-right 1px solid transparent
+
+#s_market, #s_shop
+  width: 80%
+
+.prod
+  background-color: #fff
+  position: relative
+  height: 375px
+  box-shadow 0 0 9px rgba(0, 0, 0, 0)
+  transition all .15s ease-in-out
+  border-bottom 1px solid neutral-color
+  padding: 10px 0
+  .prod-item
+    padding: 0 10px;
+    border-right 1px solid neutral-color
+  .my-btn.btn-gift
+    border 2px solid neutral-color
+    box-shadow none
+    background-image: none
+    color neutral-color
+    font-size 13px
+    padding-left: 56px
+    &:after
+      width: 20px
+      height: 20px
+      left: 17px
+      top: 50%
+      transform translate(0, -50%)
+      background-image: url(../img/svg/gift-blue.svg)
+  &:hover
+    z-index 10
+    box-shadow 0 1px 0 neutral-color, 0px -1px 0px neutral-color, 1px 0px 0px neutral-color, -1px 0px 0px neutral-color, 0 0 12px rgba(0, 0, 0, .27)
+    border-bottom none
+    .prod-item
+      border-right 1px solid transparent !important
+    .my-btn.btn-gift
+      background-image: -moz-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+      background-image: -webkit-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+      background-image: -ms-linear-gradient(90deg, rgb(141, 91, 180) 0%, rgb(173, 105, 226) 100%);
+      box-shadow: 0 8px 9px 0 rgba(98, 36, 147, 0.85), 0px 5px 0px rgba(98, 36, 147, 1);
+      color: #fff
+      border none
+      &:active
+        top: 5px;
+        box-shadow: 0 0 4px 0 rgba(98, 36, 147, 0.85), 0px 0px 0px rgba(98, 36, 147, 1);
+      &:after
+        background-image: url(../img/svg/gift-purplewhite.svg)
+
+.prod-img img
+  width: 100%
+  height: 200px
+  object-fit contain
+  object-position center center
+
+.items
+  //overflow: hidden
+#pagination
+  text-align: center
+  padding 20px 0
+  font-family bloggersans-bold, arial, sans-serif
+
+.load-more
+  text-transform: uppercase
+  color: main-color
+  height: 40px
+  display: inline-block
+  img
+    display: inline-block
+    position: relative
+    top: -5px
+  &:hover
+    color main-color
+    text-decoration: none
+
+.shop
+  text-align: center
+  a
+    display: inline-block
+    width: 100%
+    margin: 10px 0
+  .shop-name
+    width: auto
+    padding: 5px 20px
+    color: main-color
+    font-weight: bold
+    margin-top: 0
+
+.cat-title
+  margin: 0
+  font-size 1em
+  font-weight: bold
+  text-transform: uppercase
+
+.age-item, .brand-item
+  margin 5px
+  display: inline-block
+  width: 100%
+  input[type='checkbox']
+    display: none
+    &:checked + .label-text
+      &:after
+        content '✓'
+        background-image: -moz-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+        background-image: -webkit-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+        background-image: -ms-linear-gradient(90deg, #8d5bb4 0%, #ad69e2 100%);
+        box-shadow: 0 8px 9px 0 rgba(98, 36, 147, 0.85), 0px 5px 0px #622493;
+        border none
+        outline none
+        color #fff
+        top: -5px
+        font-weight: bold
+  .label-text
+    display: inline-block
+    padding-left: 30px
+    position: relative
+    font-weight: normal
+    &:after
+      display inline-block
+      content ''
+      position: absolute
+      text-align: center
+      left: 0
+      top: 0
+      width: 22px
+      height: 20px
+      background-color: #fff
+      border-radius 4px
+      border 1px solid neutral-color
+
+#brand-trigger, .to_wl
+  display: inline-block
+  border-bottom 2px dotted main-color
+  position: relative
+  //font-weight: bold
+  color main-color
+  margin: 10px 0
+  &:hover
+    color main-color
+    border-bottom 2px solid main-color
+  &.active
+    &:after
+      background: url(../img/svg/arr-d.svg) no-repeat
+  &:after
+    display: inline-block
+    content ''
+    width: 12px
+    height: 12px
+    top 5px
+    position: absolute
+    margin-left: 10px
+    background: url(../img/svg/arr-u.svg) no-repeat
+    background-size: contain
+
+.to_wl:after
+  display: none
+
+.pagination
+  display: inline-block
+  margin: 0 20px
+  li
+    display: inline-block
+    &.active
+      a
+        color main-color
+        border none
+        background-color: transparent
+        &:hover,
+        &:focus
+          border none
+          color main-color
+          background-color: transparent
+
+    &.disabled
+      a, span
+        color #ccc
+        text-shadow none
+    a, span
+      font-size 3rem
+      border none
+      background-color: transparent;
+      color neutral-color
+      float: none
+      padding: 0
+      display: inline-block
+      margin: 0 5px
+      &:hover
+        border none
+        background-color: transparent;
+        color neutral-color
+        text-shadow 0 2px 1px rgba(0, 0, 0, .35)
+
+.product-content
+  .img
+    text-align: center
+
+.product-details
+  padding-top: 45px
+
+.prod2wl
+  padding: 20px
+  .well
+    background-color: lighten(accent-color, 85%)
+    box-shadow none
+    border none
+    border-radius: 7px
+
+  .price
+    color: #131313
+    span
+      font-size 4rem
+      font-weight: bold
+
+  .btn-gift
+    font-size: 1.2rem
+    &:after
+      top: 4px
+
+#content
+  .box
+    border-top: 2px solid #cfcfcf;
+    .prod-descr
+      padding: 20px
+      .cat-title
+        margin-bottom: 30px
+      p
+        padding: 0 40px;
+        color: #131313
+
+.owl
+  .prod
+    border-bottom: none
+    .my-btn.btn-gift
+      padding-left: 46px
+
+.viewed
+  .cat-title
+    display: inline-block
+    margin-right: 10px
+  .input-group
+    display: inline-block
+    padding: 3px 10px
+
+#prev, #next
+  display: inline-block
+
+//vertical-align: middle
+#prev
+  width: 20px
+  padding-right 5px
+  border-right 1px solid neutral-color
+
+#next
+  width: 15px
+
+.order > div
+  padding: 20px 0
+  border-bottom 1px solid #cfcfcf
+  &:last-child
+    border-bottom none
+    padding-bottom: 0
+  .cat-title
+    margin-bottom: 10px
+
+.delivery
+  p
+    font-size: 14px
+    color #131313
+    margin-bottom: 5px
+    padding-left: 10px
+
+.menu__block__inline
+  display inline-block
+  text-align: center
+  .menu__block__inline__submenu
+    width: 54px
+    height: 56px
+    font-size: 12px
+    display: inline-block
+    //cursor: pointer
+    text-align: center
+    margin: 10px 0
+    //&:hover
+    //  .svg__block svg > *, .svg__block__name
+    //    color main-color
+    //    fill main-color
+    .svg__block
+      display: inline-block
+      //margin-right: 60px
+      margin: 0 auto
+      height: 3px
+      position: relative
+      .svg
+        width: 30px
+        height: 30px
+        & > *
+          fill neutral-color
+    .svg__block__name
+      display: inline-block
+      color neutral-color
+      font-family: ptsans-regular
+      font-size: 12px
+      font-weight: 600
+
+#breadcrumps
+  margin: 25px 10px
+  .bcrmp-item
+    display: inline-block
+    text-transform: uppercase
+    color neutral-color
+    .bcrmp-link
+      color: main-color
+      display: inline-block
+      position: relative
+      font-weight: bold
+      &:after
+        display: inline-block
+        position: relative
+        width: 12px
+        height: 12px
+        //left: 100%
+        margin: 0 10px
+        transform rotate(90deg)
+        content ''
+        background: url(/img/svg/arr-d.svg) no-repeat 50% 50%
+
+/* *** main menu *** */
+.header
+  position: relative
+  padding-bottom: 10px
+  @media(max-width :767px)
+    padding-bottom: 30px
+  .wave
+    bottom 0
+  &__top
+    background: url(/img/bg-head2.png) 0 0 repeat-x
+    background-size: 29px 40px
+    height: 40px
+    position: relative
+    z-index: 20
+    color main-color
+    font-size: 14px
+    a:hover
+      color: lighten(main-color,20%)
+  &__top:after
+    content: " "
+    display: table
+    clear: both
+
+  .top-menu
+    float: left
+    width: auto
+    &__item
+      float: left
+      margin-top: 7px
+      border-left: 1px solid main-color
+      width: auto
+      a
+        padding: 0 30px
+        display: inline-block
+        //padding: 0px 26px 0 21px
+        vertical-align: middle
+        transition: color 0.2s
+
+      &:first-child
+        border-left: none
+.sets
+  float: right
+  margin-top: 7px
+  position: relative
+  z-index: 5
+  &__item
+    float: left
+    margin-left: 16px
+    margin-right: 17px
+    position: relative
+    z-index: 5
+    i
+      display: inline-block
+      margin-right: 8px
+      vertical-align: middle
+      background-size: 16px 16px
+      width: 16px
+      height: 16px
+
+.icon-planet
+  background: url("/img/svg/planet.svg") no-repeat 0 0
+
+.icon-dia-bubble
+  background: url("/img/svg/dia-bubble.svg") no-repeat 0 0
+
+.logo
+  float: left
+  margin-top: 11px
+  margin-left: 20px
+  color: neutral-color
+  font-size: 14px
+  max-width:184px
+  @media (max-width: 767px)
+    width 40%
+  &:hover
+    color: darken(neutral-color,10%)
+  .icon-logo
+    width: 100%
+    display: inline-block
+//  background: url("/img/svg/logo.svg") no-repeat 0 0
+//  background-size: 184px 67px
+//  height: 67px
+.menu-block-wrap
+  float: left
+  position: relative
+  width: 19.5%
+  height: 123px
+  margin-left: 0.9%
+.menu-block
+  position: absolute
+  top: -12px
+  left: 0px
+  z-index: 0
+  width: 100%
+  &__wrapper
+    transform: translate3d(0, 0, 0) rotate(2deg)
+    background: #804fa9
+    border-radius: 0 0 15px 10px
+    width: 100%
+    height: 103px
+    position: relative
+    z-index: 0
+    transition: all .2s ease-in-out
+  &__in
+    transform: translate3d(0, 0, 0) rotate(-1deg)
+    position: absolute
+    display: block
+    top: 3px
+    left: 2px
+    z-index: 1
+    width: 94%
+    height: 90px;
+    border-radius: 0 0 10px 15px
+    background: #8d5bb4
+    //opacity .3
+    transition: all 0.2s ease-in-out
+    &
+      .menu-block__content
+        position: absolute
+        bottom: 10px
+        left: 15%
+        transform: translate3d(0, 0, 0) rotate(2deg)
+        & span
+          display: inline-block
+          vertical-align: middle
+          font-family: bloggersans-bold, Tahoma,Arial, sans-serif
+          font-weight: 700
+          font-size: 18px
+          max-width: 40%
+          color: #fff
+          text-transform: uppercase
+          text-shadow: 2px 2px 0 rgba(0,0,0,.16)
+          transition all .2s ease-in-out
+
+  &:hover
+    .menu-block__wrapper
+      height: 113px
+    //background-color: main-color
+    .menu-block__in
+      height: 100px
+      span
+        text-shadow: 3px 3px 5px rgba(0,0,0,.4)
+
+  &__icon
+    display: inline-block
+    vertical-align: middle
+    width: 64px
+    margin-left: -11px
+    margin-right: 10px
+    background-size: contain
+
+.icon-cloud
+  background: url("/img/svg/cloud.svg") no-repeat 0 0
+  //background-size: 64px 50px
+  height: 50px
+
+.icon-love
+  background: url("/img/svg/love.svg") no-repeat 0 0
+  //background-size: 64px 50px
+  height: 50px
+
+.icon-book
+  background: url("/img/svg/book-shine.svg") no-repeat 0 0
+  //background-size: 64px 64px
+  height: 64px
+
+.icon-menu
+  background: url("/img/svg/menu.svg") no-repeat 0 0
+  margin: 0
+  width: 44px
+  height: 44px
+
+.icon-wl
+  background: url("/img/svg/wl.svg") no-repeat 0 0
+  //background-size: 50px 64px
+  height: 50px
+  width: 50px
+
+.menu-trigger
+  display: inline-block
+  padding: 10px
+
+
+.is-yellow
+  &.menu__item,
+  .menu-block__wrapper
+    background: #fea82b
+  .menu-block__in
+    background: #feb737
+.is-pink
+  &:before
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    height: 20px;
+    transform: translate3d(0,0,0) rotate(-1deg);
+    z-index: 20;
+  &:after
+    bottom: -5px;
+    top: auto;
+    transform: translate3d(0,0,0) rotate(1deg);
+  &.menu__item,
+  .menu-block__wrapper
+    background: #d87cdd
+  .menu-block__in
+    background: #e192e5
+.is-blue
+  &:before
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    height: 20px;
+    transform: translate3d(0,0,0) rotate(-1deg);
+    z-index: 20;
+  &:after
+    bottom: -5px;
+    top: auto;
+    transform: translate3d(0,0,0) rotate(1deg);
+  .menu-block__wrapper,
+  &.menu__item
+    background: #91b2fb
+  .menu-block__in
+    background: #a6c3fc
+.is-active
+  .menu-block__wrapper
+    background: #e9d7af
+  .menu-block__in
+    background: #e5d0a4
+.is-ipopo.menu__item
+  background main-color
+
+.menu__item
+  padding: 15px 5px
+  //padding-left: 20px
+  color: #ffffff
+  vertical-align: middle;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "bloggersans-bold", Tahoma,Arial, sans-serif;
+  font-weight: 700
+  position: relative
+  a
+    text-shadow 0 0px 0px rgba(0,0,0,.0)
+  a:hover,a:active,a:focus,.user__info:hover
+    color: #ffffff
+    text-shadow 0 1px 3px rgba(0,0,0,.3)
+  .user
+    font-family bloggersans, Tahoma,Arial, sans-serif;
+    text-transform: capitalize
+    font-size: 14px
+.user__info
+  float: left
+  margin-right: 20px
+  margin-top: 5px
+.user__icon
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  width: 14px;
+  height: 16px;
+.icon-present-white
+  background: url("/img/svg/present-white.svg") no-repeat 50% 50%;
+.icon-card-white
+  background: url("/img/svg/card-white.svg") no-repeat 50% 50%;
+
+
+.small-icon
+  display: inline-block
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+
+.is-turned
+  transform: translate3d(0, 0, 0) rotate(-4deg)
+  .menu-block__in
+    transform: translate3d(0, 0, 0) rotate(3deg)
+.wave
+  position: absolute
+  height: 18px
+  width: 100%
+  background: url("/img/svg/wave.svg")
+
+.js-menu
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  transition all .4s ease-in-out
+  &.is-active
+    transform: translateY(0%);
+  .menu__item
+    position: relative
+    display: block
+  #form-close
+    width: 24px
+    height: 24px
+  .icon-close-color {
+    background: url("/img/svg/close-color-2.svg") no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+  }
+  .menu__wrap
+    max-width: 320px
+    margin: 0 auto
+    position: relative
+    z-index: 20
+    padding-left: 20px
+    &.childs
+      position: relative
+      &:before
+        display: block
+        content ''
+        width: 16px
+        height: 16px
+        background: url(/img/svg/arr-right.svg) no-repeat 50% 50%
+        position: absolute
+        top 17px
+        right: 20px
+.menu__element
+  border-bottom: 1px solid white;
+  background-color: #e9d7af
+  padding: 15px 0px;
+  display: block;
+  transition: all 0.2s;
+  &:hover
+    color main-color
+  &:active
+    padding-left: 5px
+  & + ul
+    display: none
+  &.is-active + ul
+    display: block
+
+.dropdown:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  background: url(/img/svg/arr-right.svg) no-repeat 50% 50%;
+}
+li.fall__item
+  .menu__element
+    padding-left: 60px
+
+.footer
+  padding: 107px 0 65px
+  position: relative
+  .wave
+    top: 0
+
+  .footer__logo
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+.nets
+  margin-top: 24px
+.nets__icon
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  &:first-child
+    margin-left: 0px;
+  &:hover
+    opacity: 0.8;
+.up__in
+  width: 50px
+  height: 50px
+  display inline-block
+  bottom 0px
+  background-color: main-color
+  position: relative
+  border-radius: 50%
+  transition: all 0.2s ease-in-out
+  &:hover
+    bottom 5px
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 26px
+    height: 8px
+    border-radius: 4px
+    top: 50%
+    margin-top: -4px
+    -moz-transition: margin-top 0.2s
+    -o-transition: margin-top 0.2s
+    -webkit-transition: margin-top 0.2s
+    transition: margin-top 0.2s
+
+  &:before
+    background-color: white
+    transform: rotate(-45deg)
+    left: 5px
+
+  &:after
+    background-color: #feb737
+    transform: rotate(45deg)
+    right: 6px
+    left: auto
+
+.footer__link
+  margin-top: 36px
+  display: inline-block
+
+.up_link
+  text-align: center
+  p
+    font-weight: 700;
+    font-size: 16px;
+    color: #8d5bb4;
+    text-transform: uppercase;
+
+#form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 201;
+}
+.overlay {
+  position: relative;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: rgba(141, 91, 180, 0.8);
+}
+.step_body {
+  width: 590px;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 95;
+  position: absolute;
+  background: #fff;
+  padding: 40px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#form-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 210;
+}
+.input {
+  position: relative;
+}
+.date-label {
+  width: 60%;
+  float: left;
+}
+div#label .title_small {
+  position: relative;
+  margin-right: 10px;
+}
+.title_small {
+  margin: 20px 0;
+}
+.title_small {
+  font-size: 23px;
+  font-family: "blogger_sans-bold", Georgia, sans-serif;
+  font-weight: 700;
+  color: #feb737;
+  margin-bottom: 3px;
+}
+.date-f {
+  width: 40%;
+  float: left;
+}
+.input_date input {
+  padding: 0 9px;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: "ptsans-regular", Arial, sans-serif;
+  font-weight: 400;
+  color: #8d5bb4;
+  vertical-align: middle;
+  text-align: center;
+}
+.input input {
+  border: 2px solid #a6c3fd;
+  padding: 0 20px;
+  color: #feb737;
+  background-color: transparent;
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: "ptsans-regular", Arial, sans-serif;
+  font-weight: 400;
+  -moz-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.input_date button, .input_date i {
+  vertical-align: bottom;
+  margin-left: 10px;
+  display: inline-block;
+}
+.icon-date {
+  background: url("/img/svg/date.svg") no-repeat 0 0;
+  -moz-background-size: 30px 34px;
+  -o-background-size: 30px 34px;
+  -webkit-background-size: 30px 34px;
+  background-size: 30px 34px;
+  width: 30px;
+  height: 34px;
+  display: inline-block;
+}
+.ui-datepicker { padding: 0 5px 10px; margin-top: 9px; display: none; background: white; border-radius: 3px; border: 4px solid #feb737; position: relative; display: none; z-index: 99 !important;}
+.ui-datepicker.is-visible { display: block; }
+.ui-datepicker:before { content: ""; position: absolute; width: 12px; height: 12px; background: white; border-top: 4px solid #feb737; border-right: 4px solid #feb737; top: -9px; left: 50%; margin-left: -5px; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.ui-datepicker .ui-datepicker-calendar { margin: 0; }
+.ui-datepicker thead span { font-size: 16px; color: #feb737; font-family: "ptsans-regular", Arial, sans-serif; font-weight: 400; }
+.ui-datepicker tbody td { padding: 0px 3px; color: #8d5bb4; font-size: 16px; font-family: "ptsans-regular", Arial, sans-serif; font-weight: 400; }
+
+.ui-datepicker-inline { display: block; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border-radius: 0; border: 0; }
+
+.ui-datepicker .ui-datepicker-header { position: relative; padding: 20px 0 10px; }
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: absolute; top: 50%; margin-top: -2px; font: 0/0 a; text-shadow: none; color: transparent; cursor: pointer; }
+@media only screen and (max-width: 1023px) { .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { top: 45%; } }
+
+.ui-datepicker .ui-datepicker-prev { left: 13px; background: url('/img/icons-s8c3ae2a1f8.png') 0 -27px no-repeat; background-position: 0 -14px; width: 9px;height: 15px; -moz-background-size: 25px 153px;-webkit-background-size: 25px 153px;background-size: 25px 153px;-moz-transition: left 0.2s;-o-transition: left 0.2s;-webkit-transition: left 0.2s;transition: left 0.2s;}
+.ui-datepicker .ui-datepicker-prev:hover { left: 11px; }
+
+@media only screen and (max-width: 1023px) { .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { zoom: 1.5; width: 20px !important; height: 20px !important; } }
+@media only screen and (max-width: 1023px) { .ui-datepicker .ui-datepicker-prev { background-position: 0 -13px; } }
+@media only screen and (max-width: 1023px) { .ui-datepicker .ui-datepicker-next { background-position: 0 -32px; } }
+
+.ui-datepicker .ui-datepicker-next { right: 13px; background: url('/img/icons-s8c3ae2a1f8.png') 0 -67px no-repeat; background-position: 0 -34px; width: 9px; height: 15px; -moz-background-size: 25px 153px;-webkit-background-size: 25px 153px;background-size: 25px 153px;-moz-transition: right 0.2s;-o-transition: right 0.2s;-webkit-transition: right 0.2s;transition: right 0.2s;}
+.ui-datepicker .ui-datepicker-next:hover { right: 11px; }
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px; }
+
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; text-align: center; font-size: 16px; text-transform: uppercase; color: #8d5bb4; font-family: "blogger_sans-bold", Georgia, sans-serif; font-weight: 700; }
+
+.ui-datepicker-month, .ui-datepicker-year { width: 45%; font-size: 16px; margin: 0; }
+
+.ui-datepicker-month { margin-right: 5%; }
+
+.ui-datepicker table { width: 100%; font-size: 0.9em; border-collapse: collapse; margin: 0 0 0.4em; }
+
+.ui-datepicker th { padding: 0.7em 0.3em; text-align: center; font-size: 15px; font-weight: normal; border: 0; }
+
+.ui-datepicker td { vertical-align: middle; text-align: center; }
+.ui-datepicker td a, .ui-datepicker td span { display: block; background: transparent; border-radius: 50%; text-align: center; width: 32px; height: 32px; line-height: 32px; text-decoration: none; font-size: 16px; color: #8d5bb4; -moz-transition: background-color 0.2s, color 0.2s; -o-transition: background-color 0.2s, color 0.2s; -webkit-transition: background-color 0.2s, color 0.2s; transition: background-color 0.2s, color 0.2s; }
+.ui-datepicker td a:hover, .ui-datepicker td span:hover { background-color: #8d5bb4; color: white; }
+.ui-datepicker td.ui-datepicker-current-day a, .ui-datepicker td.ui-datepicker-current-day span { background: #8d5bb4; color: white; }
+.ui-datepicker td.ui-datepicker-today a, .ui-datepicker td.ui-datepicker-today span { background: #feb737; color: white; }
+
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: 0.7em 0 0 0; padding: 0 0.2em; border-left: 0; border-right: 0; border-bottom: 0; }
+
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: 0.5em 0.2em 0.4em; cursor: pointer; padding: 0.2em 0.6em 0.3em 0.6em; width: auto; overflow: visible; }
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float: left; }
+
+.ui-datepicker.ui-datepicker-multi { width: auto; }
+
+.ui-datepicker-multi .ui-datepicker-group { float: left; }
+
+.ui-datepicker-multi .ui-datepicker-group table { width: 95%; margin: 0 auto 0.4em; }
+
+.ui-datepicker-multi-2 .ui-datepicker-group { width: 50%; }
+
+.ui-datepicker-multi-3 .ui-datepicker-group { width: 33.3%; }
+
+.ui-datepicker-multi-4 .ui-datepicker-group { width: 25%; }
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width: 0; }
+
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear: left; }
+
+.ui-datepicker-row-break { clear: both; width: 100%; font-size: 0; }
