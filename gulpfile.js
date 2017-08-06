@@ -28,11 +28,10 @@ gulp.task('browserSync', function () {
   });
 });
 
-gulp.task('favicons', function() {
-  return gulp.src('src/*.png')
-      .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(gulp.dest('dist'));
-});
+// gulp.task('favicons', function() {
+//   return gulp.src('src/*.+(png|ico)')
+//       .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('showcase', function () {
   return gulp.src('src/showcase/**/*')
@@ -40,7 +39,7 @@ gulp.task('showcase', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('src/sass/**/*.scss')
+  gulp.src('src/sass/**/*.scss')
     .pipe(autoprefixer(['last 10 versions']))
     .pipe(plumber())
     .pipe(sass())
@@ -49,7 +48,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
     .pipe(cache(imagemin({
       interlaced: true,
       progressive: true,
@@ -60,7 +59,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('html-minify', function() {
-  return gulp.src('src/*.html')
+  gulp.src('src/*.html')
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist'));
 });
@@ -72,11 +71,11 @@ gulp.task('css:minify', function () {
 });
 
 gulp.task('fonts', function () {
-  return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
+  gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('useref', ['html-minify'], function () {
-  return gulp.src('src/*.html')
+  gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cleanCss({ compatibility: 'ie8' })))
@@ -84,7 +83,7 @@ gulp.task('useref', ['html-minify'], function () {
 });
 
 gulp.task('clean:dist', function () {
-  return del.sync('dist');
+  del.sync('dist');
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
@@ -94,7 +93,7 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
 });
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'showcase', 'favicons', 'sass', 'css:minify', ['useref', 'images', 'fonts'], callback);
+  runSequence('clean:dist', 'sass', 'css:minify', 'showcase', ['useref', 'images', 'fonts'], callback);
 });
 
 gulp.task('default', function (callback) {
