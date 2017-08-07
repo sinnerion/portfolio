@@ -1,9 +1,9 @@
 @media screen and (max-width: 991px) {
   .my-info .about-me-list {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .my-info .about-me-list span {
-    font-size: 21px;
+    font-size: 2.1rem;
   }
 }
 
@@ -14,6 +14,9 @@
   .main-footer {
     margin-bottom: 0;
   }
+  .content .about-me-list {
+    margin-bottom: 40px;
+  }
   .main-menu .navbar-collapse {
     box-shadow: none;
     border-top: 1px solid $main-bg;
@@ -21,7 +24,7 @@
   .content .main-heading {
     padding-bottom: 5rem;
     line-height: 30px;
-    font-size: 25px;
+    font-size: 2.5rem;
   }
   .lang-btn {
     top: auto !important;
@@ -49,11 +52,11 @@
 
 @media screen and (max-width: 480px) {
   .content h1 {
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 
   .my-info .about-me li,
   .my-info .about-me span {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }

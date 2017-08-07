@@ -20,7 +20,7 @@
     color: $light-txt;
     background: $main-bg;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   .menu-btn:hover {
     background: lighten($main-bg, 4%);
@@ -31,7 +31,7 @@
   }
   a {
     color: $light-txt;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 60px;
     &:hover {
       color: $dark-txt;
