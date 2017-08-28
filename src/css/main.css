@@ -8187,7 +8187,7 @@ html {
 body {
   min-height: 100%;
   position: relative;
-  background: #58548b;
+  background: #3366CC;
   font-family: "robotoregular", sans-serif; }
 
 .container {
@@ -8209,9 +8209,9 @@ section {
   margin-bottom: 15px; }
 
 a {
-  color: #59ff59; }
+  color: #ff953e; }
   a:hover {
-    color: #7dff7d; }
+    color: #ffa962; }
 
 .example-full-img {
   cursor: pointer;
@@ -8237,7 +8237,7 @@ a {
   .example-description_txt {
     margin-bottom: 2rem; }
   .example-description a {
-    color: #59ff59; }
+    color: #ff953e; }
 
 .example-preview {
   position: relative;
@@ -8271,11 +8271,11 @@ a {
     float: none;
     margin: 10px auto;
     color: #f1f1f1;
-    background: #58548b;
+    background: #3366CC;
     text-transform: uppercase;
     font-size: 1.6rem; }
   .main-menu .menu-btn:hover {
-    background: #605c98; }
+    background: #4372d0; }
   .main-menu ul {
     display: table;
     width: 100%; }
@@ -8309,7 +8309,7 @@ a {
     font-size: 30px;
     line-height: 60px;
     margin: 0 0 30px;
-    border-bottom: 2px solid #59ff59; }
+    border-bottom: 2px solid #ff953e; }
   .content .section-heading {
     font-size: 2rem;
     margin: 0 0 35px; }
@@ -8344,7 +8344,7 @@ a {
     .content .my-photo img {
       text-align: center;
       max-width: 80%;
-      border: 2px solid #58548b;
+      border: 2px solid #3366CC;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px; }
@@ -8401,12 +8401,12 @@ a {
       text-decoration: none;
       color: #bebebe; }
     .content .about-me-list .email-link:hover {
-      color: #73ff73; }
+      color: #ffa358; }
 
 .summary-content {
   font-size: 1.8rem; }
   .summary-content .summary-title {
-    border-top: 1px solid #58548b;
+    border-top: 1px solid #3366CC;
     padding-top: 1rem; }
   .summary-content .skillbar {
     position: relative;
@@ -8434,7 +8434,7 @@ a {
     left: 0;
     width: 108px;
     color: #fff;
-    background: #58548b;
+    background: #3366CC;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-bottom-left-radius: 4px;
     -moz-border-radius-topleft: 3px;
@@ -8454,7 +8454,7 @@ a {
   .summary-content .skillbar-bar {
     height: 24px;
     width: 0;
-    background: #706ca6;
+    background: #5c85d6;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px; }
@@ -8463,11 +8463,11 @@ a {
   display: block;
   float: left;
   margin-bottom: 20px;
-  color: #63ff63;
+  color: #ff9b48;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 0 15px #68ff68;
-  border-radius: 5px; }
+  box-shadow: 0 0 10px #ff9d4d;
+  border-radius: 2px; }
   .my-projects .project-description {
     text-transform: uppercase;
     font-size: 1.6rem; }
@@ -8489,23 +8489,23 @@ a {
     -ms-transition: transform, .15s;
     -o-transition: transform, .15s;
     transition: transform, .15s;
-    color: #73ff73;
-    box-shadow: 0 0 10px #73ff73;
-    background: #4d4d4d; }
+    color: #ffa358;
+    box-shadow: 0 0 3px #ffa052;
+    background: #404040; }
   .my-projects .project img {
     width: 100%;
-    border-radius: 5px 5px 0 0; }
+    border-radius: 2px 2px 0 0; }
   .my-projects .project:nth-child(4n) {
     margin-right: 0; }
 
 .btn.portfolio_more-btn,
 .btn.portfolio_less-btn {
-  background: #58548b;
+  background: #3366CC;
   color: #fff; }
   .btn.portfolio_more-btn:hover, .btn.portfolio_more-btn:focus,
   .btn.portfolio_less-btn:hover,
   .btn.portfolio_less-btn:focus {
-    background: #6a66a2;
+    background: #547ed4;
     outline: none; }
 
 .main-footer {
@@ -8533,7 +8533,7 @@ a {
     margin-bottom: 40px; }
   .main-menu .navbar-collapse {
     box-shadow: none;
-    border-top: 1px solid #58548b; }
+    border-top: 1px solid #3366CC; }
   .content .main-heading {
     padding-bottom: 5rem;
     line-height: 30px;

@@ -28,11 +28,6 @@ gulp.task('browserSync', function () {
   });
 });
 
-// gulp.task('favicons', function() {
-//   return gulp.src('src/*.+(png|ico)')
-//       .pipe(gulp.dest('dist'));
-// });
-
 gulp.task('showcase', function () {
   return gulp.src('src/showcase/**/*')
       .pipe(gulp.dest('dist/showcase'));
@@ -48,20 +43,20 @@ gulp.task('sass', function () {
 });
 
 gulp.task('images', function () {
-  gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
-    .pipe(cache(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngout()]
-    })))
-    .pipe(gulp.dest('dist/img'));
+  gulp.src('src/img/**/*')
+      .pipe(cache(imagemin({
+        interlaced: true,
+        progressive: true,
+        svgoPlugins: [{ removeViewBox: false }],
+        use: [pngout()]
+      })))
+      .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('html-minify', function() {
-  gulp.src('src/*.html')
-      .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(gulp.dest('dist'));
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('css:minify', function () {
@@ -71,11 +66,11 @@ gulp.task('css:minify', function () {
 });
 
 gulp.task('fonts', function () {
-  gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
+  return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('useref', ['html-minify'], function () {
-  gulp.src('src/*.html')
+  return gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cleanCss({ compatibility: 'ie8' })))
@@ -92,8 +87,12 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
   gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
+});
+
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'sass', 'css:minify', 'showcase', ['useref', 'images', 'fonts'], callback);
+  runSequence('clean:dist', 'sass', 'css:minify', 'showcase', ['useref', 'fonts', 'images'], callback);
 });
 
 gulp.task('default', function (callback) {
