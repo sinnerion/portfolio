@@ -1,5 +1,6 @@
 CACHE MANIFEST
 CACHE:
+index.html
 style.css
 common.js
 js/libs/addEventListener-polyfill.js
@@ -7,4 +8,11 @@ js/libs/modernizr-custom.js
 img/*
 
 NETWORK:
+http://*
+https://*
 *
+
+SETTINGS
+# fast
+
+# 31.03.2018
