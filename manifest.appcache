@@ -1,7 +1,7 @@
 CACHE MANIFEST
 CACHE:
 index.html
-style.css
+css/style.css
 common.js
 js/libs/addEventListener-polyfill.js
 js/libs/modernizr-custom.js
