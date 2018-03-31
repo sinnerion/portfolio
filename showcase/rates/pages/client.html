@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 col-lg-8">
+        <nav class="nav top-nav justify-content-center justify-content-md-start justify-contenlgmd-start">
+          <a class="nav-link active" href="#">о рейтинге</a>
+          <a class="nav-link" href="#">новости</a>
+          <a class="nav-link" href="#">тендеры</a>
+        </nav>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <nav class="nav top-nav top-nav-user justify-content-center justify-content-md-end justify-content-lg-end">
+          <a class="nav-link" data-toggle="modal" data-target="#enter">вход</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#registration">регистрация</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main cabinet client">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7 col-lg-8">
+        <nav class="main-nav navbar navbar-toggleable-lg navbar-expand-xl navbar-light bg-light">
+          <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt=""></a>
+          <button class="navbar-toggler main-nav_burger" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav justify-content-end mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><span><strong>S</strong><em>eo</em><br> компании</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span><strong>W</strong><em>eb</em><br> студии</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span><strong>D</strong><em>itgital</em><br> компании</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span><strong>F</strong><em>reelance</em><br> специалисты</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-content">
+          <h1 class="main-heading">Личный кабинет представителя компании:</h1>
+          <div class="company-block-tabs">
+            <ul class="nav nav-pills justify-content-sm-start flex-xl-row" id="companyTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#tab-profile" aria-controls="tab-profile" data-toggle="tab" role="tab">настройка профиля</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tab-reviews" aria-controls="tab-reviews" data-toggle="tab" role="tab">мои
+                  <br> отзывы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tab-requests" aria-controls="tab-requests" data-toggle="tab" role="tab">мои
+                  <br> заявки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="company-block-tabs-content">
+            <div class="tab-content" id="companyTabContent">
+              <div class="tab-pane tab-profile fade show active" id="tab-profile" role="tabpanel" aria-labelledby="tab-profile-tab">
+                <form action="">
+                  <div class="tab-pane_heading">Настройка профиля пользователя</div>
+                  <div class="tab-profile-form d-flex justify-content-between flex-wrap">
+                    <label for="tab-profile-form_input-1" class="tab-profile-form_label">Ваше имя</label>
+                    <div class="tab-profile-form_field"><input value="Никита" type="text" id="tab-profile-form_input-1"></div>
+                    <label for="tab-profile-form_input-2" class="tab-profile-form_label">Ваш телефон</label>
+                    <div class="tab-profile-form_field"><input value="+7 (906)-626-66-63" type="text" id="tab-profile-form_input-2"></div>
+                    <label for="tab-profile-form_input-3" class="tab-profile-form_label">Ваш e-mail</label>
+                    <div class="tab-profile-form_field"><input value="79066266663@ya.ru" type="text" id="tab-profile-form_input-3"></div>
+                    <label for="tab-profile-form_select-1" class="tab-profile-form_label">Тип пользователя</label>
+                    <div class="tab-profile-form_field">
+                      <select name="" id="tab-profile-form_select-1">
+                        <option value="val-1">Заказчик услуг</option>
+                        <option value="Пользователь">Пользователь</option>
+                        <option value="val-2">Val-2</option>
+                        <option value="val-3">Val-3</option>
+                      </select>
+                    </div>
+                    <label for="tab-profile-form_input-5" class="tab-profile-form_label">Придумайте пароль</label>
+                    <div class="tab-profile-form_field tab-profile-form_password">
+                      <input value="ххххххх" type="password" id="tab-profile-form_input-5">
+                      <span class="d-none d-lg-block">нажмите для того, чтобы изменить</span>
+                    </div>
+                    <label for="tab-profile-form_select-2" class="tab-profile-form_label">Ваша должность</label>
+                    <div class="tab-profile-form_field">
+                      <select name="" id="tab-profile-form_select-2">
+                        <option value="Директор">Директор</option>
+                        <option value="Должность">Должность</option>
+                        <option value="val-2">Val-2</option>
+                        <option value="val-3">Val-3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="tab-pane_heading">Настройка оповещений</div>
+                  <div class="tab-profile-form d-flex justify-content-between flex-wrap">
+                    <label for="tab-profile-form_check-1" class="custom-checkbox tab-profile-form_check">
+                      <input id="tab-profile-form_check-1" type="checkbox">
+                      <span>Оповещать о новостях сайта</span>
+                    </label>
+                    <label for="tab-profile-form_check-2" class="custom-checkbox tab-profile-form_check">
+                      <input id="tab-profile-form_check-2" type="checkbox">
+                      <span>Оповещать о новых отзывах компании</span>
+                    </label>
+                    <label for="tab-profile-form_check-3" class="custom-checkbox tab-profile-form_check">
+                      <input id="tab-profile-form_check-3" type="checkbox">
+                      <span>Оповещать о новых заявках</span>
+                    </label>
+                    <div class="tab-profile-form_submit">
+                      <a href="#" class="btn btn-primary">Сохранить</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane tab-reviews fade" id="tab-reviews" role="tabpanel" aria-labelledby="tab-reviews-tab">
+                <div class="tab-pane_heading">Мои отзывы о компаниях</div>
+                <div class="tab-reviews-item d-flex justify-content-between flex-wrap">
+                  <div class="tab-reviews-item_user">
+                    <span class="icon-profile"></span>
+                    <p class="user-name">Сергей Федоров</p>
+                    <p class="user-post">топ менеджер компании ООО “Русь”</p>
+                    <div class="star-rating star-rating_disabled">
+                      <div class="star-rating__wrap">
+                        <input class="star-rating__input" id="star-rating-95" type="radio" name="rating-20" value="5">
+                        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-95" title="5 out of 5 stars"></label>
+                        <input class="star-rating__input" checked id="star-rating-94" type="radio" name="rating-20" value="4">
+                        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-94" title="4 out of 5 stars"></label>
+                        <input class="star-rating__input" id="star-rating-93" type="radio" name="rating-20" value="3">
+                        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-93" title="3 out of 5 stars"></label>
+                        <input class="star-rating__input" id="star-rating-92" type="radio" name="rating-20" value="2">
+                        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-92" title="2 out of 5 stars"></label>
+                        <input class="star-rating__input" id="star-rating-91" type="radio" name="rating-20" value="1">
+                        <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-91" title="1 out of 5 stars"></label>
+                      </div>
+                    </div>
+                    <span>(не плохая компания)</span>
+                  </div>
+                  <div class="tab-reviews-item_links">
+                    <span>сайт компании:</span>
+                    <a href="#">www.rusauto-sibirica-tut.ru</a>
+                    <p>Заказывал услугу: <a href="#">SEO,<br> продвижение сайта по позициям</a></p>
+                  </div>
+                  <div class="tab-reviews-ratings d-flex flex-wrap">
+                    <div class="tab-reviews-ratings_item">
+                      Професионализм <span>3 из 5</span>
+                      <div class="star-rating star-rating_disabled">
+                        <div class="star-rating__wrap">
+                          <input class="star-rating__input" id="star-rating-100" type="radio" name="rating-21"
+                                 value="5">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-100"
+                                 title="5 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-99" type="radio" name="rating-21"
+                                 value="4">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-99"
+                                 title="4 out of 5 stars"></label>
+                          <input class="star-rating__input" checked id="star-rating-98" type="radio" name="rating-21"
+                                 value="3">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-98"
+                                 title="3 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-97" type="radio" name="rating-21"
+                                 value="2">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-97"
+                                 title="2 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-96" type="radio" name="rating-21"
+                                 value="1">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-96"
+                                 title="1 out of 5 stars"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-reviews-ratings_item">
+                      Отчетность о работах <span>3 из 5</span>
+                      <div class="star-rating star-rating_disabled">
+                        <div class="star-rating__wrap">
+                          <input class="star-rating__input" id="star-rating-105" type="radio" name="rating-22"
+                                 value="5">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-105"
+                                 title="5 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-104" type="radio" name="rating-22"
+                                 value="4">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-104"
+                                 title="4 out of 5 stars"></label>
+                          <input class="star-rating__input" checked id="star-rating-103" type="radio" name="rating-22"
+                                 value="3">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-103"
+                                 title="3 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-102" type="radio" name="rating-22"
+                                 value="2">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-102"
+                                 title="2 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-101" type="radio" name="rating-22"
+                                 value="1">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-101"
+                                 title="1 out of 5 stars"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-reviews-ratings_item">
+                      Работа менеджера <span>3 из 5</span>
+                      <div class="star-rating star-rating_disabled">
+                        <div class="star-rating__wrap">
+                          <input class="star-rating__input" id="star-rating-110" type="radio" name="rating-23"
+                                 value="5">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-110"
+                                 title="5 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-109" type="radio"
+                                 name="rating-23" value="4">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-109"
+                                 title="4 out of 5 stars"></label>
+                          <input class="star-rating__input" checked id="star-rating-108" type="radio" name="rating-23"
+                                 value="3">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-108"
+                                 title="3 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-107" type="radio" name="rating-23"
+                                 value="2">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-107"
+                                 title="2 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-106" type="radio" name="rating-23"
+                                 value="1">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-106"
+                                 title="1 out of 5 stars"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-reviews-ratings_item">
+                      Результат работ <span>3 из 5</span>
+                      <div class="star-rating star-rating_disabled">
+                        <div class="star-rating__wrap">
+                          <input class="star-rating__input" id="star-rating-115" type="radio" name="rating-24"
+                                 value="5">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-115"
+                                 title="5 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-114" type="radio"
+                                 name="rating-24" value="4">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-114"
+                                 title="4 out of 5 stars"></label>
+                          <input class="star-rating__input" checked id="star-rating-113" type="radio" name="rating-24"
+                                 value="3">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-113"
+                                 title="3 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-112" type="radio" name="rating-24"
+                                 value="2">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-112"
+                                 title="2 out of 5 stars"></label>
+                          <input class="star-rating__input" id="star-rating-111" type="radio" name="rating-24"
+                                 value="1">
+                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-111"
+                                 title="1 out of 5 stars"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-reviews-txt">
+                    <p>
+                      Вышел на сайт данного провайдера и узнал номер телефона,позвонил и заключил с ними договор,оплатив полную стоимость.Вот тогда все и началось.Точнее закончилось.Повышения в рейтинге я не заметил, свой сайт так и не смог найти, да и прибавки в количестве пользователей на сайте не заметил.И решил позвонить в эту шаражкину контору.Мне пообещали что «работа полным ходом».Через месяц ничего так и не изменилось и я позвонил снова.Мне уже довольно грубо ответили, что я мешаю им работать и они без меня знают как им работать. В итоге я остался ободранным в финансово и не получившим раскрученного сайта.
+                    </p>
+                  </div>
+                </div>
+                <div class="tab-reviews-answers d-flex justify-content-between flex-wrap">
+                  <div class="tab-reviews-answers_back">
+                    <p>ответ от сотрудника компании</p>
+                    <a href="#"><span class="icon-back"></span></a>
+                  </div>
+                  <div class="tab-reviews-answers_actual">
+                    <div class="tab-reviews-answers_actual-heading">
+                      <span class="icon-company"></span>
+                      <p class="tab-reviews-answers_actual-company"><strong>К</strong>омпания "..........."</p>
+                      <p class="tab-reviews-answers_actual-name">Сергей</p>
+                    </div>
+                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от</p>
+                  </div>
+                </div>
+                <div class="tab-reviews-buttons d-flex justify-content-around justify-content-sm-end flex-wrap">
+                  <a href="#" class="btn btn-primary tab-reviews-buttons_btn">снять с публикации</a>
+                </div>
+              </div>
+              <div class="tab-pane tab-requests fade" id="tab-requests" role="tabpanel" aria-labelledby="tab-requests-tab">
+                <div class="tab-reviews-item d-flex justify-content-between flex-wrap">
+                  <div class="tab-reviews-item_user">
+                    <span class="icon-profile"></span>
+                    <p class="user-name">Сергей Федоров</p>
+                    <p class="user-post">топ менеджер компании ООО “Русь”</p>
+                  </div>
+                  <div class="tab-reviews-item_links">
+                    <span>сайт компании:</span>
+                    <a href="#">www.rusauto-sibirica-tut.ru</a>
+                  </div>
+                  <div class="tab-pane_heading tab-pane_heading-smaller">Заявка на <a href="#">продвижение сайта по позициям</a></div>
+                  <div class="company-block-data d-flex flex-wrap">
+                    <div class="company-block-data_item">
+                      <span class="icon-money"></span>
+                      <p>Бюджет: <br> <a href="#">50 000 - 100 000 руб.</a></p>
+                    </div>
+                    <div class="company-block-data_item">
+                      <span class="icon-site-theme"></span>
+                      <p>Тематика сайта: <br> <a href="#">авто</a></p>
+                    </div>
+                    <div class="company-block-data_item">
+                      <span class="icon-site-type"></span>
+                      <p>Тип сайта: <br> <a href="#">интернет магазин</a></p>
+                    </div>
+                  </div>
+                  <div class="tab-reviews-txt">
+                    <p>
+                      Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+                    </p>
+                  </div>
+                  <div class="company-block-data d-flex flex-wrap">
+                    <div class="company-block-data_item">
+                      <span class="icon-technology"></span>
+                      <p>+7 (903) 118-20-98</p>
+                    </div>
+                    <div class="company-block-data_item">
+                      <span class="icon-email"></span>
+                      <p>serg.gorely@ya.ru</p>
+                    </div>
+                    <div class="company-block-data_item">
+                      <span class="icon-adobe"></span>
+                      <p><a href="#"><ins>технические требования к подрядчику</ins></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-reviews-buttons d-flex justify-content-between justify-content-sm-end flex-wrap">
+                  <a href="#" class="btn btn-primary tab-reviews-buttons_btn">закрыть заявку</a>
+                  <a href="#" class="btn btn-primary tab-reviews-buttons_btn">редактировать заявку</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4">
+        <aside class="sidebar">
+          <div class="sidebar-block">
+            <p class="sidebar-block_title"><strong>П</strong><em>ривет!</em> - от модератора</p>
+            <p class="sidebar-block_txt">
+              Дорогие друзья и гости портала Рейтинг Метрика, хочу Вас заверить что информация предлагаемая на сайте ни
+              в коем случае не призывает бездумно верить в нее. Но тем не менее позволяет задуматься и принять
+              правильное решение в сложной ситуации выбора качественного исполнителя. Если кто то хочет предложить что
+              то интерсное или высказаться то милости просим форма ниже.
+            </p>
+            <div class="sidebar-block_buttons d-flex justify-content-end">
+              <a href="#" class="btn btn-primary sidebar-btn" data-toggle="modal" data-target="#writeToModerator">Написать модератору</a>
+            </div>
+          </div>
+          <div class="sidebar-block sidebar-block-with-img">
+            <div class="sidebar-block_img"><img src="../img/sidebar-img-1.png" alt=""></div>
+            <p class="sidebar-block_title"><strong>К</strong><em>омпетентная помощь</em> <span>в подборе и контроле подрядчика</span>
+            </p>
+            <div class="sidebar-block_buttons d-flex justify-content-end">
+              <a href="#" class="btn btn-primary sidebar-btn">Элементарно, Ватсон!</a>
+            </div>
+          </div>
+          <div class="sidebar-block sidebar-block-with-img">
+            <p class="sidebar-block_title"><strong>НЕ</strong> <em>останься с носом</em>
+              <span>оставь заявку на тендер</span></p>
+            <div class="sidebar-block_img"><img src="../img/sidebar-img-2.png" alt=""></div>
+            <div class="sidebar-block_buttons d-flex justify-content-end">
+              <a href="#" class="btn btn-primary sidebar-btn">Оставить <br> заявку</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modals -->
+<div class="modal fade" id="writeToModerator" tabindex="-1" role="dialog" aria-labelledby="writeToModeratorLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="writeToModeratorLabel" >Написать сообщение к модератору</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="add-message d-flex justify-content-between flex-wrap">
+          <div class="add-message_title">Цель письма:</div>
+          <div class="add-message_block input-block">
+            <select name="add-message_select" id="add-message_select" class="add-message_select">
+              <option value="Option-4">Выберите из списка</option>
+              <option value="Option-1">Хочу пожаловаться</option>
+              <option value="Option-2">Есть предложение</option>
+              <option value="Option-3">По рекламе на портале</option>
+            </select>
+          </div>
+          <div class="add-message_block input-block">
+            <input type="text" class="add-message_input" placeholder="Ваш email">
+          </div>
+          <div class="add-message_block input-block">
+            <input type="text" class="add-message_input" placeholder="Ваше имя">
+          </div>
+          <div class="add-message_block input-block">
+            <input type="text" class="add-message_input" placeholder="Ваш телефон">
+          </div>
+          <div class="add-message_block textarea-block">
+            <div class="field-wrapper">
+              <textarea name="add-message_textarea" id="add-message_textarea" cols="60" rows="4" class="add-message_textarea"></textarea>
+              <span>Текст сообщения</span>
+            </div>
+          </div>
+        </form>
+        <form action="" method="POST" class="modal-captcha d-flex justify-content-between flex-wrap">
+          <div class="modal-captcha-item text-center text-sm-left text-md-left text-lg-left">
+            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+          </div>
+          <div class="modal-captcha-item add-message_btn text-center text-sm-right text-md-right text-lg-right">
+            <input class="btn btn-primary" type="submit" value="Отправить сообщение">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="registrationLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationLabel">Регистрация на сайте</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="registration-form d-flex justify-content-between flex-wrap">
+          <label for="registration-form_input-1" class="registration-form_label">Ваше имя</label>
+          <div class="registration-form_field"><input type="text" id="registration-form_input-1"></div>
+          <label for="registration-form_input-2" class="registration-form_label">Ваш телефон</label>
+          <div class="registration-form_field"><input type="text" id="registration-form_input-2"></div>
+          <label for="registration-form_input-3" class="registration-form_label">Ваш e-mail</label>
+          <div class="registration-form_field"><input type="text" id="registration-form_input-3"></div>
+          <label for="registration-form_select" class="registration-form_label">Тип пользователя</label>
+          <div class="registration-form_field">
+            <select name="registration-form_select" id="registration-form_select" class="registration-form_select">
+              <option value="Выберите нужное">Выберите нужное</option>
+              <option value="Val-1">Заказчик услуг</option>
+              <option value="Val-2">Представитель компании</option>
+              <option value="Val-3">Частный специалист</option>
+            </select>
+          </div>
+          <label for="registration-form_input-5" class="registration-form_label">Придумайте пароль</label>
+          <div class="registration-form_field"><input type="password" id="registration-form_input-5"></div>
+          <div class="registration-form-submit d-flex justify-content-between flex-wrap">
+            <div class="registration-form-submit_btn">
+              <a href="#" class="btn btn-primary">Зарегистрироваться</a>
+            </div>
+            <label for="registration-form-submit_check" class="custom-checkbox registration-form-submit_check">
+              <input id="registration-form-submit_check" type="checkbox">
+              <span>Согласен на обработку персональных данных</span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="enter" tabindex="-1" role="dialog" aria-labelledby="enterLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enterLabel">Вход в личный кабинет</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="registration-form d-flex justify-content-between flex-wrap">
+          <label for="registration-form_input-6" class="registration-form_label">Ваш e-mail</label>
+          <div class="registration-form_field"><input type="text" id="registration-form_input-6"></div>
+          <label for="registration-form_input-7" class="registration-form_label">Ваш пароль</label>
+          <div class="registration-form_field"><input type="text" id="registration-form_input-7"></div>
+          <div class="registration-form-submit d-flex justify-content-center flex-wrap">
+            <div class="registration-form-submit_btn">
+              <a href="#" class="btn btn-primary">Войти</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modals END -->
+
+<script src="../js/vendor.min.js"></script>
+<script src="../js/common.js"></script>
+</body>
+</html>
