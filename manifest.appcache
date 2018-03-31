@@ -2,10 +2,19 @@ CACHE MANIFEST
 CACHE:
 index.html
 css/style.css
-js/common.js
+common.js
 js/libs/addEventListener-polyfill.js
 js/libs/modernizr-custom.js
-img/*
+img/my-photo-min.jpg
+img/artcapital-min.png
+img/bandr-min.png
+img/ritual-rf-min.png
+img/bcoptima-min.png
+img/voltenopt-min.png
+img/rates-min.png
+img/ipopo-min.png
+img/smarttoys-mob-min.png
+img/cuda-min.png
 
 NETWORK:
 http://*
