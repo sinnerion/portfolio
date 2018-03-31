@@ -1,0 +1,4365 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <meta name="csrf-param" content="_csrf">
+  <meta name="csrf-token" content="cjJKd1hzTldCaGdFOTUbZCdhBRMQMiUtRkAkRR0WPh8.eA4cISN6IA==">
+  <title>BonToy</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <link href="assets/65b8aa86/css/bootstrap.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <script src="assets/5c5bc5b2/jquery.js"></script>
+  <script src="assets/110b58/yii.js"></script>
+  <script src="assets/65b8aa86/js/bootstrap.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/flexibility.js"></script>
+</head>
+<body>
+<!--Popups-->
+
+<div class="modal fade" id="popup-price" tabindex="-1" role="dialog" aria-labelledby="modalLabel-1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times"></i></span>
+        </button>
+        <h4 class="modal-title" id="modalLabel-1">Показать сначала</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled">
+          <li><label><input type="checkbox"/><span class="label-txt">Популярные</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дорогие</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дешёвые</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Популярные</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дорогие</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дешёвые</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Популярные</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дорогие</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дешёвые</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Популярные</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дорогие</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дешёвые</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Популярные</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дорогие</span></label></li>
+          <li><label><input type="checkbox"/><span class="label-txt">Дешёвые</span></label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="popup-filter" tabindex="-1" role="dialog" aria-labelledby="modalLabel-2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fa fa-times"></i></span>
+      </button>
+      <div class="modal-body">
+        <ul class="nav navbar-nav popup-catalog_nav">
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Цена <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special popup-filter_dropdown">
+              <div class="price-range"><!--price-range-->
+                <div class="price-range_body clearfix">
+                  <input type="text" class="price-in_small" value="10000" id="min-price-1">
+                  <span> - </span>
+                  <input type="text" class="price-in_small" value="50000" id="max-price-1">
+                  <span>грн.</span>
+                  <a href="/price/1-50000" class="price-link my-btn" id="price-1"></a>
+                  <div id="slider-1"></div>
+                </div>
+                <script>
+                  $('#slider-1').slider({
+                    range: true,
+                    min: 1,
+                    max: 75000,
+                    values: [10000, 50000],
+                    slide: function (event, ui) {
+                      $('.price-link').each(function () {
+                        var h = $(this).attr('href').split('/price/')[0];
+                        h = h + '/price/' + ui.values[0] + '-' + ui.values[1];
+                        $(this).attr('href', h);
+                      });
+
+                      $('#min-price-1').val(ui.values[0]);
+                      $('#max-price-1').val(ui.values[1]);
+                    }
+                  });
+                </script>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Возраст <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Бренд <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Цена <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special popup-filter_dropdown">
+              <div class="price-range"><!--price-range-->
+                <div class="price-range_body clearfix">
+                  <input type="text" class="price-in_small" value="10000" id="min-price-2">
+                  <span> - </span>
+                  <input type="text" class="price-in_small" value="50000" id="max-price-2">
+                  <span>грн.</span>
+                  <a href="/price/1-50000" class="price-link my-btn" id="price-2"></a>
+                  <div id="slider-2"></div>
+                </div>
+                <script>
+                  $('#slider-2').slider({
+                    range: true,
+                    min: 1,
+                    max: 75000,
+                    values: [10000, 50000],
+                    slide: function (event, ui) {
+                      $('.price-link').each(function () {
+                        var h = $(this).attr('href').split('/price/')[0];
+                        h = h + '/price/' + ui.values[0] + '-' + ui.values[1];
+                        $(this).attr('href', h);
+                      });
+
+                      $('#min-price-2').val(ui.values[0]);
+                      $('#max-price-2').val(ui.values[1]);
+                    }
+                  });
+                </script>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Возраст <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Бренд <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Цена <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special popup-filter_dropdown">
+              <div class="price-range"><!--price-range-->
+                <div class="price-range_body clearfix">
+                  <input type="text" class="price-in_small" value="10000" id="min-price-3">
+                  <span> - </span>
+                  <input type="text" class="price-in_small" value="50000" id="max-price-3">
+                  <span>грн.</span>
+                  <a href="/price/1-50000" class="price-link my-btn" id="price-3"></a>
+                  <div id="slider-3"></div>
+                </div>
+                <script>
+                  $('#slider-3').slider({
+                    range: true,
+                    min: 1,
+                    max: 75000,
+                    values: [10000, 50000],
+                    slide: function (event, ui) {
+                      $('.price-link').each(function () {
+                        var h = $(this).attr('href').split('/price/')[0];
+                        h = h + '/price/' + ui.values[0] + '-' + ui.values[1];
+                        $(this).attr('href', h);
+                      });
+
+                      $('#min-price-3').val(ui.values[0]);
+                      $('#max-price-3').val(ui.values[1]);
+                    }
+                  });
+                </script>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Возраст <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Бренд <span>Lorem ipsum dolor...</span></a>
+            <ul class="dropdown-menu_special filter_price-list">
+              <li><label><input type="checkbox"/><span class="label-txt">5 Stars</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">AFO</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Alzipmat</span></label></li>
+              <li><label><input type="checkbox"/><span class="label-txt">Cosmo</span></label></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="popup-catalog" tabindex="-1" role="dialog" aria-labelledby="modalLabel-3"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times"></i></span>
+        </button>
+        <h4 class="modal-title modal-catalog_title" id="modalLabel-3">Каталог товаров Repka.ua</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav navbar-nav popup-catalog_nav">
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Детские коляски</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Детские игрушки</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Игрушки из
+                мультфильмов</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Интерактивные
+                игрушки</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Мягкие игрушки</a></li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Конструкторы</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Электрические</a></li>
+                  <li><a href="#">Строительные</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Мягкие игрушки,
+            фигурки</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Игрушки для
+            новорожденных</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Тематические игровые
+            наборы</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Тематические игровые
+            наборы</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Игрушки для
+            ванной</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Интерактивные
+            игрушки</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Музыкальные
+            игрушки</a>
+            <ul class="dropdown-menu_special">
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-special"><a href="#" class="dropdown-toggle_special" data-toggle="dropdown-special"
+                                              role="button" aria-haspopup="true" aria-expanded="false">Lorem</a>
+                <ul class="dropdown-menu_special">
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                  <li><a href="#">Lorem</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-search" id="popup-search">
+  <div class="popup-search_underlay"></div>
+  <div class="search-input_open">
+    <div class="market-search">
+      <form method="get" action="/category/search">
+        <input class="market-search_input" type="search" name="s_market" id="popup_market-search"
+               placeholder="Что вы хотите найти?">
+        <input class="market-search_submit" type="submit" value="Найти">
+      </form>
+    </div>
+  </div>
+</div>
+<!--    header begin      -->
+<header class="header">
+  <div class="visible-md-block visible-lg-block">
+    <div class="header__top">
+      <div class="container">
+        <div class="row">
+          <ul class="top-menu">
+            <li class="top-menu__item">
+              <a href="http://www.ipopo.com/rus/ob_ipopo.html">
+                Об Ipopo
+              </a>
+            </li>
+            <li class="top-menu__item">
+              <a href="http://www.ipopo.com/rus/schastlivyj_istorii.html">
+                Счастливые истории
+              </a>
+            </li>
+            <li class="top-menu__item">
+              <a href="http://www.ipopo.com/rus/postavschiki_horoshego_nastroeniya.html">
+                Поставщики хорошего настроения
+              </a>
+            </li>
+            <li class="top-menu__item">
+              <a href="http://www.ipopo.com/rus/office_ipopo.html">
+                Офис Ipopo
+              </a>
+            </li>
+          </ul>
+
+          <ul class="sets">
+            <li class="sets__item">
+              <i class="icon-planet"></i>
+              <span>Выберите страну:</span>
+              <a class="arm-link" id="js-btn-fall-countr">
+                <span>Украина</span>
+              </a>
+              <ul class="fall fall_where">
+                <li class="fall__item">
+                  <a onclick="setCountry(2,'Россия')" class="arm-link">
+                    <span>Россия</span>
+                  </a>
+                </li>
+                <li class="fall__item">
+                  <a onclick="setCountry(3,'Белорусcия')" class="arm-link">
+                    <span>Белорусcия</span>
+                  </a>
+                </li>
+                <li class="fall__item">
+                  <a onclick="setCountry(4,'Казахстан')" class="arm-link">
+                    <span>Казахстан</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sets__item">
+              <i class="icon-dia-bubble"></i>
+              <a class="arm-link" id="js-btn-fall-lang">
+                <span>Русский</span>
+              </a>
+              <ul class="fall">
+                <li class="fall__item">
+                  <a href="/ukr" class="arm-link">
+                    <span>Українська</span>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="header__main col-md-12 clearfix">
+        <div class="container">
+          <div class="row">
+            <a href="/" class="logo col-xs-6 no-padding">
+              <img class="icon-logo img-responsive" src="img/svg/logo.svg">
+              <div class="main-logo_title">
+                Агенство полезных подарков
+              </div>
+            </a>
+
+            <div class="visible-md-block visible-lg-block">
+              <div class="menu-block-wrap ">
+                <div class="menu-block">
+                  <div class="menu-block__wrapper">
+
+                  </div>
+                  <a href="/wishlist.html" class="menu-block__in">
+                    <div class="menu-block__content">
+                      <i class="menu-block__icon icon-cloud"></i>
+                      <span>Создай вишлист</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="menu-block-wrap is-turned is-pink">
+                <div class="menu-block">
+                  <div class="menu-block__wrapper">
+
+                  </div>
+                  <a href="http://www.ipopo.com/akcii.html" class="menu-block__in">
+                    <div class="menu-block__content">
+                      <i class="menu-block__icon icon-love"></i>
+                      <span>Акции конкурсы</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="menu-block-wrap is-yellow">
+                <div class="menu-block">
+                  <div class="menu-block__wrapper">
+
+                  </div>
+                  <a href="http://www.ipopo.com/card.html" class="menu-block__in">
+                    <div class="menu-block__content">
+                      <i class="menu-block__icon icon-book"></i>
+                      <span>Отправляй открытки</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="menu-block-wrap is-turned is-blue">
+                <div class="menu-block">
+                  <div class="menu-block__wrapper">
+
+                  </div>
+                  <a href="http://www.ipopo.com/card.html" class="menu-block__in">
+                    <div class="menu-block__content">
+                      <i class="menu-block__icon icon-wl"></i>
+                      <span>вернуться в&nbsp;вишлист</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="visible-small pull-right no-padding col-xs-6">
+              <div class="menu-trigger_small">
+                <div class="menu-trigger_small-wrapper"></div>
+                <a href="#" class="menu-trigger menu-trigger_small-link">
+                  <div class="menu-trigger_small-content">
+                    <span>Меню</span>
+                    <i class="menu-block__icon icon-menu"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave visible-large"></div>
+</header>
+
+<div class="js-menu_underlay hidden"></div>
+<div class="menu js-menu">
+  <div class="menu__item is-ipopo">
+    <div id="form-close"><i class="icon-close-color"></i></div>
+    <div class="menu__wrap">
+      <a href="#">
+        <i class="menu-block__icon icon-cloud"></i>
+        <span>Создай вишлист</span>
+      </a>
+
+    </div>
+  </div>
+  <div class="menu__item is-pink">
+    <div class="menu__wrap">
+      <a href="#">
+        <i class="menu-block__icon icon-love"></i>
+        <span>Акции конкурсы</span>
+      </a>
+
+    </div>
+  </div>
+  <div class="menu__item is-yellow">
+    <div class="menu__wrap">
+      <a href="#">
+        <i class="menu-block__icon icon-book"></i>
+        <span>Отправляй открытки</span>
+      </a>
+
+    </div>
+  </div>
+  <div class="menu__item is-blue">
+    <div class="menu__wrap">
+      <div class="user">
+        <div class="user__name" id="mob_link_profile_box">
+          <input type="hidden" value="" id="mob_link_profile">
+          <a href="#" class="user__name">
+            <span>Sam Smith</span>
+          </a>
+          <a id="wl_name_href_mob" href="#" class="user__name">
+            <span id="wl_name_mob">My Wishlist</span>
+          </a>
+        </div>
+        <div class="clearfix">
+          <div class="user__info">
+            <div href="" class="user__link">
+              <i class="user__icon icon-present-white"></i>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="user__info">
+            <div href="" class="user__link">
+              <i class="user__icon icon-card-white"></i>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu__item is-ipopo text-center">
+    <div class="menu__wrap">
+      <a href="#">
+        <span>Вход</span>
+      </a>
+
+    </div>
+  </div>
+  <div class="menu_info">
+    <a class="menu__element menu_link" href="http://www.ipopo.com/rus/ob_ipopo.html">
+      <div class="menu__wrap">Об Ipopo</div>
+    </a>
+    <a class="menu__element menu_link" href="http://www.ipopo.com/rus/schastlivyj_istorii.html">
+      <div class="menu__wrap">Счастливые истории</div>
+    </a>
+    <a class="menu__element menu_link" href="http://www.ipopo.com/rus/postavschiki_horoshego_nastroeniya.html">
+      <div class="menu__wrap">Поставщики хорошего настроения</div>
+    </a>
+    <a class="menu__element dropdown" id="js-btn-fall-countr">
+      <div class="menu__wrap"><i class="small-icon icon-planet"></i>
+        <!--            <span>Выберите страну:</span>-->
+        <span>Украина</span>
+      </div>
+    </a>
+    <ul class="fall fall_where">
+      <li class="fall__item">
+        <a onclick="setCountry(2,'Россия')" class="arm-link menu__element ">
+          <div class="menu__wrap"><span>Россия</span></div>
+        </a>
+      </li>
+      <li class="fall__item">
+        <a onclick="setCountry(3,'Белорусcия')" class="arm-link menu__element ">
+          <div class="menu__wrap"><span>Белорусcия</span></div>
+        </a>
+      </li>
+      <li class="fall__item">
+        <a onclick="setCountry(4,'Казахстан')" class="arm-link menu__element ">
+          <div class="menu__wrap"><span>Казахстан</span></div>
+        </a>
+      </li>
+    </ul>
+    <a class="menu__element dropdown" id="js-btn-fall-lang">
+      <div class="menu__wrap"><i class="small-icon icon-dia-bubble"></i>
+        <span>Русский</span></div>
+    </a>
+    <ul class="fall">
+      <li class="fall__item">
+        <a href="/ukr" class="menu__element arm-link">
+          <div class="menu__wrap"><span>Українська</span></div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+<section id="menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 cat-header_wrap no-padding">
+        <div class="cat-header clearfix">
+          <div class="visible-large col-md-3 no-padding"><a href="#" class="shop_cat-trigger cat-trigger">Каталог
+            товаров</a></div>
+          <div class="cat-header_small cat-header_small-btn no-padding col-lg-2 col-md-3 col-sm-8 col-xs-8">
+            <button type="button" class="my-btn cat-trigger_small visible-small btn btn-primary btn-lg"
+                    data-toggle="modal" data-target="#popup-catalog">Каталог <i class="fa fa-angle-down"></i></button>
+          </div>
+          <div class="visible-large col-md-9">
+            <div class="market-search">
+              <form method="get" action="/category/search">
+                <input class="market-search_input" type="search" name="market-search" id="market-search"
+                       placeholder="Что вы хотите найти?">
+                <input class="market-search_submit" type="submit" value="Найти">
+              </form>
+            </div>
+          </div>
+          <div class="cat-header_small cat-header_small-right visible-small col-sm-4 col-xs-4 no-padding text-right">
+            <ul class="list-unstyled">
+              <li><a id="search-small" class="search-small" href="#"><img src="img/search-w.png" alt=""/></a></li>
+              <li><a class="nav-trigger_small" href="#"><img src="img/svg/cloud-small.svg" alt=""/></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-2 pull-right">
+            <!--                        <a href="#" class="to_wl">Вернуться в вишлист</a>-->
+          </div>
+          <div class="col-sm-12 no-padding">
+            <div class="catalogue" style="display: none;">
+              <ul id="catalogue" class="catalog">
+                <li>
+                  <a href="/category/461" class="
+    childs">
+                    Детские коляски
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/462" class="
+    childs">
+                        Прогулочные коляски
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/466" class="
+    ">
+                            Коляски-книжки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/467" class="
+    ">
+                            Коляски-трости </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/463" class="
+    childs">
+                        Универсальные коляски
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/468" class="
+    ">
+                            Коляски 2 в 1 </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/469" class="
+    ">
+                            Коляски 3 в 1 </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/470" class="
+    ">
+                            Коляски трансформеры </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/464" class="
+    ">
+                        Коляски для двойни </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/465" class="
+    childs">
+                        Аксессуары для колясок
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/471" class="
+    ">
+                            Дождевики </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/472" class="
+    ">
+                            Сумки для колясок </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/473" class="
+    ">
+                            Люльки для колясок </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/474" class="
+    childs">
+                    Мебель для детской
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/475" class="
+    childs">
+                        Детские кровати
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/484" class="
+    ">
+                            Для новорожденных </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/485" class="
+    ">
+                            Колыбели </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/486" class="
+    ">
+                            Кровать-трасформер </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/476" class="
+    ">
+                        Детские матрасы </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/477" class="
+    ">
+                        Пеленаторы </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/478" class="
+    childs">
+                        Стульчик для кормления
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/487" class="
+    ">
+                            Стульчик трансформер </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/488" class="
+    ">
+                            Высокие стульчики </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/479" class="
+    childs">
+                        Манежи и кровати-манежи
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/489" class="
+    ">
+                            Манежи </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/490" class="
+    ">
+                            Кровати манежи </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/480" class="
+    childs">
+                        Кресла качалки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/491" class="
+    ">
+                            Качели </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/492" class="
+    ">
+                            Шезлонги </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/493" class="
+    ">
+                            Прыгунки </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/481" class="
+    ">
+                        Постельные комплекты </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/482" class="
+    ">
+                        Светильники и ночники </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/483" class="
+    ">
+                        Ящики для игрушек </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/696" class="
+    ">
+                        Шведские стенки </a>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/494" class="
+    childs">
+                    Для мам и малышей
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/495" class="
+    childs">
+                        Посуда и аксессуары для кормления
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/506" class="
+    ">
+                            Поильники </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/507" class="
+    ">
+                            Столовые приборы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/508" class="
+    ">
+                            Тарелки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/509" class="
+    ">
+                            Чашки-непроливайки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/691" class="
+    ">
+                            Аксессуары для кормления </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/496" class="
+    childs">
+                        Ингаляторы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/510" class="
+    ">
+                            Соляные лампы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/511" class="
+    ">
+                            Ультразвуковые ингаляторы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/512" class="
+    ">
+                            Компрессорные ингаляторы </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/497" class="
+    childs">
+                        Молокоотсосы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/513" class="
+    ">
+                            Ручные молокоотсосы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/514" class="
+    ">
+                            Электрические молокоотсосы </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/498" class="
+    childs">
+                        Подогреватели и стерилизаторы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/515" class="
+    ">
+                            Подогреватели для бутылочек </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/516" class="
+    ">
+                            Стерилизаторы для бутылочек </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/499" class="
+    childs">
+                        Радио и видео няни
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/517" class="
+    ">
+                            Радио няни </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/518" class="
+    ">
+                            Видео няни </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/500" class="
+    childs">
+                        Детские весы и термометры
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/583" class="
+    ">
+                            Детские весы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/584" class="
+    ">
+                            Термометры </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/501" class="
+    childs">
+                        Косметика для мам и малышей
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/519" class="
+    ">
+                            Детский шампунь </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/520" class="
+    ">
+                            Крем от растяжек </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/521" class="
+    ">
+                            Детский гель </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/502" class="
+    ">
+                        Подгузники </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/503" class="
+    ">
+                        Кенгуру и слинги </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/504" class="
+    childs">
+                        Соски и пустышки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/522" class="
+    ">
+                            Соски </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/523" class="
+    ">
+                            Пустышки </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/505" class="
+    childs">
+                        Увлажнители воздуха
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/524" class="
+    ">
+                            Очистители воздуха </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/525" class="
+    ">
+                            Ультразвуковые увлажнители </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/526" class="
+    ">
+                            Паровые увлажнители </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/685" class="
+    ">
+                        Бутылочки для кормления </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/687" class="
+    ">
+                        Ванночки </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/688" class="
+    ">
+                        Горшки </a>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/527" class="
+    childs">
+                    Развитие и творчество
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/528" class="
+    childs">
+                        Наборы для рисования
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/532" class="
+    ">
+                            Краски </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/533" class="
+    ">
+                            Мольберты и холсты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/534" class="
+    ">
+                            Раскраски и альбомы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/535" class="
+    ">
+                            Фломастеры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/536" class="
+    ">
+                            Цветные карандаши </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/529" class="
+    childs">
+                        Наборы для творчества
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/537" class="
+    ">
+                            Бисер и бусины </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/538" class="
+    ">
+                            Гравюра для детей </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/539" class="
+    ">
+                            Наборы для лепки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/540" class="
+    ">
+                            Наклейки для творчества </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/541" class="
+    ">
+                            Детские оригами </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/542" class="
+    ">
+                            Наборы фокусов </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/543" class="
+    ">
+                            Песок для рисования </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/544" class="
+    ">
+                            Детское рукоделие </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/545" class="
+    ">
+                            Мозаика для детей </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/530" class="
+    childs">
+                        Наборы для опытов
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/546" class="
+    ">
+                            Детские телескопы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/547" class="
+    ">
+                            Детские микроскопы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/548" class="
+    ">
+                            Юный физик </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/549" class="
+    ">
+                            Юный химик </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/531" class="
+    childs">
+                        Настольные игры
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/550" class="
+    ">
+                            Детское лото </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/551" class="
+    ">
+                            Детское домино </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/552" class="
+    ">
+                            Монополия </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/553" class="
+    ">
+                            Настольный футбол </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/554" class="
+    ">
+                            Экономические игры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/555" class="
+    ">
+                            Стратегические игры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/556" class="
+    ">
+                            Карточные игры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/557" class="
+    ">
+                            Логические игры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/558" class="
+    ">
+                            Головоломки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/559" class="
+    ">
+                            Пазлы </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/560" class="
+    childs">
+                    Транспорт для детей
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/561" class="
+    childs">
+                        Велосипеды
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/567" class="
+    ">
+                            Двухколесные велосипеды </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/568" class="
+    ">
+                            Трехколесные велосипеды </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/569" class="
+    ">
+                            Беговелы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/570" class="
+    ">
+                            Электровелосипеды </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/692" class="
+    ">
+                            Велосиденья </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/693" class="
+    ">
+                            Аксессуары для велосипедов </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/562" class="
+    childs">
+                        Ролики
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/571" class="
+    ">
+                            Раздвижные ролики </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/563" class="
+    childs">
+                        Самокаты
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/572" class="
+    ">
+                            Двухколесные </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/573" class="
+    ">
+                            Трехколесные </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/564" class="
+    childs">
+                        Зимний транспорт
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/574" class="
+    ">
+                            Санки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/575" class="
+    childs">
+                            Коньки
+                            <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                          </a>
+                          <ul class="catalog">
+                            <li>
+                              <a href="/category/577" class="
+    ">
+                                Раздвижные коньки </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/578" class="
+    ">
+                                Фигурные коньки </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/579" class="
+    ">
+                                Хоккейные коньки </a>
+
+                            </li>
+                          </ul>
+
+                        </li>
+                        <li>
+                          <a href="/category/576" class="
+    ">
+                            Снегокаты </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/565" class="
+    childs">
+                        Электромобили
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/580" class="
+    ">
+                            Квадроциклы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/581" class="
+    ">
+                            Мотоциклы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/582" class="
+    ">
+                            Машины </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/686" class="
+    ">
+                            Чудомобили </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/566" class="
+    ">
+                        Ходунки </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/694" class="
+    ">
+                        Скейтборды </a>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/585" class="
+    childs">
+                    Детские игрушки
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/586" class="
+    childs">
+                        Игрушки из мультфильмов
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/603" class="
+    ">
+                            Cars (Тачки) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/604" class="
+    ">
+                            Fairies (Феи) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/605" class="
+    ">
+                            Monster High </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/606" class="
+    ">
+                            My Little Pony (Пони) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/607" class="
+    ">
+                            TMNT (Черепашки-ниндзя) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/608" class="
+    ">
+                            Transformers (Трансформеры) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/609" class="
+    ">
+                            Winx (Винкс) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/610" class="
+    ">
+                            Planes (Литачки) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/611" class="
+    ">
+                            Hello Kitty </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/612" class="
+    ">
+                            Chuggington (Чаггингтон) </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/613" class="
+    ">
+                            Как приручить дракона </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/614" class="
+    ">
+                            Щенячий патруль </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/615" class="
+    ">
+                            Peppa </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/587" class="
+    childs">
+                        Детское оружие
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/616" class="
+    ">
+                            Наборы оружия </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/617" class="
+    ">
+                            Бластеры </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/588" class="
+    childs">
+                        Для самых маленьких
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/618" class="
+    ">
+                            Сортеры </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/619" class="
+    ">
+                            Пирамидки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/620" class="
+    ">
+                            Кубики </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/621" class="
+    ">
+                            Погремушки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/622" class="
+    ">
+                            Мобили </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/623" class="
+    ">
+                            Игрушки для ванной </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/624" class="
+    ">
+                            Прорезыватели </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/625" class="
+    ">
+                            Музыкальные игрушки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/626" class="
+    ">
+                            Развивающие коврики </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/627" class="
+    ">
+                            Подвески и дуги </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/628" class="
+    ">
+                            Каталки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/699" class="
+    ">
+                            Игрушки для песочницы </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/589" class="
+    childs">
+                        Интерактивные игрушки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/629" class="
+    ">
+                            Интерактивные плакаты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/630" class="
+    ">
+                            Планшеты и телефоны </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/631" class="
+    ">
+                            Компьютеры и ноутбуки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/632" class="
+    ">
+                            Интерактивные животные </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/590" class="
+    childs">
+                        Конструкторы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/633" class="
+    ">
+                            Для мальчиков </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/634" class="
+    ">
+                            Для девочек </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/635" class="
+    ">
+                            Battat </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/636" class="
+    ">
+                            Zoob </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/637" class="
+    ">
+                            Знаток </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/638" class="
+    childs">
+                            Lego
+                            <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                          </a>
+                          <ul class="catalog">
+                            <li>
+                              <a href="/category/665" class="
+    ">
+                                Lego City </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/666" class="
+    ">
+                                Lego Friends </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/667" class="
+    ">
+                                Lego Star Wars </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/668" class="
+    ">
+                                Lego Ninjago </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/669" class="
+    ">
+                                Lego Turtles </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/670" class="
+    ">
+                                Lego Movie </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/671" class="
+    ">
+                                Lego Technic </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/672" class="
+    ">
+                                Lego Architecture </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/673" class="
+    ">
+                                Lego Disney Princess </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/674" class="
+    ">
+                                Lego Legends of Chima </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/675" class="
+    ">
+                                Lego Bionicle </a>
+
+                            </li>
+                            <li>
+                              <a href="/category/676" class="
+    ">
+                                Lego Duplo </a>
+
+                            </li>
+                          </ul>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/591" class="
+    childs">
+                        Куклы и пупсы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/639" class="
+    ">
+                            Куклы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/640" class="
+    ">
+                            Кукольная мебель </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/641" class="
+    ">
+                            Одежда и аксессуары </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/642" class="
+    ">
+                            Пупсы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/643" class="
+    ">
+                            Принцессы и феи </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/592" class="
+    childs">
+                        Радиоуправляемые игрушки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/644" class="
+    ">
+                            Машины </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/645" class="
+    ">
+                            Вертолеты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/646" class="
+    ">
+                            Катера и яхты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/647" class="
+    ">
+                            Мотоциклы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/648" class="
+    ">
+                            Самолеты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/649" class="
+    ">
+                            Танки </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/593" class="
+    childs">
+                        Мягкие игрушки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/650" class="
+    ">
+                            Герои мультфильмов </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/651" class="
+    ">
+                            Животные </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/652" class="
+    ">
+                            Пони </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/594" class="
+    ">
+                        Роботы и трансформеры </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/595" class="
+    childs">
+                        Игровые наборы
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/653" class="
+    ">
+                            Археолог </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/654" class="
+    ">
+                            Доктор </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/655" class="
+    ">
+                            Пожарный </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/656" class="
+    ">
+                            Полицейский </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/657" class="
+    ">
+                            Кассир </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/658" class="
+    ">
+                            Шпион </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/659" class="
+    ">
+                            Повар </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/660" class="
+    ">
+                            Солдат </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/596" class="
+    childs">
+                        Машинки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/661" class="
+    ">
+                            Наборы машинок </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/662" class="
+    ">
+                            Танки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/663" class="
+    ">
+                            Автотреки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/664" class="
+    ">
+                            Железные дороги </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/597" class="
+    childs">
+                        Активные игры
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/598" class="
+    ">
+                            Детские горки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/599" class="
+    ">
+                            Детские домики </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/600" class="
+    ">
+                            Детские палатки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/601" class="
+    ">
+                            Мыльные пузыри </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/602" class="
+    ">
+                            Прыгуны </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/690" class="
+    ">
+                            Батуты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/695" class="
+    ">
+                            Гамаки и подвесные палатки </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/677" class="
+    childs">
+                    Детские автокресла
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/678" class="
+    ">
+                        Группа 0+ (от 0 до 13 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/679" class="
+    ">
+                        Группа 0/1 (от 0 до 18 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/680" class="
+    ">
+                        Группа 1 (от 9 до 18 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/681" class="
+    ">
+                        Группа 1/2 (от 9 до 25 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/682" class="
+    ">
+                        Группа 1/2/3 (от 9 до 36 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/683" class="
+    ">
+                        Группа 2/3 (от 15 до 36 кг) </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/684" class="
+    ">
+                        Аксессуары для автокресел </a>
+
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="/category/700" class="
+    childs">
+                    Товары для школы
+                    <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                  </a>
+                  <ul class="catalog">
+                    <li>
+                      <a href="/category/701" class="
+    childs">
+                        Рюкзаки и сумки
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/708" class="
+    ">
+                            Детские рюкзаки и ранцы </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/709" class="
+    ">
+                            Подростковые рюкзаки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/710" class="
+    ">
+                            Сумки школьные через плечo </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/711" class="
+    ">
+                            Сумки для обуви </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/712" class="
+    ">
+                            Папки портфели </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/702" class="
+    childs">
+                        Канцелярские товары
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/717" class="
+    ">
+                            Альбомы для рисования </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/718" class="
+    ">
+                            Блокноты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/719" class="
+    ">
+                            Гелевые ручки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/720" class="
+    ">
+                            Шариковые ручки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/721" class="
+    ">
+                            Карандаши </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/722" class="
+    ">
+                            Цветной картон </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/723" class="
+    ">
+                            Ластики </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/724" class="
+    ">
+                            Линейки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/725" class="
+    ">
+                            Наборы для лепки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/726" class="
+    ">
+                            Подложки настольные </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/727" class="
+    ">
+                            Канцелярские подставки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/728" class="
+    ">
+                            Тетради </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/729" class="
+    ">
+                            Точилки </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/730" class="
+    ">
+                            Фломастеры </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/703" class="
+    ">
+                        Пеналы </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/704" class="
+    childs">
+                        Мольберты
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/713" class="
+    ">
+                            Деревянные мольберты </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/714" class="
+    ">
+                            Пластиковы мольберты </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/705" class="
+    childs">
+                        Краски
+                        <!--        <span class="badge pull-right"><i class="fa fa-plus"></i></span>-->
+                      </a>
+                      <ul class="catalog">
+                        <li>
+                          <a href="/category/715" class="
+    ">
+                            Гуашь </a>
+
+                        </li>
+                        <li>
+                          <a href="/category/716" class="
+    ">
+                            Акварель </a>
+
+                        </li>
+                      </ul>
+
+                    </li>
+                    <li>
+                      <a href="/category/706" class="
+    ">
+                        Парты </a>
+
+                    </li>
+                    <li>
+                      <a href="/category/707" class="
+    ">
+                        Обучающие плакаты </a>
+
+                    </li>
+                  </ul>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="market">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-12 visible-large no-padding">
+        <aside class="mp-sidebar">
+          <div class="box">
+            <div class="shop">
+              <a href="/">
+                                <span class="shop-logo">
+                                    <img src="img/shop-logo.jpg" alt="shop">
+                                </span>
+              </a>
+              <a href="/" class="shop-name">
+                Магазин BonToy
+              </a>
+            </div>
+            <div class="shop-search">
+              <div class="input-group">
+                <form method="get" action="/category/search">
+                  <input type="search" name="s_shop" id="s_shop" placeholder="Поиск по Bontoy">
+                  <input type="submit" value="">
+                </form>
+                <div id="resp" style="display: none"></div>
+              </div>
+            </div>
+
+            <div class="shop-categories">
+
+              <ul class="catalog category-products">
+                <li>
+                  <a href="/category/461">Детские коляски </a>
+                </li>
+                <li>
+                  <a href="/category/474">Мебель для детской </a>
+                </li>
+                <li>
+                  <a href="/category/494">Для мам и малышей </a>
+                </li>
+                <li>
+                  <a href="/category/527">Развитие и творчество </a>
+                </li>
+                <li>
+                  <a href="/category/560">Транспорт для детей </a>
+                </li>
+                <li>
+                  <a href="/category/585">Детские игрушки </a>
+                </li>
+                <li>
+                  <a href="/category/677">Детские автокресла </a>
+                </li>
+                <li>
+                  <a href="/category/700">Товары для школы </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <div><h2 class="cat-title">Цена</h2></div>
+            <div class="price-range"><!--price-range-->
+              <div class="text-center">
+                <input type="text" class="price-in" value="1" id="min-price">
+                <span> - </span>
+                <input type="text" class="price-in" value="34510" id="max-price">
+                <span>грн.</span>
+                <a href="/price/1-34510" class="price-link my-btn" id="price">✓</a>
+
+                <div id="slider"></div>
+              </div>
+
+              <script>
+                $('#slider').slider({
+                  range: true,
+                  min: 1,
+                  max: 35700,
+                  values: [1, 34510],
+                  slide: function (event, ui) {
+                    $('.price-link').each(function () {
+                      var h = $(this).attr('href').split('/price/')[0];
+                      h = h + '/price/' + ui.values[0] + '-' + ui.values[1];
+                      $(this).attr('href', h);
+                    });
+
+                    $('#min-price').val(ui.values[0]);
+                    $('#max-price').val(ui.values[1]);
+                  }
+                });
+              </script>
+            </div>
+          </div>
+          <div class="box">
+            <div>
+              <h2 class="cat-title">бренд</h2>
+            </div>
+            <div class="sidebar-block">
+              <div class="sidebar-brand mCustomScrollbar">
+                <div class="brand-list">
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Djeco">
+                      <span class="label-text">Djeco</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Renart">
+                      <span class="label-text">Renart</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Мульти-Пульти">
+                      <span class="label-text">Мульти-Пульти</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Lalaloopsy">
+                      <span class="label-text">Lalaloopsy</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Auldey">
+                      <span class="label-text">Auldey</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Ouaps">
+                      <span class="label-text">Ouaps</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="BeBeLino ">
+                      <span class="label-text">BeBeLino </span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Ben 10">
+                      <span class="label-text">Ben 10</span>
+                    </label>
+                  </div>
+                  <div class="brand-item">
+                    <label>
+                      <input type="checkbox" name="brand" value="Disney">
+                      <span class="label-text">Disney</span>
+                    </label>
+                  </div>
+                  <div id="brand-more">
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Crayola">
+                        <span class="label-text">Crayola</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="TMNT">
+                        <span class="label-text">TMNT</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fashion Angels">
+                        <span class="label-text">Fashion Angels</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Grown Up">
+                        <span class="label-text">Grown Up</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Pinkie Cooper">
+                        <span class="label-text">Pinkie Cooper</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Piatnik">
+                        <span class="label-text">Piatnik</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="KodKod">
+                        <span class="label-text">KodKod</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Quercetti">
+                        <span class="label-text">Quercetti</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tiny love">
+                        <span class="label-text">Tiny love</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Philips Avent">
+                        <span class="label-text">Philips Avent</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Cybex">
+                        <span class="label-text">Cybex</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Double Bubble">
+                        <span class="label-text">Double Bubble</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Lottie">
+                        <span class="label-text">Lottie</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="TommeeTippee">
+                        <span class="label-text">TommeeTippee</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Zuru">
+                        <span class="label-text">Zuru</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Realtoy">
+                        <span class="label-text">Realtoy</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Playgro">
+                        <span class="label-text">Playgro</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="B Kids">
+                        <span class="label-text">B Kids</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Eternal Shield">
+                        <span class="label-text">Eternal Shield</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="WonderKids">
+                        <span class="label-text">WonderKids</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Weina ">
+                        <span class="label-text">Weina </span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Chicco">
+                        <span class="label-text">Chicco</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Kiddy">
+                        <span class="label-text">Kiddy</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Gigo">
+                        <span class="label-text">Gigo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Kiddieland">
+                        <span class="label-text">Kiddieland</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mondo">
+                        <span class="label-text">Mondo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Goo.N">
+                        <span class="label-text">Goo.N</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="WinX">
+                        <span class="label-text">WinX</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Toy State">
+                        <span class="label-text">Toy State</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Kids II">
+                        <span class="label-text">Kids II</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Maxi-Cosi">
+                        <span class="label-text">Maxi-Cosi</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Aurora">
+                        <span class="label-text">Aurora</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Prima Baby">
+                        <span class="label-text">Prima Baby</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="XQ">
+                        <span class="label-text">XQ</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="YaYa">
+                        <span class="label-text">YaYa</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="ШпионоМания">
+                        <span class="label-text">ШпионоМания</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Liscianigiochi">
+                        <span class="label-text">Liscianigiochi</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Paola Reina">
+                        <span class="label-text">Paola Reina</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Zoob">
+                        <span class="label-text">Zoob</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Orbeez">
+                        <span class="label-text">Orbeez</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Trudi">
+                        <span class="label-text">Trudi</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Color Splasherz">
+                        <span class="label-text">Color Splasherz</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fotorama">
+                        <span class="label-text">Fotorama</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Xploderz">
+                        <span class="label-text">Xploderz</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Blaster Pro">
+                        <span class="label-text">Blaster Pro</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="EasyScience">
+                        <span class="label-text">EasyScience</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Step Puzzle ">
+                        <span class="label-text">Step Puzzle </span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mega Bloks">
+                        <span class="label-text">Mega Bloks</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tomy">
+                        <span class="label-text">Tomy</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ty">
+                        <span class="label-text">Ty</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fisher Price">
+                        <span class="label-text">Fisher Price</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Max Steel ">
+                        <span class="label-text">Max Steel </span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Cars">
+                        <span class="label-text">Cars</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Hot Wheels">
+                        <span class="label-text">Hot Wheels</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Peg-Perego">
+                        <span class="label-text">Peg-Perego</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="4Baby">
+                        <span class="label-text">4Baby</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Taf Toys">
+                        <span class="label-text">Taf Toys</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Lansinoh">
+                        <span class="label-text">Lansinoh</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mommy Care">
+                        <span class="label-text">Mommy Care</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Технопарк">
+                        <span class="label-text">Технопарк</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Bburago">
+                        <span class="label-text">Bburago</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Battat">
+                        <span class="label-text">Battat</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Aqua Doodle">
+                        <span class="label-text">Aqua Doodle</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="X-bot">
+                        <span class="label-text">X-bot</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ks Kids">
+                        <span class="label-text">Ks Kids</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Nuby">
+                        <span class="label-text">Nuby</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Transformers">
+                        <span class="label-text">Transformers</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Знаток">
+                        <span class="label-text">Знаток</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Hasbro">
+                        <span class="label-text">Hasbro</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Littlest Pet Shop">
+                        <span class="label-text">Littlest Pet Shop</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Lego">
+                        <span class="label-text">Lego</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Roadbot">
+                        <span class="label-text">Roadbot</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="My Little Pony">
+                        <span class="label-text">My Little Pony</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Play-Doh">
+                        <span class="label-text">Play-Doh</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Smart Trik">
+                        <span class="label-text">Smart Trik</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Hy-Pro">
+                        <span class="label-text">Hy-Pro</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Monster High">
+                        <span class="label-text">Monster High</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Barbie">
+                        <span class="label-text">Barbie</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Dr. Browns">
+                        <span class="label-text">Dr. Browns</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Poli">
+                        <span class="label-text">Poli</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="BiBi">
+                        <span class="label-text">BiBi</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Dr. Frei">
+                        <span class="label-text">Dr. Frei</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Rossmax">
+                        <span class="label-text">Rossmax</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Microlife">
+                        <span class="label-text">Microlife</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mattel">
+                        <span class="label-text">Mattel</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Gamma">
+                        <span class="label-text">Gamma</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Micro">
+                        <span class="label-text">Micro</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Power Trains">
+                        <span class="label-text">Power Trains</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Orange">
+                        <span class="label-text">Orange</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Spy Gear">
+                        <span class="label-text">Spy Gear</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Cubic Fun">
+                        <span class="label-text">Cubic Fun</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fantastic">
+                        <span class="label-text">Fantastic</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fun Kits">
+                        <span class="label-text">Fun Kits</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="ZT Model">
+                        <span class="label-text">ZT Model</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ez-Tec">
+                        <span class="label-text">Ez-Tec</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Play Go">
+                        <span class="label-text">Play Go</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="WL-Toys">
+                        <span class="label-text">WL-Toys</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="J-Color">
+                        <span class="label-text">J-Color</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Toys Toys">
+                        <span class="label-text">Toys Toys</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Botas">
+                        <span class="label-text">Botas</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ranok Creative">
+                        <span class="label-text">Ranok Creative</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Zenet">
+                        <span class="label-text">Zenet</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Alex">
+                        <span class="label-text">Alex</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ameniza">
+                        <span class="label-text">Ameniza</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Супер Плюс">
+                        <span class="label-text">Супер Плюс</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tempish">
+                        <span class="label-text">Tempish</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Strida">
+                        <span class="label-text">Strida</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Duracell">
+                        <span class="label-text">Duracell</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Keter">
+                        <span class="label-text">Keter</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Edu-Toys">
+                        <span class="label-text">Edu-Toys</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Power Rangers">
+                        <span class="label-text">Power Rangers</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Lava">
+                        <span class="label-text">Lava</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Peppa">
+                        <span class="label-text">Peppa</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Maisto">
+                        <span class="label-text">Maisto</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Bruder">
+                        <span class="label-text">Bruder</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Nikko">
+                        <span class="label-text">Nikko</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Chap Mei">
+                        <span class="label-text">Chap Mei</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Cararama ">
+                        <span class="label-text">Cararama </span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Маша и Медведь">
+                        <span class="label-text">Маша и Медведь</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Kinder Rich">
+                        <span class="label-text">Kinder Rich</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Spin Master">
+                        <span class="label-text">Spin Master</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Aqua Dragons">
+                        <span class="label-text">Aqua Dragons</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ever After High">
+                        <span class="label-text">Ever After High</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Filly">
+                        <span class="label-text">Filly</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ecoiffier">
+                        <span class="label-text">Ecoiffier</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Loom">
+                        <span class="label-text">Loom</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Casato">
+                        <span class="label-text">Casato</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Everflo">
+                        <span class="label-text">Everflo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Paw Patrol">
+                        <span class="label-text">Paw Patrol</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tolo">
+                        <span class="label-text">Tolo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Furby">
+                        <span class="label-text">Furby</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Amav Diamant">
+                        <span class="label-text">Amav Diamant</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Carioca">
+                        <span class="label-text">Carioca</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Peppa Pig">
+                        <span class="label-text">Peppa Pig</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Grand Fantasy">
+                        <span class="label-text">Grand Fantasy</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Berber">
+                        <span class="label-text">Berber</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Baby Team">
+                        <span class="label-text">Baby Team</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Bellelli">
+                        <span class="label-text">Bellelli</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Pride">
+                        <span class="label-text">Pride</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="АГУ">
+                        <span class="label-text">АГУ</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Babysport">
+                        <span class="label-text">Babysport</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Спортишка">
+                        <span class="label-text">Спортишка</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="VD Sport">
+                        <span class="label-text">VD Sport</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Inter Atletik">
+                        <span class="label-text">Inter Atletik</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Microneb">
+                        <span class="label-text">Microneb</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mamivac">
+                        <span class="label-text">Mamivac</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Eitech">
+                        <span class="label-text">Eitech</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Dino Horizons">
+                        <span class="label-text">Dino Horizons</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="MIC-O-MIC">
+                        <span class="label-text">MIC-O-MIC</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Professor EIN-O">
+                        <span class="label-text">Professor EIN-O</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Melissa Doug">
+                        <span class="label-text">Melissa Doug</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Rubens Barn">
+                        <span class="label-text">Rubens Barn</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Teifoc">
+                        <span class="label-text">Teifoc</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="La Siesta">
+                        <span class="label-text">La Siesta</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Love and Carry">
+                        <span class="label-text">Love and Carry</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Pampers">
+                        <span class="label-text">Pampers</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Amigo">
+                        <span class="label-text">Amigo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="iTrike">
+                        <span class="label-text">iTrike</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Camarelo">
+                        <span class="label-text">Camarelo</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Explore">
+                        <span class="label-text">Explore</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Anmar">
+                        <span class="label-text">Anmar</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Adamex">
+                        <span class="label-text">Adamex</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Profi Trike">
+                        <span class="label-text">Profi Trike</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Cloud B">
+                        <span class="label-text">Cloud B</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Azimut">
+                        <span class="label-text">Azimut</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Heyner">
+                        <span class="label-text">Heyner</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tako">
+                        <span class="label-text">Tako</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Medela">
+                        <span class="label-text">Medela</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="BabyBjorn">
+                        <span class="label-text">BabyBjorn</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Profi">
+                        <span class="label-text">Profi</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Injusa">
+                        <span class="label-text">Injusa</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Mustang">
+                        <span class="label-text">Mustang</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Plastelino">
+                        <span class="label-text">Plastelino</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Clementoni">
+                        <span class="label-text">Clementoni</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Biba Toys">
+                        <span class="label-text">Biba Toys</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="СК">
+                        <span class="label-text">СК</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Roller Derby">
+                        <span class="label-text">Roller Derby</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="MaxCity">
+                        <span class="label-text">MaxCity</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Taxa">
+                        <span class="label-text">Taxa</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Joerex">
+                        <span class="label-text">Joerex</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Fancy">
+                        <span class="label-text">Fancy</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Союз Мультфильм">
+                        <span class="label-text">Союз Мультфильм</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Polesie">
+                        <span class="label-text">Polesie</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Strong Magnet">
+                        <span class="label-text">Strong Magnet</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Laser Pegs">
+                        <span class="label-text">Laser Pegs</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Bullyland">
+                        <span class="label-text">Bullyland</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Roan">
+                        <span class="label-text">Roan</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Ravensburger">
+                        <span class="label-text">Ravensburger</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tin Kitchen Tea set">
+                        <span class="label-text">Tin Kitchen Tea set</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Krooom">
+                        <span class="label-text">Krooom</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Twins">
+                        <span class="label-text">Twins</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Kite">
+                        <span class="label-text">Kite</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Geoworld">
+                        <span class="label-text">Geoworld</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="ПЛК">
+                        <span class="label-text">ПЛК</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Class">
+                        <span class="label-text">Class</span>
+                      </label>
+                    </div>
+                    <div class="brand-item">
+                      <label>
+                        <input type="checkbox" name="brand" value="Tiger">
+                        <span class="label-text">Tiger</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <a href="#" id="brand-trigger">Показать все</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-12">
+        <div class="shop-content">
+          <h2 class="actual-category">Конструкторы в магазине <a href="http://repka.ua/">repka.ua</a></h2>
+          <div class="small-filters clearfix visible-small">
+            <button type="button" class="btn btn-primary btn-lg small-filters_btn-1" data-toggle="modal"
+                    data-target="#popup-price">Сначала популярные
+            </button>
+            <button type="button" class="btn btn-primary btn-lg small-filters_btn-2" data-toggle="modal"
+                    data-target="#popup-filter">Фильтры
+            </button>
+          </div>
+          <div class="filter-sort visible-large">
+            <div class="sort-label">
+              Показать сначала:
+            </div>
+            <div class="input-group">
+              <a href="/category/index"
+                 id="popular" class="price-link active">популярные</a>
+              <a href="/order/desc"
+                 id="expensive" class="price-link ">дорогие</a>
+              <a href="/order/asc"
+                 id="cheap" class="price-link ">дешевые</a>
+            </div>
+          </div>
+          <div class="items clearfix">
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/131">
+                      <img src="img/items/item-1.jpg"
+                           alt="Пазл Djeco «Маша и медведи»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/131">Пазл Djeco «Маша и медведи»</a>
+                    </h3>
+                    <h4 class="price">24 224<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/132">
+                      <img src="img/items/item-2.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/132">Пазл Djeco «Завтрак Бельчонка»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/133">
+                      <img src="img/items/item-1.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/133">Пазл Djeco «Улиткин огород»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/136">
+                      <img src="img/items/item-2.jpg" alt="Набор наклеек Djeco «Пираты»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/136">Набор наклеек Djeco «Пираты»</a>
+                    </h3>
+                    <h4 class="price">2 473<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/131">
+                      <img src="img/items/item-1.jpg"
+                           alt="Пазл Djeco «Маша и медведи»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/131">Пазл Djeco «Маша и медведи»</a>
+                    </h3>
+                    <h4 class="price">24 224<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/132">
+                      <img src="img/items/item-2.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/132">Пазл Djeco «Завтрак Бельчонка»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/133">
+                      <img src="img/items/item-1.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/133">Пазл Djeco «Улиткин огород»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/136">
+                      <img src="img/items/item-2.jpg" alt="Набор наклеек Djeco «Пираты»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/136">Набор наклеек Djeco «Пираты»</a>
+                    </h3>
+                    <h4 class="price">2 473<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/131">
+                      <img src="img/items/item-1.jpg"
+                           alt="Пазл Djeco «Маша и медведи»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/131">Пазл Djeco «Маша и медведи»</a>
+                    </h3>
+                    <h4 class="price">24 224<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/132">
+                      <img src="img/items/item-2.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/132">Пазл Djeco «Завтрак Бельчонка»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/133">
+                      <img src="img/items/item-1.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/133">Пазл Djeco «Улиткин огород»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/136">
+                      <img src="img/items/item-2.jpg" alt="Набор наклеек Djeco «Пираты»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/136">Набор наклеек Djeco «Пираты»</a>
+                    </h3>
+                    <h4 class="price">2 473<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/131">
+                      <img src="img/items/item-1.jpg"
+                           alt="Пазл Djeco «Маша и медведи»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/131">Пазл Djeco «Маша и медведи»</a>
+                    </h3>
+                    <h4 class="price">24 224<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/132">
+                      <img src="img/items/item-2.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/132">Пазл Djeco «Завтрак Бельчонка»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/133">
+                      <img src="img/items/item-1.jpg"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/133">Пазл Djeco «Улиткин огород»</a>
+                    </h3>
+                    <h4 class="price">24 299<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 visible-large no-padding">
+              <div class="prod">
+                <div class="prod-item clearfix">
+                  <div class="prod-img">
+                    <a href="/product/136">
+                      <img src="img/items/item-2.jpg" alt="Набор наклеек Djeco «Пираты»"/>
+                    </a>
+                  </div>
+                  <div class="prod-description">
+                    <h3 class="prod-name">
+                      <a href="/product/136">Набор наклеек Djeco «Пираты»</a>
+                    </h3>
+                    <h4 class="price">2 473<span> грн.</span></h4>
+                    <a href="#" class="my-btn btn-gift">добавить <span class="hidden-xs">в вишлист</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="pagination">
+            <a href="#" data-order="" class="load-more price-link">
+              <img src="img/svg/refresh.svg" width="43" alt="refresh">
+              Показать еще
+            </a>
+            <ul class="pagination hidden-xs hidden-sm">
+              <li class="prev hidden-xs disabled"><span>&laquo;</span></li>
+              <li class="active"><a href="#" data-page="0">1</a></li>
+              <li><a href="#" data-page="1">2</a></li>
+              <li><a href="#" data-page="2">3</a></li>
+              <li><a class="hidden-xs" href="#" data-page="3">4</a></li>
+              <li><a class="hidden-xs" href="#" data-page="4">5</a></li>
+              <li><a class="hidden-xs" href="#" data-page="5">6</a></li>
+              <li><a class="visible-xs" href="#" data-page="#">...</a></li>
+              <li><a href="#" data-page="6">7</a></li>
+              <li><a class="hidden-xs" href="#" data-page="7">8</a></li>
+              <li><a class="hidden-xs" href="#" data-page="8">9</a></li>
+              <li><a class="hidden-xs" href="/#" data-page="9">10</a></li>
+              <li class="next hidden-xs"><a href="#" data-page="1">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--<script src="js/main.js"></script>-->
+<!--    footer begin      -->
+<footer class="footer">
+  <div class="wave"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <a href="/" class="footer-logo logo">
+          <img class="icon-logo img-responsive" src="img/svg/logo.svg">
+          <i class="icon-logo"></i>
+          <span class="footer__logo">
+                                © 2015 Ipopo Все права защищены
+                            </span>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="nets mp-nets">
+          <a href="https://www.facebook.com/IPOPOcom/"
+             class="nets__icon" target="_blank">
+            <img src="img/svg/facebook.svg" alt="">
+          </a>
+          <a href="https://www.youtube.com/channel/UCB-h5350elItvfwODGhOiCw" class="nets__icon"
+             target="_blank">
+            <img src="img/svg/youtube.svg" alt="">
+          </a>
+          <a href="#" class="nets__icon" target="_blank">
+            <img src="img/svg/twitter.svg" alt="">
+          </a>
+          <a href="http://vk.com/ipopocom" class="nets__icon" target="_blank">
+            <img src="img/svg/vk.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="/usloviya_ispolzovaniya.html" class="footer__link mp-footer__link">Условия использования
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-12 col-xs-12">
+        <div class="up_link">
+          <a href="#" class="up__in">
+          </a>
+          <p>вверх</p>
+        </div>
+        <script>
+          $('.up__in').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 500);
+          })
+        </script>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--    footer end      --></body>
+</html>

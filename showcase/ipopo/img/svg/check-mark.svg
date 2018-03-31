@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg3375"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   viewBox="0 0 64 64"
+   sodipodi:docname="check-mark.svg">
+  <defs
+     id="defs3377" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.5"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3380">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <image
+       y="0.36363757"
+       x="0.18181247"
+       id="image3355"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAA CXBIWXMAAAsSAAALEgHS3X78AAADP0lEQVRIx7XWS0zTcBwH8A6mEiQ+oglGoyFGFIyPGL0aT149 Ei/Go3hA1MRnVKJGY4wHQhQfMxgE8TFQwiNjCgORAJGn695u7L3RUTq2dmu3tv+fFzcD60ClfI9N +v/09+vv1xTDZMqHMw7Fwmv9NcFdZk34/fg7sqLzunu1XFbWtF12KZ2DURMbEYAmkqK9LzKkveMp WDFQXWFX4O2zKo4WIBWeE8EzRgdHm0LnVwTtrfbtiFE8AomwUQFkBz/fdxf4cWYGiZIm0KEkUsqN Fu7Nryjck79ZkZMxV9jMT5ZzDkfKZQX7n/pKZl0sJ1VhLMyj4frgqbflFsXypd9puWTN9etpQgrk ORFMWrLt01XbKtlA9QWLQt8WqkkwguR7pLxsUnPPsU7WtnZXO7dHiYQo2VYqiYbqfcdlBVtvWVfb BylcFDKnVUgisPSSfQvvyVkuWnRk/aOiw+v35eQumA/AsKCZJqaGwidkrbLvmXNf2M/yUm3lGAEN vHIfk7pv3p7qaqe25SoVawk7Yy97uB8tBjZfMyiLj276umFrXsauIwGwqWGqy2+Mflv0qUfUvpNc TOCFhAi4dlr95vzkovs02uw7y0YyP3UIARB2JtZ8zZB9PZouTigmOwI34pFk+oBEXACTjtA1nBuX hLXVtq00KT2tlD/O96kcRxat0NofauOYzNeSZAXQdwVb3lyYmAd/rMLzXOOUVwpECMDwZbpjyWEI B+KSgwAAIPAiTLT7VA2Vo2n4hybwWmo9AAD85shc+wPjxiXRwSZn2YyL4UD6HEhyAoy0eG5jGIa1 3sXzg7YoIz2tPHQ/se5eEkyl57mtlHDQsWwVzwXjoql3esBrCFOJuCAJ6rWBlobK7//2MdeprAdC TpqF/0jAMkerb46v+SfwT8WWUtLDcAhla3ZmoiSHBhrtp/8LTOXLM/PuGdffVzyp8b5fFpiuWGU+ sBSMEAK3fjakrhrNkwXFMAzreWk+SHpoLhsaJVlRU4MXyQamW/3cWEJ6M9cpEecB7/F1yQ6m4RfG 0pA7Oq/VXiM123hlSPafunnR1ZkOBWzhyBwRF3xmiuqqxXeuKJhKT52peKzTVaF5rN+y3LN+AYNH Jn6TqFYyAAAAAElFTkSuQmCC "
+       preserveAspectRatio="none"
+       height="64"
+       width="64" />
+  </g>
+</svg>
