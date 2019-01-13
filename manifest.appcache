@@ -10,7 +10,6 @@ img/artcapital-min.png
 img/bandr-min.png
 img/ritual-rf-min.png
 img/bcoptima-min.png
-img/voltenopt-min.png
 img/rates-min.png
 img/ipopo-min.png
 img/smarttoys-mob-min.png
@@ -18,6 +17,8 @@ img/kvantum.png
 img/barbershop.png
 img/proektmetall.png
 img/torlift-min.png
+img/marshalcar.png
+img/doors-lux.png
 
 NETWORK:
 http://*
@@ -27,4 +28,4 @@ https://*
 SETTINGS
 # fast
 
-# 09.12.2018 17:08
+# 13.01.2019 16:31
