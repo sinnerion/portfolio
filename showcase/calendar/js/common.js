@@ -43,13 +43,13 @@ window.addEventListener('load', function () {
   function dayMarking() {
     this.classList.toggle('month-list__cell_marked');
     if (this.classList.contains('month-list__cell_marked')) {
-      activeDays.push(this.getAttribute('data-id'));
+      activeDays.push(this.getAttribute('id'));
       for (let i = 0; i < activeDays.length; i++) {
         localStorage.setItem(`${activeDays[i]}`, activeDays[i]);
       }
     } else {
-      activeDays.remove(this.getAttribute('data-id'));
-      localStorage.removeItem(`${this.getAttribute('data-id')}`);
+      activeDays.remove(this.getAttribute('id'));
+      localStorage.removeItem(`${this.getAttribute('id')}`);
     }
   }
 
@@ -81,10 +81,12 @@ window.addEventListener('load', function () {
     });
   });
 
-  monthBlockDay.forEach(function (item) {
-    if (!!localStorage.getItem(`${item.getAttribute('data-id')}`)) {
-     item.classList.add('month-list__cell_marked');
+  for(let i = 0; i < localStorage.length; i++) {
+    console.log(localStorage.getItem(localStorage.key(i)));
+    if (localStorage.getItem(localStorage.key(i)) && localStorage.key(i) !== 'body-bg') {
+      let monthBlockDayMarked = document.getElementById(localStorage.getItem(localStorage.key(i)));
+      monthBlockDayMarked.classList.add('month-list__cell_marked');
     }
-  });
+  }
 
 });
