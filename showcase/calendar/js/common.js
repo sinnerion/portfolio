@@ -82,7 +82,6 @@ window.addEventListener('load', function () {
   });
 
   for(let i = 0; i < localStorage.length; i++) {
-    console.log(localStorage.getItem(localStorage.key(i)));
     if (localStorage.getItem(localStorage.key(i)) && localStorage.key(i) !== 'body-bg') {
       let monthBlockDayMarked = document.getElementById(localStorage.getItem(localStorage.key(i)));
       monthBlockDayMarked.classList.add('month-list__cell_marked');
