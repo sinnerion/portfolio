@@ -4,8 +4,8 @@ window.addEventListener('load', function () {
   const betterBtn = document.querySelector('.btn_accent');
   const betterBtnSpan = betterBtn.querySelectorAll('span');
   const monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
-  const modalBlock = document.querySelector('.modal');
-  const modalUnderlayer = document.querySelector('.modal-underlayer');
+  // const modalBlock = document.querySelector('.modal');
+  // const modalUnderlayer = document.querySelector('.modal-underlayer');
   let activeDays = [];
 
   if(localStorage.getItem('body-bg')) {
