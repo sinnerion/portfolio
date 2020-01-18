@@ -1,26 +1,25 @@
-window.addEventListener('load', function () {
+"use strict";
 
-  const docBody = document.getElementsByTagName('body');
-  const betterBtn = document.querySelector('.btn_accent');
-  const betterBtnSpan = betterBtn.querySelectorAll('span');
-  const monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
-  // const modalBlock = document.querySelector('.modal');
-  // const modalUnderlayer = document.querySelector('.modal-underlayer');
-  let activeDays = [];
+function MakeItOnLoad() {
+  var docBody = document.getElementsByTagName('body')[0];
+  var betterBtn = document.getElementById('better-btn');
+  var betterBtnSpan = betterBtn.querySelectorAll('#better-btn span');
+  var monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
 
-  if(localStorage.getItem('body-bg')) {
-    docBody[0].classList.add(localStorage.getItem('body-bg'));
+  if (localStorage.getItem('body-bg')) {
+    docBody.classList.add(localStorage.getItem('body-bg'));
     betterBtnSpan.forEach(function (item) {
       item.classList.toggle('hidden');
     });
   }
 
   function bodyBgChange() {
-    docBody[0].classList.toggle('body_better');
+    docBody.classList.toggle('body_better');
     betterBtnSpan.forEach(function (item) {
       item.classList.toggle('hidden');
     });
-    if (docBody[0].classList.contains('body_better')) {
+
+    if (docBody.classList.contains('body_better')) {
       localStorage.setItem('body-bg', 'body_better');
     } else {
       localStorage.removeItem('body-bg');
@@ -29,42 +28,88 @@ window.addEventListener('load', function () {
 
   betterBtn.addEventListener('click', bodyBgChange);
 
-  Array.prototype.remove = function() {
-    let what, a = arguments, L = a.length, ax;
+  Array.prototype.remove = function () {
+    var what,
+        a = arguments,
+        L = a.length,
+        ax;
+
     while (L && this.length) {
       what = a[--L];
+
       while ((ax = this.indexOf(what)) !== -1) {
         this.splice(ax, 1);
       }
     }
+
     return this;
   };
 
   function dayMarking() {
+    var thisId = this.getAttribute('id');
     this.classList.toggle('month-list__cell_marked');
+
     if (this.classList.contains('month-list__cell_marked')) {
-      activeDays.push(this.getAttribute('id'));
-      for (let i = 0; i < activeDays.length; i++) {
-        localStorage.setItem(`${activeDays[i]}`, activeDays[i]);
-      }
+      localStorage.setItem(thisId, thisId);
     } else {
-      activeDays.remove(this.getAttribute('id'));
-      localStorage.removeItem(`${this.getAttribute('id')}`);
+      localStorage.removeItem(thisId);
     }
   }
 
   function dayFocusing() {
-    for (let sibling of this.parentNode.children) {
-      if(!sibling.classList.contains('month-list__cell_marked')) {
-        sibling.classList.add('month-list__cell_blured');
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = this.parentNode.children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var sibling = _step.value;
+
+        if (!sibling.classList.contains('month-list__cell_marked')) {
+          sibling.classList.add('month-list__cell_blured');
+        }
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+          _iterator["return"]();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
       }
     }
+
     this.classList.remove('month-list__cell_blured');
   }
 
   function dayBluring() {
-    for (let sibling of this.parentNode.children) {
-      sibling.classList.remove('month-list__cell_blured');
+    var _iteratorNormalCompletion2 = true;
+    var _didIteratorError2 = false;
+    var _iteratorError2 = undefined;
+
+    try {
+      for (var _iterator2 = this.parentNode.children[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+        var sibling = _step2.value;
+        sibling.classList.remove('month-list__cell_blured');
+      }
+    } catch (err) {
+      _didIteratorError2 = true;
+      _iteratorError2 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+          _iterator2["return"]();
+        }
+      } finally {
+        if (_didIteratorError2) {
+          throw _iteratorError2;
+        }
+      }
     }
   }
 
@@ -73,19 +118,25 @@ window.addEventListener('load', function () {
     item.addEventListener('mouseenter', dayFocusing);
     item.addEventListener('mouseleave', dayBluring);
   });
-
   document.querySelector('#clear-btn').addEventListener('click', function () {
     monthBlockDay.forEach(function (item) {
       item.classList.remove('month-list__cell_marked');
       localStorage.clear();
     });
-  });
+    docBody.classList.remove('body_better');
 
-  for(let i = 0; i < localStorage.length; i++) {
-    let monthBlockDayMarked = document.getElementById(localStorage.getItem(localStorage.key(i)));
-    if (localStorage.getItem(localStorage.key(i)) && localStorage.key(i) !== 'body-bg' && monthBlockDayMarked) {
-      monthBlockDayMarked.classList.add('month-list__cell_marked');
+    if (!docBody.classList.contains('body_better')) {
+      betterBtnSpan.forEach(function (item) {
+        item.classList.toggle('hidden');
+      });
     }
-  }
+  });
+  var markedDaysInStorage = Object.keys(localStorage).filter(function (k) {
+    return k !== 'body-bg' && document.getElementById(k);
+  });
+  markedDaysInStorage.forEach(function (item) {
+    document.getElementById(item).classList.add('month-list__cell_marked');
+  });
+}
 
-});
+window.addEventListener('load', MakeItOnLoad);
