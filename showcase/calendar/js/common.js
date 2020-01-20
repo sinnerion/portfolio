@@ -5,6 +5,9 @@ function MakeItOnLoad() {
   var betterBtn = document.getElementById('better-btn');
   var betterBtnSpan = betterBtn.querySelectorAll('#better-btn span');
   var monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
+  var clearBtn = document.getElementById('clear-btn');
+  var themeChangeBtn = document.getElementById('themeChangeBtn');
+  var root = document.documentElement;
 
   if (localStorage.getItem('body-bg')) {
     docBody.classList.add(localStorage.getItem('body-bg'));
@@ -27,23 +30,6 @@ function MakeItOnLoad() {
   }
 
   betterBtn.addEventListener('click', bodyBgChange);
-
-  Array.prototype.remove = function () {
-    var what,
-        a = arguments,
-        L = a.length,
-        ax;
-
-    while (L && this.length) {
-      what = a[--L];
-
-      while ((ax = this.indexOf(what)) !== -1) {
-        this.splice(ax, 1);
-      }
-    }
-
-    return this;
-  };
 
   function dayMarking() {
     var thisId = this.getAttribute('id');
@@ -113,30 +99,42 @@ function MakeItOnLoad() {
     }
   }
 
+  function clearAll() {
+    monthBlockDay.forEach(function (item) {
+      item.classList.remove('month-list__cell_marked');
+      localStorage.clear();
+    });
+
+    if (docBody.classList.contains('body_better')) {
+      betterBtnSpan.forEach(function (item) {
+        item.classList.toggle('hidden');
+      });
+    }
+
+    docBody.classList.remove('body_better');
+  }
+
   monthBlockDay.forEach(function (item) {
     item.addEventListener('click', dayMarking);
     item.addEventListener('mouseenter', dayFocusing);
     item.addEventListener('mouseleave', dayBluring);
   });
-  document.querySelector('#clear-btn').addEventListener('click', function () {
-    monthBlockDay.forEach(function (item) {
-      item.classList.remove('month-list__cell_marked');
-      localStorage.clear();
-    });
-    docBody.classList.remove('body_better');
-
-    if (!docBody.classList.contains('body_better')) {
-      betterBtnSpan.forEach(function (item) {
-        item.classList.toggle('hidden');
-      });
-    }
-  });
+  clearBtn.addEventListener('click', clearAll);
   var markedDaysInStorage = Object.keys(localStorage).filter(function (k) {
     return k !== 'body-bg' && document.getElementById(k);
   });
   markedDaysInStorage.forEach(function (item) {
     document.getElementById(item).classList.add('month-list__cell_marked');
   });
+
+  function themeChanging() {
+    root.style.setProperty('--bg-gradient', "linear-gradient(to top, #f4f4f4, #e2e2e2, #b4b4b4)");
+    root.style.setProperty('--month-bg', "#acacac");
+    root.style.setProperty('--month-bg_hover', "#949494");
+    root.style.setProperty('--month-box-shadow', "rgba(75, 75, 75, 0.5)");
+  }
+
+  themeChangeBtn.addEventListener('click', themeChanging);
 }
 
 window.addEventListener('load', MakeItOnLoad);
