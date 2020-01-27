@@ -1,7 +1,7 @@
 "use strict";
 
 function MakeItOnLoad() {
-  var docBody = document.getElementsByTagName('body')[0];
+  var docBody = document.body;
   var betterBtn = document.getElementById('better-btn');
   var betterBtnSpan = betterBtn.querySelectorAll('#better-btn span');
   var monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
@@ -126,15 +126,17 @@ function MakeItOnLoad() {
   markedDaysInStorage.forEach(function (item) {
     document.getElementById(item).classList.add('month-list__cell_marked');
   });
-
-  function themeChanging() {
-    root.style.setProperty('--bg-gradient', "linear-gradient(to top, #f4f4f4, #e2e2e2, #b4b4b4)");
-    root.style.setProperty('--month-bg', "#acacac");
-    root.style.setProperty('--month-bg_hover', "#949494");
-    root.style.setProperty('--month-box-shadow', "rgba(75, 75, 75, 0.5)");
-  }
-
-  themeChangeBtn.addEventListener('click', themeChanging);
+  cssVars({
+    // Targets
+    rootElement: document,
+    onlyLegacy: false
+  }); // function themeChanging() {
+  //   root.style.setProperty('--bg-gradient', "linear-gradient(to top, #f4f4f4, #e2e2e2, #b4b4b4)");
+  //   root.style.setProperty('--month-bg', "#acacac");
+  //   root.style.setProperty('--month-bg_hover', "#949494");
+  //   root.style.setProperty('--month-box-shadow', "rgba(75, 75, 75, 0.5)");
+  // }
+  // themeChangeBtn.addEventListener('click', themeChanging);
 }
 
 window.addEventListener('load', MakeItOnLoad);
