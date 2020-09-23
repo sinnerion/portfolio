@@ -6,15 +6,15 @@ function MakeItOnLoad() {
   var betterBtnSpan = betterBtn.querySelectorAll('#better-btn span');
   var monthBlockDay = document.querySelectorAll('.month-list__cell:not(.month-list__cell_disabled)');
   var clearBtn = document.getElementById('clear-btn');
-  var themeChangeBtn = document.getElementById('themeChangeBtn');
-  var root = document.documentElement;
+  var everyMonthDay = document.querySelectorAll('.month-list__cell'); // Применение стилей или localStorage
 
   if (localStorage.getItem('body-bg')) {
     docBody.classList.add(localStorage.getItem('body-bg'));
     betterBtnSpan.forEach(function (item) {
       item.classList.toggle('hidden');
     });
-  }
+  } // Смена фона у тела документа
+
 
   function bodyBgChange() {
     docBody.classList.toggle('body_better');
@@ -29,7 +29,7 @@ function MakeItOnLoad() {
     }
   }
 
-  betterBtn.addEventListener('click', bodyBgChange);
+  betterBtn.addEventListener('click', bodyBgChange); // Смена цвета у дней недели при клике на него
 
   function dayMarking() {
     var thisId = this.getAttribute('id');
@@ -40,7 +40,8 @@ function MakeItOnLoad() {
     } else {
       localStorage.removeItem(thisId);
     }
-  }
+  } // Фокусировка на дне недели при наведении
+
 
   function dayFocusing() {
     var _iteratorNormalCompletion = true;
@@ -71,7 +72,8 @@ function MakeItOnLoad() {
     }
 
     this.classList.remove('month-list__cell_blured');
-  }
+  } // Размытие всех дней недели, кроме того, на который наведён курсор
+
 
   function dayBluring() {
     var _iteratorNormalCompletion2 = true;
@@ -97,7 +99,8 @@ function MakeItOnLoad() {
         }
       }
     }
-  }
+  } // Сброс всех настроек (пометки дней и фон)
+
 
   function clearAll() {
     monthBlockDay.forEach(function (item) {
@@ -130,13 +133,7 @@ function MakeItOnLoad() {
     // Targets
     rootElement: document,
     onlyLegacy: false
-  }); // function themeChanging() {
-  //   root.style.setProperty('--bg-gradient', "linear-gradient(to top, #f4f4f4, #e2e2e2, #b4b4b4)");
-  //   root.style.setProperty('--month-bg', "#acacac");
-  //   root.style.setProperty('--month-bg_hover', "#949494");
-  //   root.style.setProperty('--month-box-shadow', "rgba(75, 75, 75, 0.5)");
-  // }
-  // themeChangeBtn.addEventListener('click', themeChanging);
+  });
 }
 
 window.addEventListener('load', MakeItOnLoad);
