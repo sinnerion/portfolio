@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Главная</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/css-purge/font-awesome.min.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-row flex-wrap align-items-center justify-content-between">
+          <a href="index.html" class="custom-logo-link"><img src="images/logo.png" alt=""></a>
+          <div class="header-contacts d-xl-flex flex-row flex-nowrap align-items-center">
+            <div class="header-contacts__block">
+              <p>г. Москва, Улица Нижние поля дом 31, <br>строение 1, офис 404.</p>
+              <a href="#">Схема проезда</a>
+            </div>
+            <div class="header-contacts__block">
+              <p>sale@intehmet.com <br>9883409@gmail.com</p>
+              <a href="#">Написать нам</a>
+            </div>
+          </div>
+          <div class="header-phone d-flex flex-row flex-wrap align-items-center justify-content-end">
+            <a href="tel:+74951234567" class="header-phone__link">+74951234567</a>
+            <button class="header__btn accent-btn accent-btn_invert"><span class="d-none d-md-inline">Заказать звонок</span><i class="fa fa-phone d-inline-block d-md-none"></i></button>
+            <button class="header__btn accent-btn accent-btn_dark d-none d-md-inline-block" data-toggle="modal" data-target="#requestModal">Отправить заявку</button>
+            <button class="header__btn accent-btn accent-btn_gray_invert search-form-toggle d-inline-block d-lg-none"><i class="fa fa-search"></i></button>
+            <button class="header__btn accent-btn main-nav-toggle d-inline-block d-lg-none"><i class="fa fa-bars"></i><i class="fa fa-close d-none"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="header-nav">
+  <div class="container">
+    <div class="row position-relative">
+      <div class="col-12 col-lg-10">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="company.html">О компании</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Каталог</a>
+              <ul class="dropdown-menu">
+                <li><a href="category.html">Металлоконструкции</a></li>
+                <li><a href="category-alt.html">Металлопрокат</a></li>
+                <li><a href="#">Нержавеющая сталь</a></li>
+                <li><a href="#">Металлообработка</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-lg-2 d-flex justify-content-end position-static">
+        <button class="search-form-toggle d-none d-lg-inline-block"><i class="fa fa-search"></i></button>
+        <form id="header-search-form" class="search-form">
+          <button class="btn search-form__close"><i class="fa fa-close"></i></button>
+          <input type="text" class="form-control search-form__input" placeholder="Что будем искать?">
+          <button type="submit" class="btn form-control search-form__submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="carousel main-carousel" role="banner">
+  <div id="main-carousel-item_1" class="main-carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7">
+          <div class="main-carousel-item__caption">
+            <div class="heading heading_main-carousel">Любые ограды на заказ</div>
+            <p>Ограды на любой вкус! Профнастил, сетка, <br>литые решетки, ковка  от 495 руб. за 1 секцию</p>
+            <a href="#" class="accent-btn accent-btn_invert accent-btn_big main-carousel-item__btn">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-carousel-item_2" class="main-carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7">
+          <div class="main-carousel-item__caption">
+            <div class="heading heading_main-carousel">Рубка металла на заказ</div>
+            <p>Гильотинная рубка – толщина от 1,2 до 12 мм, <br>цены от 13 до 70 руб. за 1 штуку. <strong>Скидки!</strong></p>
+            <a href="#" class="accent-btn accent-btn_invert accent-btn_big main-carousel-item__btn">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-carousel-item_3" class="main-carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7">
+          <div class="main-carousel-item__caption">
+            <div class="heading heading_main-carousel">Металлопрокат для всех отраслей!</div>
+            <p>Реализуем металлопрокат любого типа и с различной поверхностью. <br><span>Любые размеры!</span></p>
+            <a href="#" class="accent-btn accent-btn_invert accent-btn_big main-carousel-item__btn">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="main" role="main">
+  <div class="section section_production">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="production-img"><img src="images/production-img.jpg" alt=""></div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h2 class="heading heading-h2">Производство</h2>
+          <div class="accent-subheading">Металлоизделий по чертежам</div>
+          <div class="production-description">
+            <p>У нас вы можете заказать такую услугу, как изготовление металлоизделий по чертежам клиента. Это могут быть:</p>
+            <ul class="list-unstyled d-flex flex-row flex-wrap w-100">
+              <li>Торговое оборудование</li>
+              <li>Секционные заборы</li>
+              <li>Опоры, перекрытия</li>
+              <li>Корпуса платежных терминалов</li>
+              <li>Противопожарные двери</li>
+              <li>Корпуса электроприборов и электрощитов</li>
+              <li>Металлические шкафы</li>
+              <li>Складские и архивные стеллажи</li>
+              <li>Вентилируемые фасады</li>
+              <li>Козырьки, навесы</li>
+            </ul>
+            <p>Мы учитываем все требования заказчика, а также детально согласовываем все работы на основе содержания индивидуального чертежа изделия. Тем не менее, каждый эскиз от заказчика в обязательном порядке проходит экспертизу на предмет его реализуемости.</p>
+          </div>
+          <button class="accent-btn accent-btn_invert accent-btn_big text-uppercase">Производство</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_services">
+    <div class="section-heading section-heading_h2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h2 class="heading heading-h2"><span>Наши услуги</span></h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-row flex-wrap justify-content-between">
+          <div class="services-item services-item_1">
+            <div class="services-item__heading heading">Металлоконструкции</div>
+            <p>Мы работаем на современном оборудовании, на собственных производственных площадях.</p>
+            <a href="category.html" class="services-item__more">Узнать подробнее<i class="icon icon-arrow-right"></i></a>
+          </div>
+          <div class="services-item services-item_2 services-item_special">
+            <div class="services-item__heading heading">Металлопрокат</div>
+            <p>У нас вы можете заказать широкий ассортимент металлопрокатных изделий.</p>
+            <a href="category.html" class="services-item__more">Узнать подробнее<i class="icon icon-arrow-right"></i></a>
+          </div>
+          <div class="services-item services-item_3">
+            <div class="services-item__heading heading">Металлообработка</div>
+            <p>У нас вы можете заказать резку и гибку металла на собственных производственных площадях.</p>
+            <a href="category.html" class="services-item__more">Узнать подробнее<i class="icon icon-arrow-right"></i></a>
+          </div>
+          <div class="services-item services-item_4">
+            <div class="services-item__heading heading">Нержавеющая сталь</div>
+            <p>Готовы оснастить ваше предприятие необходимым количеством нержавейки.</p>
+            <a href="category.html" class="services-item__more">Узнать подробнее<i class="icon icon-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="request-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-7 col-lg-8">
+          <div class="heading request-block__heading">Нужен прайс-лист на все товары?</div>
+          <p>Оставьте заявку и мы вышлем вам прайс-лист с актуальными ценами!</p>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 d-flex align-items-center justify-content-end">
+          <button class="accent-btn accent-btn_light_invert accent-btn_big text-uppercase">Прайс-лист</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_advantages">
+    <div class="section-heading section-heading_h2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h2 class="heading heading-h2"><span>Наши преимущества</span></h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex flex-row flex-wrap justify-content-between">
+          <div class="advantages-item advantages-item_1">
+            <div class="advantages-item__icon"></div>
+            <div class="advantages-item__name heading">Сроки</div>
+            <p>Короткие сроки производства изделий </p>
+          </div>
+          <div class="advantages-item advantages-item_2">
+            <div class="advantages-item__icon"></div>
+            <div class="advantages-item__name heading">Производство</div>
+            <p>Производство изделий из металла любой сложности </p>
+          </div>
+          <div class="advantages-item advantages-item_3">
+            <div class="advantages-item__icon"></div>
+            <div class="advantages-item__name heading">Чертежи</div>
+            <p>Соответствие рабочим чертежам</p>
+          </div>
+          <div class="advantages-item advantages-item_4">
+            <div class="advantages-item__icon"></div>
+            <div class="advantages-item__name heading">Опыт</div>
+            <p>Большой опыт работы в области металлообработки </p>
+          </div>
+          <div class="advantages-item advantages-item_5">
+            <div class="advantages-item__icon"></div>
+            <div class="advantages-item__name heading">Оборудование</div>
+            <p>Современное технологичное оборудование</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_articles">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <article class="article-item">
+            <a href="#" class="article-item__link"></a>
+            <h2 class="heading heading-h2 heading-h2_small"><span>Наши новости</span></h2>
+            <div class="article-item__img"><img src="images/article-item-img-1.jpg" alt=""></div>
+            <div class="article-item__heading heading">С начала 2018 года в Российской Федерации увеличилось производство металлопроката</div>
+            <div class="article-item__date heading">12.08.2018</div>
+            <p>В России с начала 2018 года увеличилось производство металлопроката на 2,8%.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-6">
+          <article class="article-item">
+            <a href="#" class="article-item__link"></a>
+            <h2 class="heading heading-h2 heading-h2_small"><span>Статьи</span></h2>
+            <div class="article-item__img"><img src="images/article-item-img-2.jpg" alt=""></div>
+            <div class="article-item__heading heading">Производство металлоконструкций в Российской Федерации сократилось на 3,5%</div>
+            <div class="article-item__date heading">12.08.2018</div>
+            <p>С января по август 2018 года в России снизились темпы изготовления металлоконструкций. На сегодняшний день объемы производства составляют 3,6 млн</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_about">
+    <div class="section-heading section-heading_h2 section-heading_about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="heading heading-h2"><span>Компания «Название компании»</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12"><div class="accent-subheading accent-subheading_about">Мы работаем с 1991</div></div>
+        <div class="col-12 col-md-6">
+          <div class="about-txt">
+            <p>Компания «Интехмет» производит металлоизделия по собственным проектам и индивидуальным чертежам заказчиков. Мы располагаем собственными производственными мощностями и новейшим оборудованием из Европы. У нас можно заказать любые изделия из металла на заказ – от типовых до нестандартных.</p>
+            <p>Наша компания имеет восьмилетний опыт работы на рынке черного металлопроката России и является одной из самых крупных и надежных в этой сфере деятельности. Наши специалисты используют современные методы и разработки по улучшению работы компании, поэтому сервис услуг всегда на высшем уровне.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="about-txt">
+            <p>Наша компания имеет восьмилетний опыт работы на рынке черного металлопроката России и является одной из самых крупных и надежных в этой сфере деятельности. Наши специалисты используют современные методы и разработки по улучшению работы компании, поэтому сервис услуг всегда на высшем уровне.</p>
+            <button class="accent-btn accent-btn_dark accent-btn_big about-txt__btn">Сертификаты</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="request-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-7 col-lg-8">
+          <div class="heading request-block__heading">Оформить заявку</div>
+          <p>Обращайтесь, с радостью поможем Вам! В течение 15 мин.</p>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 d-flex align-items-center justify-content-end">
+          <button class="accent-btn accent-btn_light_invert accent-btn_big text-uppercase" data-toggle="modal" data-target="#requestModal">Оформить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_partners">
+    <div class="section-heading section-heading_h2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h2 class="heading heading-h2"><span>Нам доверяют</span></h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="carousel partners-carousel">
+            <div class="partners-carousel-item"><img src="images/rostel-2.png" alt=""></div>
+            <div class="partners-carousel-item"><img src="images/eltex.png" alt=""></div>
+            <div class="partners-carousel-item"><img src="images/linkedin.png" alt=""></div>
+            <div class="partners-carousel-item"><img src="images/rostel-2.png" alt=""></div>
+            <div class="partners-carousel-item"><img src="images/eltex.png" alt=""></div>
+            <div class="partners-carousel-item"><img src="images/linkedin.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_works">
+    <div class="section-heading section-heading_h2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h2 class="heading heading-h2"><span>Наши работы</span></h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-fluid_works">
+      <div class="row">
+        <div class="col-12">
+          <div class="works d-flex flex-row flex-wrap justify-content-between w-100">
+            <div class="works-item">
+              <img src="images/works-img-1.jpg" alt="">
+              <a href="#" class="works-item__link"></a>
+              <div class="works-item__description">
+                <div class="heading">Название проекта</div>
+                <p>Описание работы <br>или проекта</p>
+              </div>
+            </div>
+            <div class="works-item">
+              <img src="images/works-img-2.jpg" alt="">
+              <a href="#" class="works-item__link"></a>
+              <div class="works-item__description">
+                <div class="heading">Название проекта</div>
+                <p>Описание работы <br>или проекта</p>
+              </div>
+            </div>
+            <div class="works-item">
+              <img src="images/works-img-3.jpg" alt="">
+              <a href="#" class="works-item__link"></a>
+              <div class="works-item__description">
+                <div class="heading">Название проекта</div>
+                <p>Описание работы <br>или проекта</p>
+              </div>
+            </div>
+            <div class="works-item">
+              <img src="images/works-img-4.jpg" alt="">
+              <a href="#" class="works-item__link"></a>
+              <div class="works-item__description">
+                <div class="heading">Название проекта</div>
+                <p>Описание работы <br>или проекта</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center"><a href="#" class="accent-btn accent-btn_invert accent-btn_big works-btn">Перейти в портфолио</a></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 pr-lg-0">
+        <div class="copyright">
+          <p><span class="text-uppercase">© 2007 - 2019  «Интехмет»</span>
+            <br>Изготовление металлоизделий и металлоконструкций на заказ. Резка и рубка металла.
+            <br>Металлопрокат оптом и в розницу.</p>
+          <div class="d-flex flex-row flex-wrap w-100">
+            <a href="#" class="accent-btn accent-btn_thin accent-btn_invert">Карта сайта</a>
+            <a href="#" class="accent-btn accent-btn_thin accent-btn_gray_invert">Схема проезда</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-nav d-flex flex-row flex-wrap w-100">
+          <nav class="footer-nav-block">
+            <ul>
+              <li><a href="#">Главаная</a></li>
+              <li><a href="company.html">О компании</a></li>
+              <li><a href="#">Популярные цвета RAL</a></li>
+              <li><a href="#">Справочник</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav-block">
+            <ul>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Спецпредложение</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="footer-contacts">
+          <p>Телефон | Факс: +7 (495) 988 - 34 - 09</p>
+          <p>E-mail: <a href="mailto:sale@intehmet.com">sale@intehmet.com</a>, <a href="mailto:9883409@gmail.com">9883409@gmail.com</a></p>
+          <p class="footer-contacts__address">
+            Московская область, Ленинский район, <br>сельское поселение Развилковское, село Беседы, <br>Промышленный проезд, дом 9, офис 421.1
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="up-btn"><i class="fa fa-chevron-up"></i></button>
+
+<!-- Modals -->
+
+<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content common-form">
+      <div class="modal-header common-form-header">
+        <h5 class="modal-title common-form-title heading" id="requestModalLabel">Оформить заявку</h5>
+        <p class="modal-subtitle common-form-subtitle">Обращайтесь, с радостью поможем вам в течение 15 мин.</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body common-form-body">
+        <form class="modal-form modal-form_request d-flex flex-row flex-wrap justify-content-between w-100">
+          <div class="modal-form__block">
+            <div class="form-group">
+              <label for="modal-form_request__input-1">Название организации, имя*:</label>
+              <input id="modal-form_request__input-1" type="text" class="form-control modal-form__input">
+            </div>
+            <div class="form-group">
+              <label for="modal-form_request__input-2">Телефон*:</label>
+              <input id="modal-form_request__input-2" type="tel" class="form-control modal-form__input">
+            </div>
+            <div class="form-group mb-0">
+              <label for="modal-form_request__input-3">E-mail:</label>
+              <input id="modal-form_request__input-3" type="email" class="form-control modal-form__input">
+            </div>
+          </div>
+          <div class="modal-form__block">
+            <div class="form-group h-100">
+              <label for="modal-form_request__input-4">Комментарий к заявке*</label>
+              <textarea id="modal-form_request__input-4" class="form-control modal-form__input modal-form__textarea"></textarea>
+            </div>
+          </div>
+          <div class="modal-form__footer d-flex flex-row flex-wrap justify-content-between w-100">
+            <div class="form-group modal-form__file">
+              <label for="modal-form_request__file-1">Файл к заявке:</label>
+              <label for="modal-form_request__file-1" class="special-file">
+                <span class="btn">Выбрать файл</span>
+                <input type="file" class="form-control-file" id="modal-form_request__file-1">
+              </label>
+            </div>
+            <div class="form-group modal-form__captcha">
+              <label for="modal-form_request__input-5">* Защитный код:</label>
+              <div class="input-group">
+                <div class="input-group-prepend ">
+                  <img src="images/captcha-example.jpg" alt="">
+                </div>
+                <input id="modal-form_request__input-5" type="text" class="form-control modal-form__input">
+              </div>
+            </div>
+            <div class="text-center w-100">
+              <button type="submit" class="accent-btn accent-btn_big text-uppercase w-100">Отправить заявку</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals END -->
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+
+<script src="js/css-vars-ponyfill.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js?v=1.1"></script>
+<script src="js/stickyfill.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

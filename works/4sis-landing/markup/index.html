@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>4sis landing</title>
+  <meta name="description" content="4sis landing description">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <!-- Header CSS -->
+  <style>
+    :root{--color-dark-txt:#171717;--color-gray-txt:#777;--color-dark-brown:#200E01;--color-light-brown:#625042;--color-gray:#5D5C57;--color-light-gray:#f2f2f2;--color-green:#818061;--color-orange:#92703D;--main-font:'Montserrat', sans-serif;--secondary-font:'Darker Grotesque', sans-serif;--border-radius-small:3px}@font-face{font-family:'third-way-icons';src:url(fonts/third-way-icons.eot?5bp1vh);src:url(fonts/third-way-icons.eot?5bp1vh#iefix) format("embedded-opentype"),url(fonts/third-way-icons.ttf?5bp1vh) format("truetype"),url(fonts/third-way-icons.woff?5bp1vh) format("woff"),url(fonts/third-way-icons.svg?5bp1vh#third-way-icons) format("svg");font-weight:400;font-style:normal;font-display:block}[class*=" third-way-icon-"],[class^=third-way-icon-]{font-family:'third-way-icons'!important;speak:never;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;overflow:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.third-way-icon-chair:before{content:"\e900"}.third-way-icon-table:before{content:"\e901"}.third-way-icon-armchair:before{content:"\e902"}.third-way-icon-sofa:before{content:"\e904"}.third-way-icon-advantages-1:before{content:"\e905"}.third-way-icon-advantages-2:before{content:"\e906"}.third-way-icon-advantages-3:before{content:"\e907"}.third-way-icon-advantages-4:before{content:"\e90a"}.third-way-icon-dzen:before{content:"\e90b"}.third-way-icon-instagram:before{content:"\e90c"}.third-way-icon-telegram:before{content:"\e90d"}.third-way-icon-vk:before{content:"\e90e"}.third-way-icon-phone:before{content:"\e903"}.third-way-icon-email:before{content:"\e908"}.third-way-icon-location:before{content:"\e909"}.third-way-icon-user:before{content:"\e90f"}.third-way-icon-arrow-right:before{content:"\e910"}.third-way-icon-arrow-left:before{content:"\e911"}.third-way-icon-arrow-close:before{content:"\e912"}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Light.woff2) format("woff2"),url(fonts/Montserrat-Light.woff) format("woff");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Medium.woff2) format("woff2"),url(fonts/Montserrat-Medium.woff) format("woff");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-LightItalic.woff2) format("woff2"),url(fonts/Montserrat-LightItalic.woff) format("woff");font-weight:300;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-MediumItalic.woff2) format("woff2"),url(fonts/Montserrat-MediumItalic.woff) format("woff");font-weight:500;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-SemiBold.woff2) format("woff2"),url(fonts/Montserrat-SemiBold.woff) format("woff");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-SemiBoldItalic.woff2) format("woff2"),url(fonts/Montserrat-SemiBoldItalic.woff) format("woff");font-weight:600;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Thin.woff2) format("woff2"),url(fonts/Montserrat-Thin.woff) format("woff");font-weight:100;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Black.woff2) format("woff2"),url(fonts/Montserrat-Black.woff) format("woff");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Regular.woff2) format("woff2"),url(fonts/Montserrat-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-ThinItalic.woff2) format("woff2"),url(fonts/Montserrat-ThinItalic.woff) format("woff");font-weight:100;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-BlackItalic.woff2) format("woff2"),url(fonts/Montserrat-BlackItalic.woff) format("woff");font-weight:900;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-BoldItalic.woff2) format("woff2"),url(fonts/Montserrat-BoldItalic.woff) format("woff");font-weight:700;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Bold.woff2) format("woff2"),url(fonts/Montserrat-Bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-ExtraBold.woff2) format("woff2"),url(fonts/Montserrat-ExtraBold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-ExtraLight.woff2) format("woff2"),url(fonts/Montserrat-ExtraLight.woff) format("woff");font-weight:200;font-style:normal;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-ExtraLightItalic.woff2) format("woff2"),url(fonts/Montserrat-ExtraLightItalic.woff) format("woff");font-weight:200;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-ExtraBoldItalic.woff2) format("woff2"),url(fonts/Montserrat-ExtraBoldItalic.woff) format("woff");font-weight:700;font-style:italic;font-display:swap}@font-face{font-family:'Montserrat';src:url(fonts/Montserrat-Italic.woff2) format("woff2"),url(fonts/Montserrat-Italic.woff) format("woff");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-Black.woff2) format("woff2"),url(fonts/DarkerGrotesque-Black.woff) format("woff");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-Regular.woff2) format("woff2"),url(fonts/DarkerGrotesque-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-Medium.woff2) format("woff2"),url(fonts/DarkerGrotesque-Medium.woff) format("woff");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-Light.woff2) format("woff2"),url(fonts/DarkerGrotesque-Light.woff) format("woff");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-SemiBold.woff2) format("woff2"),url(fonts/DarkerGrotesque-SemiBold.woff) format("woff");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-Bold.woff2) format("woff2"),url(fonts/DarkerGrotesque-Bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Darker Grotesque';src:url(fonts/DarkerGrotesque-ExtraBold.woff2) format("woff2"),url(fonts/DarkerGrotesque-ExtraBold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:var(--main-font);color:var(--color-gray-txt);font-weight:400;font-size:15px;line-height:24px}@media screen and (min-width:768px){body{font-size:16px;line-height:25px}}.landing-hero__description p,p{margin-top:0}a[href*="mailto:"],a[href*="tel:"]{white-space:nowrap}.d-inline-md{display:none!important}@media screen and (min-width:992px){.d-inline-md{display:inline!important}}.text-center{text-align:center!important}.w-100{width:100%!important}.h-100{height:100%!important}.d-none{display:none!important}.d-flex{display:-webkit-box;display:-ms-flexbox;display:flex}.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.justify-content-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.justify-content-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.list-unstyled{list-style:none;padding:0;margin:0}.landing-main{position:relative;z-index:99}.container{position:relative;margin-left:auto;margin-right:auto;max-width:100%;padding-left:15px;padding-right:15px}@media screen and (min-width:1320px){.container{width:1320px}}@media screen and (min-width:1440px){.container{width:1400px}}.simple-btn{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;text-align:center;border-radius:var(--border-radius-small);background-color:#fff;cursor:pointer;text-decoration:none;font-size:16px;font-weight:400;text-transform:uppercase;line-height:1;padding:15px 20px;border:0;color:var(--color-light-brown);-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}.simple-btn:hover{color:#fff;background-color:var(--color-orange)}.simple-btn:focus{outline:0}.simple-btn:focus-visible{-webkit-box-shadow:inset 0 0 0 2px var(--color-orange);box-shadow:inset 0 0 0 2px var(--color-orange)}@media screen and (min-width:768px){.simple-btn{padding:20px 30px}}.landing-header{background-color:#fff;padding:15px 20px;width:100%;z-index:100}@media screen and (min-width:1200px){.landing-header{padding:50px 80px}}.landing-header__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.landing-header__logo{display:block;margin-right:25px}.landing-header__logo img{width:116px;height:auto;max-width:100%}.landing-contacts-list{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.landing-contacts-list__item{margin-top:3px;margin-bottom:3px}.landing-contacts-list__item:not(:last-child){margin-right:20px}.landing-contacts-list__link{display:block;color:var(--color-dark-txt);text-decoration:none;font-size:14px;line-height:20px}.landing-contacts-list__link:hover{color:var(--color-orange)}.landing-contacts-list.landing-contacts-list_header{margin-left:auto;-ms-flex-preferred-size:0;flex-basis:0}.landing-contacts-list.landing-contacts-list_header li{margin-right:0}@media screen and (min-width:576px){.landing-contacts-list.landing-contacts-list_header{-ms-flex-wrap:nowrap;flex-wrap:nowrap}}.landing-contacts-list.landing-contacts-list_icons .landing-contacts-list__address,.landing-contacts-list.landing-contacts-list_icons .landing-contacts-list__link{padding-left:35px;position:relative}.landing-contacts-list.landing-contacts-list_icons .landing-contacts-list__address i,.landing-contacts-list.landing-contacts-list_icons .landing-contacts-list__link i{position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);font-size:20px;color:inherit}@media screen and (min-width:493px){.landing-contacts-list_header li:not(:last-child){margin-right:40px}}@media screen and (min-width:1330px){.landing-contacts-list a{font-size:16px}}.landing-hero{padding:50px 0 65px}.no-webp .landing-hero{background:url(images/landing-hero-bg.jpg) no-repeat center top;background-size:cover}.webp .landing-hero{background:url(images/landing-hero-bg.webp) no-repeat center top;background-size:cover}@media screen and (min-width:1330px){.landing-hero{padding:115px 0 150px}}.landing-hero__caption{color:#fff;padding-left:20px;padding-right:20px;width:890px;max-width:100%;margin-left:auto;margin-right:auto}.landing-hero__title{text-transform:uppercase;font-weight:600;font-size:30px;line-height:1.3;margin-bottom:35px;margin-top:0}@media screen and (min-width:1330px){.landing-hero__title{font-size:40px;line-height:36px;margin-bottom:50px}}.landing-hero__description p:last-child{margin-bottom:0}.landing-advantages{padding:15px 0;margin-bottom:30px}@media screen and (min-width:1025px){.landing-advantages{margin-bottom:60px}}.landing-advantages-list{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media screen and (min-width:900px){.landing-advantages-list{-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}}@media screen and (max-width:479px){.container_advantages{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.container_advantages .landing-advantages-list{-ms-flex-preferred-size:0;flex-basis:0}}.landing-advantages-list__item{position:relative;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;max-width:240px;padding-left:60px;margin:15px 10px 15px 0}.landing-advantages-list__item i{position:absolute;top:5px;color:#000;font-size:40px;left:0}.landing-advantages-list__item p{margin:0;text-transform:uppercase}
+  </style>
+<!--  <link rel="stylesheet" href="css/header.css">-->
+
+  <link rel="stylesheet" href="libs/slick/slick-theme.css">
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <link rel="preload" as="image" href="images/landing-hero-bg.jpg">
+  <link rel="preload" as="image" href="images/landing-hero-bg.webp">
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="landing-header">
+  <div class="landing-header__inner">
+    <a href="#" class="landing-header__logo">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp">
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.png" width="234" height="86" alt="Логотип">
+      </picture>
+    </a>
+
+    <ul class="landing-contacts-list landing-contacts-list_icons landing-contacts-list_header list-unstyled">
+      <li class="landing-contacts-list__item">
+        <a href="tel:+74952121812" class="landing-contacts-list__link">
+          <i class="third-way-icon-phone"></i>
+          +7 (495) 212-18-12</a>
+      </li>
+      <li class="landing-contacts-list__item">
+        <a href="mailto:info@4sis.ru" class="landing-contacts-list__link">
+          <i class="third-way-icon-email"></i>
+          info@4sis.ru</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<!-- Шапка КОНЕЦ -->
+
+<!-- Контент -->
+<main class="landing-main">
+  <!-- Hero (Главнй баннер) -->
+  <div class="landing-hero">
+    <div class="landing-hero__caption">
+      <h1 class="landing-hero__title">О компании</h1>
+      <div class="landing-hero__description">
+        <p>Компания «4SiS» (ФОРСИС) — это признанный на рынке производитель с более чем 10-ти летней историей. Накопленный колоссальный опыт, профессиональная компетенция и обстоятельства нашего времени позволили успешно наладить собственное производство интерьерной линейки мебели. Среди наших корпоративных клиентов рестораны, сеть отелей Radisson и Marriott. Мы гордимся, что достигли такого уровня и ценим свою репутацию.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Hero (Главнй баннер) КОНЕЦ -->
+
+  <!-- Преимущества -->
+  <div class="landing-advantages">
+    <div class="container container_advantages">
+      <ul class="landing-advantages-list list-unstyled">
+        <li class="landing-advantages-list__item">
+          <i class="third-way-icon-advantages-1"></i>
+          <p>Мы работаем <br>с 2012 года</p></li>
+        <li class="landing-advantages-list__item">
+          <i class="third-way-icon-advantages-2"></i>
+          <p>Собственное <br>производство</p></li>
+        <li class="landing-advantages-list__item">
+          <i class="third-way-icon-advantages-3"></i>
+          <p>Широкий <br>ассортимент</p></li>
+        <li class="landing-advantages-list__item">
+          <i class="third-way-icon-advantages-4"></i>
+          <p>Изготовление по <br>индивидуальным <br>размерам</p></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Преимущества КОНЕЦ -->
+
+  <!-- Шоурум -->
+  <div class="landing-showroom">
+    <div class="container">
+      <div class="landing-showroom-item landing-showroom-item_dinner-groups">
+        <div class="landing-showroom-item__img">
+          <picture>
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-1_small.webp" type="image/webp">
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-1_small.jpg" type="image/jpeg">
+            <source srcset="images/showroom/showroom-1.webp" type="image/webp">
+            <source srcset="images/showroom/showroom-1.jpg" type="image/jpeg">
+            <img src="images/showroom/showroom-1.jpg" alt="Item-1" width="998" height="1050">
+          </picture>
+        </div>
+        <div class="landing-showroom-item__info d-flex">
+          <div class="landing-showroom-item__name">Обеденные группы</div>
+          <div class="landing-showroom-item__icons d-flex justify-content-center">
+            <i class="third-way-icon-chair"></i>
+            <i class="third-way-icon-table"></i>
+          </div>
+          <button class="simple-btn landing-showroom-item__btn">
+            <span>Подробнее</span>
+            <i class="third-way-icon-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="landing-showroom-modal">
+          <button class="landing-showroom-modal__close">
+            <i class="third-way-icon-arrow-close"></i>
+          </button>
+          <div class="container landing-showroom-modal__inner d-flex h-100">
+            <div class="landing-showroom-modal__left">
+              <div class="landing-showroom-modal-left-carousel">
+                <div class="landing-showroom-modal-left-carousel__item">
+                  <picture>
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-1.webp" type="image/webp">
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-1.jpg" type="image/jpeg">
+                    <img src="images/showroom/modals/showroom-modal-img-left-1.jpg"
+                         width="646" height="1051" alt="" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="landing-showroom-modal__right">
+              <div class="landing-showroom-modal-right-carousel">
+                <div class="landing-showroom-modal-right-carousel-item">
+                  <div class="landing-showroom-modal-right-carousel-item__left">
+                    <div class="landing-showroom-modal-right-carousel-item__name">Малага</div>
+                    <p class="landing-showroom-modal-right-carousel-item__type">Обеденная зона</p>
+                    <div class="landing-showroom-modal-right-carousel-item__img">
+                      <picture>
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-1.webp" type="image/webp">
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-1.jpg" type="image/jpeg">
+                        <img src="images/showroom/modals/showroom-modal-img-main-1.jpg"
+                             alt="" width="706" height="398" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="landing-showroom-modal-right-carousel-item__right">
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-table"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Стол Малага</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: молочный</li>
+                        <li>Материал: HPL</li>
+                        <li>Арт. RC3050-140-80-A White</li>
+                        <li>Размер: 140х80х75 см</li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-chair"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Стул Милан</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: бежевый</li>
+                        <li>Материал: роуп</li>
+                        <li>Арт. MIL-CH-001W H-beige</li>
+                        <li>Размер: 60х66х81 см</li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета стула:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_dark-gray">
+                          <span class="form-radio__label">темно-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_beige">
+                          <span class="form-radio__label">бежевый</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="landing-showroom-modal-nav d-flex">
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__prev">
+                  <i class="third-way-icon-arrow-left"></i>
+                </button>
+                <div class="landing-showroom-modal-price-carousel">
+                  <div class="landing-showroom-modal-price-carousel__item">131 160 Р</div>
+                </div>
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__next">
+                  <i class="third-way-icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-showroom-item landing-showroom-item_tables">
+        <div class="landing-showroom-item__img">
+          <picture>
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-2_small.webp" type="image/webp">
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-2_small.jpg" type="image/jpeg">
+            <source srcset="images/showroom/showroom-2.webp" type="image/webp">
+            <source srcset="images/showroom/showroom-2.jpg" type="image/jpeg">
+            <img src="images/showroom/showroom-2.jpg" alt="Item-2"
+                 width="998" height="1050" loading="lazy">
+          </picture>
+        </div>
+        <div class="landing-showroom-item__info d-flex">
+          <div class="landing-showroom-item__name">Столы</div>
+          <div class="landing-showroom-item__icons d-flex justify-content-center">
+            <i class="third-way-icon-table"></i>
+          </div>
+          <button class="simple-btn landing-showroom-item__btn">
+            <span>Подробнее</span>
+            <i class="third-way-icon-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="landing-showroom-modal">
+          <button class="landing-showroom-modal__close">
+            <i class="third-way-icon-arrow-close"></i>
+          </button>
+          <div class="container landing-showroom-modal__inner d-flex h-100">
+            <div class="landing-showroom-modal__left">
+              <div class="landing-showroom-modal-left-carousel">
+                <div class="landing-showroom-modal-left-carousel__item">
+                  <picture>
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-2.webp" type="image/webp">
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-2.jpg" type="image/jpeg">
+                    <img src="images/showroom/modals/showroom-modal-img-left-2.jpg"
+                         alt="" width="646" height="1051" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="landing-showroom-modal__right">
+              <div class="landing-showroom-modal-right-carousel">
+                <div class="landing-showroom-modal-right-carousel-item">
+                  <div class="landing-showroom-modal-right-carousel-item__left">
+                    <div class="landing-showroom-modal-right-carousel-item__name">Малага</div>
+                    <p class="landing-showroom-modal-right-carousel-item__type">Стол</p>
+                    <div class="landing-showroom-modal-right-carousel-item__img">
+                      <picture>
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-2.webp" type="image/webp">
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-2.jpg" type="image/jpeg">
+                        <img src="images/showroom/modals/showroom-modal-img-main-2.jpg"
+                             alt="" width="706" height="398" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="landing-showroom-modal-right-carousel-item__right">
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-table"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Стол из HPL</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: молочный</li>
+                        <li>Каркас: алюминий</li>
+                        <li>Арт. RC3050-140-80-A White</li>
+                        <li>Размер: 140х80х75 см</li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные размеры:</div>
+                      <p>240х100x75, 200х100x75, 180х900x75, 160х80x75, 140x80x75, 90х90x75</p>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета подстолья:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_white">
+                          <span class="form-radio__label">белый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_black">
+                          <span class="form-radio__label">чёрный</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета HPL:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_milk">
+                          <span class="form-radio__label">молочный</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_gray-granite">
+                          <span class="form-radio__label">серый <br>гранит</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_oak">
+                          <span class="form-radio__label">дуб</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="landing-showroom-modal-nav d-flex">
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__prev">
+                  <i class="third-way-icon-arrow-left"></i>
+                </button>
+                <div class="landing-showroom-modal-price-carousel">
+                  <div class="landing-showroom-modal-price-carousel__item">58 920 Р</div>
+                </div>
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__next">
+                  <i class="third-way-icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-showroom-item landing-showroom-item_chairs">
+        <div class="landing-showroom-item__img">
+          <picture>
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-3_small.webp" type="image/webp">
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-3_small.jpg" type="image/jpeg">
+            <source srcset="images/showroom/showroom-3.webp" type="image/webp">
+            <source srcset="images/showroom/showroom-3.jpg" type="image/jpeg">
+            <img src="images/showroom/showroom-3.jpg" alt="Item-3"
+                 width="998" height="1050" loading="lazy">
+          </picture>
+        </div>
+        <div class="landing-showroom-item__info d-flex">
+          <div class="landing-showroom-item__name">Стулья и кресла</div>
+          <div class="landing-showroom-item__icons d-flex justify-content-center">
+            <i class="third-way-icon-armchair"></i>
+          </div>
+          <button class="simple-btn landing-showroom-item__btn">
+            <span>Подробнее</span>
+            <i class="third-way-icon-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="landing-showroom-modal">
+          <button class="landing-showroom-modal__close">
+            <i class="third-way-icon-arrow-close"></i>
+          </button>
+          <div class="container landing-showroom-modal__inner d-flex h-100">
+            <div class="landing-showroom-modal__left">
+              <div class="landing-showroom-modal-left-carousel">
+                <div class="landing-showroom-modal-left-carousel__item">
+                  <picture>
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-3.webp" type="image/webp">
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-3.jpg" type="image/jpeg">
+                    <img src="images/showroom/modals/showroom-modal-img-left-3.jpg"
+                         alt="" width="860" height="1400" loading="lazy">
+                  </picture>
+                </div>
+                <div class="landing-showroom-modal-left-carousel__item">
+                  <picture>
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-3-1.webp" type="image/webp">
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-3-1.jpg" type="image/jpeg">
+                    <img src="images/showroom/modals/showroom-modal-img-left-3-1.jpg"
+                         alt="" width="659" height="1051" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="landing-showroom-modal__right">
+              <div class="landing-showroom-modal-right-carousel">
+                <div class="landing-showroom-modal-right-carousel-item">
+                  <div class="landing-showroom-modal-right-carousel-item__left">
+                    <div class="landing-showroom-modal-right-carousel-item__name">Милан</div>
+                    <p class="landing-showroom-modal-right-carousel-item__type">Стул</p>
+                    <div class="landing-showroom-modal-right-carousel-item__img">
+                      <picture>
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-3.webp" type="image/webp">
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-3.jpg" type="image/jpeg">
+                        <img src="images/showroom/modals/showroom-modal-img-main-3.jpg"
+                             alt="" width="352" height="398" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="landing-showroom-modal-right-carousel-item__right">
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-chair"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Стул</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: светло-серый </li>
+                        <li>Материал: роуп</li>
+                        <li>Арт. MIL-CH-001 H-grey</li>
+                        <li>Размер: 57x62x80 см</li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета стула:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_light-gray">
+                          <span class="form-radio__label">светло-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_dark-gray">
+                          <span class="form-radio__label">темно-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_beige">
+                          <span class="form-radio__label">бежевый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_brown">
+                          <span class="form-radio__label">коричневый</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета подушки:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_light-gray">
+                          <span class="form-radio__label">светло-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_dark-gray">
+                          <span class="form-radio__label">темно-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_beige">
+                          <span class="form-radio__label">бежевый</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="landing-showroom-modal-right-carousel-item">
+                  <div class="landing-showroom-modal-right-carousel-item__left">
+                    <div class="landing-showroom-modal-right-carousel-item__name">Бордо Колос</div>
+                    <p class="landing-showroom-modal-right-carousel-item__type">Стул</p>
+                    <div class="landing-showroom-modal-right-carousel-item__img">
+                      <picture>
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-3-1.webp" type="image/webp">
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-3-1.jpg" type="image/jpeg">
+                        <img src="images/showroom/modals/showroom-modal-img-main-3-1.jpg"
+                             alt="" width="338" height="398" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="landing-showroom-modal-right-carousel-item__right">
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-chair"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Стул</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: темно-серый </li>
+                        <li>Материал: роуп</li>
+                        <li>Арт. BOR-CH-St002 D-grey</li>
+                        <li>Размер: 57x62x80 см</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="landing-showroom-modal-nav d-flex">
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__prev">
+                  <i class="third-way-icon-arrow-left"></i>
+                </button>
+                <div class="landing-showroom-modal-price-carousel">
+                  <div class="landing-showroom-modal-price-carousel__item">18 060 Р</div>
+                  <div class="landing-showroom-modal-price-carousel__item">15 980 р</div>
+                </div>
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__next">
+                  <i class="third-way-icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-showroom-item landing-showroom-item_sofas">
+        <div class="landing-showroom-item__img">
+          <picture>
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-4_small.webp" type="image/webp">
+            <source media="(max-width: 480px)" srcset="images/showroom/showroom-4_small.jpg" type="image/jpeg">
+            <source srcset="images/showroom/showroom-4.webp" type="image/webp">
+            <source srcset="images/showroom/showroom-4.jpg" type="image/jpeg">
+            <img src="images/showroom/showroom-4.jpg" alt="Item-4"
+                 width="998" height="1050" loading="lazy">
+          </picture>
+        </div>
+        <div class="landing-showroom-item__info d-flex">
+          <div class="landing-showroom-item__name">Диваны и лаунж зоны</div>
+          <div class="landing-showroom-item__icons d-flex justify-content-center">
+            <i class="third-way-icon-sofa"></i>
+          </div>
+          <button class="simple-btn landing-showroom-item__btn">
+            <span>Подробнее</span>
+            <i class="third-way-icon-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="landing-showroom-modal">
+          <button class="landing-showroom-modal__close">
+            <i class="third-way-icon-arrow-close"></i>
+          </button>
+          <div class="container landing-showroom-modal__inner d-flex h-100">
+            <div class="landing-showroom-modal__left">
+              <div class="landing-showroom-modal-left-carousel">
+                <div class="landing-showroom-modal-left-carousel__item">
+                  <picture>
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-4.webp" type="image/webp">
+                    <source srcset="images/showroom/modals/showroom-modal-img-left-4.jpg" type="image/jpeg">
+                    <img src="images/showroom/modals/showroom-modal-img-left-4.jpg"
+                         alt="" width="646" height="1051" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="landing-showroom-modal__right">
+              <div class="landing-showroom-modal-right-carousel">
+                <div class="landing-showroom-modal-right-carousel-item">
+                  <div class="landing-showroom-modal-right-carousel-item__left">
+                    <div class="landing-showroom-modal-right-carousel-item__name">Канны</div>
+                    <p class="landing-showroom-modal-right-carousel-item__type">Диван</p>
+                    <div class="landing-showroom-modal-right-carousel-item__img">
+                      <picture>
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-4.webp" type="image/webp">
+                        <source srcset="images/showroom/modals/showroom-modal-img-main-4.jpg" type="image/jpeg">
+                        <img src="images/showroom/modals/showroom-modal-img-main-4.jpg" alt=""
+                             width="656" height="398" loading="lazy">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="landing-showroom-modal-right-carousel-item__right">
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-icon">
+                        <i class="third-way-icon-sofa"></i>
+                      </div>
+                      <div class="element-name element-name_colored">Диван двухместный на
+                        <br class="d-inline-md">деревянном основании</div>
+                      <ul class="element-characteristics list-unstyled">
+                        <li>Цвет: светло-серый</li>
+                        <li>Материал: роуп</li>
+                        <li>Арт. MIL-CH-001 H-grey</li>
+                        <li>Размер: 57x62x80 см</li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета дивана:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_beige">
+                          <span class="form-radio__label">бежевый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_brown">
+                          <span class="form-radio__label">коричневый</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="landing-showroom-modal-right-carousel-item__element">
+                      <div class="element-name">Доступные цвета подушки:</div>
+                      <ul class="element-colors d-flex list-unstyled">
+                        <li class="form-radio form-radio_color form-radio_dark-gray">
+                          <span class="form-radio__label">темно-<br>серый</span>
+                        </li>
+                        <li class="form-radio form-radio_color form-radio_beige">
+                          <span class="form-radio__label">бежевый</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="landing-showroom-modal-nav d-flex">
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__prev">
+                  <i class="third-way-icon-arrow-left"></i>
+                </button>
+                <div class="landing-showroom-modal-price-carousel">
+                  <div class="landing-showroom-modal-price-carousel__item">67 800 Р</div>
+                </div>
+                <button class="landing-showroom-modal__nav-btn landing-showroom-modal__next">
+                  <i class="third-way-icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Шоурум КОНЕЦ -->
+
+  <!-- Форма -->
+  <div class="landing-callback">
+    <div class="container container_callback">
+      <form class="landing-callback-form">
+        <div class="landing-callback-form__title">Форма обратной связи</div>
+        <div class="landing-callback-form__col landing-callback-form__col_half">
+          <label class="landing-callback-form__field">
+            <span class="landing-callback-form__label-icon">
+              <i class="third-way-icon-user"></i>
+            </span>
+            <input type="text" class="landing-callback-form__input" name="inputName" placeholder="Ваше имя*" required>
+          </label>
+          <label class="landing-callback-form__field">
+            <span class="landing-callback-form__label-icon">
+              <i class="third-way-icon-phone"></i>
+            </span>
+            <input type="tel" class="landing-callback-form__input" name="inputPhone" placeholder="Ваш номер*" required>
+          </label>
+          <label class="landing-callback-form__field">
+            <span class="landing-callback-form__label-icon">
+              <i class="third-way-icon-email"></i>
+            </span>
+            <input type="email" class="landing-callback-form__input" name="inputEmail" placeholder="Ваш E-mail">
+          </label>
+        </div>
+        <div class="landing-callback-form__col landing-callback-form__col_half">
+          <label class="landing-callback-form__field h-100">
+            <textarea placeholder="Текст сообщения" name="inputText"
+                      class="landing-callback-form__input landing-callback-form__textarea"></textarea>
+          </label>
+        </div>
+        <div class="landing-callback-form__col text-center">
+          <label class="form-checkbox">
+            <input type="checkbox" class="form-checkbox__input" name="inputAgreement" required>
+            <span class="form-checkbox__label">Подтверждаю согласие с политикой конфиденциальности</span>
+          </label>
+        </div>
+        <div class="landing-callback-form__col text-center">
+          <button type="submit" class="simple-btn"><span>Отправить</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Форма КОНЕЦ -->
+  <!-- Контакты -->
+  <div class="landing-contacts d-flex">
+    <div class="landing-contacts__left d-flex">
+      <div class="landing-contacts__block">
+        <div class="landing-contacts__title">Шоу-рум</div>
+
+        <ul class="landing-contacts-list landing-contacts-list_icons landing-contacts-list_contacts list-unstyled">
+          <li class="landing-contacts-list__item">
+            <p class="landing-contacts-list__address">
+              <i class="third-way-icon-location"></i>
+              БЦ "Савеловский Сити", <br>Новодмитровская ул, 2к2</p>
+          </li>
+          <li class="landing-contacts-list__item">
+            <a href="tel:+74952121812" class="landing-contacts-list__link">
+              <i class="third-way-icon-phone"></i>
+              +7 (495) 212-18-12</a>
+          </li>
+          <li class="landing-contacts-list__item">
+            <a href="mailto:info@4sis.ru" class="landing-contacts-list__link">
+              <i class="third-way-icon-email"></i>
+              info@4sis.ru</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="landing-contacts__right">
+      <picture>
+        <source srcset="images/landing-contacts-map.webp" type="image/webp">
+        <source srcset="images/landing-contacts-map.jpg" type="image/jpeg">
+        <img class="landing-contacts__map" src="images/landing-contacts-map.jpg"
+             width="1478" height="1201" alt="Map" loading="lazy">
+      </picture>
+
+    </div>
+  </div>
+  <!-- Контакты КОНЕЦ -->
+</main>
+<!-- Контент КОНЕЦ -->
+
+
+<!-- Подвал -->
+<footer class="landing-footer">
+  <div class="container d-flex flex-wrap justify-content-between">
+    <div class="landing-footer__col landing-footer__col_social">
+      <ul class="landing-social landing-social_footer list-unstyled">
+        <li class="landing-social__item">
+          <a href="#" class="landing-social__link landing-social__link_vk">
+            <i class="third-way-icon-vk"></i>
+            <span>VK</span>
+          </a>
+        </li>
+        <li class="landing-social__item">
+          <a href="#" class="landing-social__link landing-social__link_inst">
+            <i class="third-way-icon-instagram"></i>
+            <span>Instargram</span>
+          </a>
+        </li>
+        <li class="landing-social__item">
+          <a href="#" class="landing-social__link landing-social__link_tg">
+            <i class="third-way-icon-telegram"></i>
+            <span>Telegram</span>
+          </a>
+        </li>
+        <li class="landing-social__item">
+          <a href="#" class="landing-social__link landing-social__link_dzen">
+            <i class="third-way-icon-dzen"></i>
+            <span>Dzen</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="landing-footer__col landing-footer__col_contacts">
+      <p class="landing-footer__address">г. Москва, Новодмитровская ул, 2к2 <br>БЦ «Савеловский Сити</p>
+
+      <ul class="landing-contacts-list landing-contacts-list_footer list-unstyled">
+        <li class="landing-contacts-list__item">
+          <a href="tel:+74952121812" class="landing-contacts-list__link">
+            +7 (495) 212-18-12</a>
+        </li>
+        <li class="landing-contacts-list__item">
+          <a href="mailto:info@4sis.ru" class="landing-contacts-list__link">
+            info@4sis.ru</a>
+        </li>
+      </ul>
+    </div>
+    <div class="landing-footer__col landing-footer__col_copyright">
+      <p>2022 4SiS.pro — производитель уличной мебели</p>
+      <p>© Все права защищены. Копирование материалов с сайта без ссылки на этот ресурс запрещено.</p>
+    </div>
+  </div>
+</footer>
+<!-- Подвал КОНЕЦ -->
+
+
+<script src="libs/modernizr-webp.js"></script>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/jquery.mask.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

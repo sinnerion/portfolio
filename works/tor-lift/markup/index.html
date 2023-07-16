@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact-form.css">
+  <!-- Styles END -->
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-9 col-lg-8 d-none d-lg-block">
+          <nav class="header-top__nav" role="navigation">
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="technologies.html">Технологии</a></li>
+              <li><a href="#">Поддержка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-9 d-block d-lg-none">
+          <form class="header-search">
+            <input type="search" class="form-control header-search__field">
+            <button class="header-search__submit" type="submit"></button>
+          </form>
+        </div>
+        <div class="col-3 d-block d-lg-none text-right"><button class="main-nav-toggle position-relative d-inline-block d-lg-none">
+          <span class="main-nav-toggle__bar"></span>
+        </button></div>
+        <div class="col-12 col-lg-4 d-none d-lg-block">
+          <div class="header-top__address">115487, г. Москва, 2-ой Нагатинский проезд, д. 6А</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-middle">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6 col-lg-3"><a href="index.html" class="logo"><img src="img/logo.png" alt=""></a></div>
+        <div class="col-12 col-lg-4 col-xl-5 d-none d-lg-block pl-0">
+          <form class="header-search">
+            <input type="search" class="form-control header-search__field">
+            <button class="header-search__submit" type="submit"></button>
+          </form>
+        </div>
+        <div class="col-6 col-lg-3 col-xl-2 d-none d-lg-block">
+          <div class="header-contacts">
+            <p><span>Тел.:</span> +7 (495) 797-64-04</p>
+            <p><span>E-mail:</span> tor-lift@yandex.ru</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 text-right pl-0 pr-lg-0">
+          <button class="accent-btn header-call-btn" data-toggle="modal" data-target="#callBackModal">Заказать звонок</button>
+          <div class="header-contacts d-none d-sm-block d-lg-none text-left mt-1">
+            <p><span>Тел.:</span> +7 (495) 797-64-04</p>
+            <p><span>E-mail:</span> tor-lift@yandex.ru</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <button class="main-nav-close d-inline-block d-lg-none">
+            <span class="main-nav-close__bar"></span>
+          </button>
+          <nav class="main-nav position-relative" role="navigation">
+            <ul class="main-nav__list">
+              <li><span class="d-block d-lg-none">Лифты <i class="icon-angle-down"></i></span><a href="elevators.html" class="d-none d-lg-block">Лифты <i class="icon-angle-down"></i></a>
+                <ul class="main-nav__sub-list">
+                  <li class="d-block d-lg-none"><a href="elevators.html"><i class="icon-angle-right"></i>Лифты</a></li>
+                  <li><a href="mounting.html"><i class="icon-angle-right"></i>Монтаж и установка лифтов</a></li>
+                  <li><a href="mounting-cargo.html"><i class="icon-angle-right"></i>Монтаж грузовых лифтов</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-3</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-4</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-5</a></li>
+                </ul>
+              </li>
+              <li><span class="d-block d-lg-none">Шахты лифтов <i class="icon-angle-down"></i></span><a href="services-mines.html" class="d-none d-lg-block">Шахты лифтов <i class="icon-angle-down"></i></a>
+                <ul class="main-nav__sub-list">
+                  <li class="d-block d-lg-none"><a href="services-mines.html"><i class="icon-angle-right"></i>Шахты лифтов</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-1</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-2</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-3</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-4</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Эскалаторы</a></li>
+              <li><a href="#">Траволаторы</a></li>
+              <li><span class="d-block d-lg-none">Услуги <i class="icon-angle-down"></i></span><a href="services.html" class="d-none d-lg-block">Услуги <i class="icon-angle-down"></i></a>
+                <ul class="main-nav__sub-list">
+                  <li class="d-block d-lg-none"><a href="services.html"><i class="icon-angle-right"></i>Услуги</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-1</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-2</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-3</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-4</a></li>
+                  <li><a href="#"><i class="icon-angle-right"></i>Link-2-5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-top__nav_mobile d-block d-lg-none" role="navigation">
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="technologies.html">Технологии</a></li>
+              <li><a href="#">Поддержка</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" role="main">
+  <div class="main-carousel-wrapper position-relative">
+    <div class="main-carousel">
+      <a href="#" class="main-carousel-item">
+        <img src="img/main-carousel-item-1.jpg" alt="">
+        <div class="main-carousel-item__caption position-absolute">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="main-carousel-item__heading fade-up fade-active">Lorem</div>
+                <p class="main-carousel-item__txt main-carousel-item__txt_active"><i
+                    class="fade-left fade-active"></i><span class="fade-left_long fade-active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, nulla!</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="main-carousel-item">
+        <img src="img/main-carousel-item-3.jpg" alt="">
+        <div class="main-carousel-item__caption position-absolute">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="main-carousel-item__heading fade-up">Lorem</div>
+                <p class="main-carousel-item__txt"><i class="fade-left"></i><span class="fade-left_long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil?</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="main-carousel-item">
+        <img src="img/main-carousel-item-4.jpg" alt="">
+        <div class="main-carousel-item__caption position-absolute">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="main-carousel-item__heading fade-up">Lorem</div>
+                <p class="main-carousel-item__txt"><i class="fade-left"></i><span class="fade-left_long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quisquam.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="main-carousel-item">
+        <img src="img/main-carousel-item-5.jpg" alt="">
+        <div class="main-carousel-item__caption position-absolute">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="main-carousel-item__heading fade-up">Шахты лифтов</div>
+                <p class="main-carousel-item__txt"><i class="fade-left"></i><span class="fade-left_long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, natus!</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="main-carousel__dots container position-absolute">
+      <div class="row">
+        <div class="col-12"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-direction">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Направления деятельности</h2>
+        </div>
+        <div class="col-12">
+          <div class="direction d-flex flex-row flex-wrap justify-content-between w-100">
+            <div class="direction-item direction-item_1">
+              <div class="direction-item__body">
+                <div class="direction-item__heading">Lorem ipsum</div>
+                <div class="direction-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, mollitia.</p>
+                </div>
+              </div>
+              <a href="#" class="direction-item__more"><span>Подробнее <i class="icon-arrow-right"></i></span></a>
+            </div>
+            <div class="direction-item direction-item_2">
+              <div class="direction-item__body">
+                <div class="direction-item__heading">Lorem ipsum</div>
+                <div class="direction-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, mollitia.</p>
+                </div>
+              </div>
+              <a href="#" class="direction-item__more"><span>Подробнее <i class="icon-arrow-right"></i></span></a>
+            </div>
+            <div class="direction-item direction-item_3">
+              <div class="direction-item__body">
+                <div class="direction-item__heading">Lorem ipsum</div>
+                <div class="direction-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, mollitia.</p>
+                </div>
+              </div>
+              <a href="#" class="direction-item__more"><span>Подробнее <i class="icon-arrow-right"></i></span></a>
+            </div>
+            <div class="direction-item direction-item_4">
+              <div class="direction-item__body">
+                <div class="direction-item__heading">Lorem ipsum</div>
+                <div class="direction-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, mollitia.</p>
+                </div>
+              </div>
+              <a href="#" class="direction-item__more"><span>Подробнее <i class="icon-arrow-right"></i></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-services section_dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Наши услуги</h2>
+        </div>
+        <div class="col-12">
+          <div class="services d-flex flex-row flex-wrap justify-content-between w-100">
+            <a href="#" class="services-item services-item_1">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+            <a href="#" class="services-item services-item_2">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+            <a href="#" class="services-item services-item_3">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+            <a href="#" class="services-item services-item_4">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+            <a href="#" class="services-item services-item_5">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+            <a href="#" class="services-item services-item_6">
+              <span class="services-item__name">Монтаж лифтового оборудования</span>
+              <span class="services-item__btn"><i class="icon-arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="text-center"><a href="#" class="accent-btn services-link">Смотреть все услуги</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-spectrum">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 section-txt">
+          <h3>Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse et, facere fugiat illum incidunt
+            inventore labore laborum minima molestias, odio officiis placeat repudiandae vitae.</p>
+          <p>Architecto dolores doloribus impedit nulla, odio quod voluptatem? Ab asperiores doloribus earum illum, quod
+            sequi similique sit voluptate voluptatum! Consectetur distinctio magnam modi reiciendis voluptate?</p>
+          <div class="d-flex flex-row flex-wrap justify-content-between w-100">
+            <ul class="section-txt-list list-unstyled">
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti dicta earum illo
+                perspiciatis reprehenderit?
+              </li>
+              <li>Illo nam officia suscipit! Illo iure laboriosam porro quisquam tenetur? Autem cumque distinctio dolorum
+                recusandae.
+              </li>
+              <li>Accusamus, deleniti dicta fugit harum illo impedit inventore mollitia porro, reiciendis saepe similique
+                tempora vel?
+              </li>
+              <li>Ab amet excepturi exercitationem fugiat libero natus, quaerat, quibusdam quod quos similique suscipit
+                voluptatem voluptatibus.
+              </li>
+              <li>Aspernatur autem consequatur dicta eaque, est ex hic iusto libero modi officia perspiciatis, tempora,
+                voluptate?
+              </li>
+              <li>Ad assumenda aut, commodi deleniti dolores esse labore laudantium minima mollitia nisi praesentium
+                recusandae sunt?
+              </li>
+              <li>Facere iusto non reiciendis repellat sapiente sed, tempore veniam. Alias est illum ipsum minima nemo.
+              </li>
+            </ul>
+            <ul class="section-txt-list list-unstyled">
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore expedita, placeat
+                reiciendis vero?
+              </li>
+              <li>At atque esse, fugit mollitia nam nesciunt, quas repellat repudiandae rerum unde ut vero voluptas!</li>
+              <li>Accusamus accusantium assumenda commodi enim facere fugiat, illum optio quam quia ratione reiciendis,
+                saepe voluptate!
+              </li>
+              <li>Cupiditate ea earum et illo inventore laborum, maiores molestiae nemo non numquam perspiciatis
+                praesentium tempore?
+              </li>
+              <li>Consequuntur culpa et ex illo necessitatibus, nulla optio quo reiciendis. Ea eos eum quis velit.</li>
+              <li>Cum delectus dolore enim et ex, inventore magnam nostrum quam quo soluta sunt tempora unde?</li>
+              <li>Dolore ducimus facilis ipsum itaque nulla praesentium quae! At dolore esse facilis incidunt iste
+                reiciendis.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 section-txt">
+          <h3>Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Accusantium consequuntur deleniti ipsa ipsum maiores neque odio quas sit. Accusamus consectetur, distinctio
+            expedita fugit illum in ipsum? Fugiat incidunt ipsum laboriosam neque quidem quisquam!</p>
+          <p>Accusantium consequuntur deleniti ipsa ipsum maiores neque odio quas sit. Accusamus consectetur, distinctio
+            expedita fugit illum in ipsum? Fugiat incidunt ipsum laboriosam neque quidem quisquam!</p>
+
+          <div class="section-txt-images d-flex flex-row flex-wrap justify-content-between w-100">
+            <div class="section-txt-images__item"><img src="img/section-txt__img-1.jpg" alt=""></div>
+            <div class="section-txt-images__item"><img src="img/section-txt__img-2.jpg" alt=""></div>
+            <div class="section-txt-images__item"><img src="img/section-txt__img-3.jpg" alt=""></div>
+            <div class="section-txt-images__item"><img src="img/section-txt__img-4.jpg" alt=""></div>
+          </div>
+          <p>Accusantium consequuntur deleniti ipsa ipsum maiores neque odio quas sit. Accusamus consectetur, distinctio
+            expedita fugit illum in ipsum? Fugiat incidunt ipsum laboriosam neque quidem quisquam!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-achievements">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="achievements d-flex flex-row flex-wrap justify-content-between w-100">
+            <div class="achievements-item" data-width="78">
+              <div class="achievements-item__title timer count-number">24</div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="achievements-item__bar"></div>
+            </div>
+            <div class="achievements-item" data-width="32">
+              <div class="achievements-item__title timer count-number">
+                1096
+              </div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="achievements-item__bar"></div>
+            </div>
+            <div class="achievements-item" data-width="84">
+              <div class="achievements-item__title timer count-number">
+                1237
+              </div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit.
+              </div>
+              <div class="achievements-item__bar"></div>
+            </div>
+            <div class="achievements-item" data-width="75">
+              <div class="achievements-item__title timer count-number">576
+              </div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="achievements-item__bar"></div>
+            </div>
+            <div class="achievements-item" data-width="100">
+              <div class="achievements-item__title timer count-number">43
+              </div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit.
+              </div>
+              <div class="achievements-item__bar"></div>
+            </div>
+            <div class="achievements-item" data-width="30">
+              <div class="achievements-item__title timer count-number">12
+              </div>
+              <div class="achievements-item__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="achievements-item__bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-reviews">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-12 col-lg-6">
+          <h3>Lorem</h3>
+          <div class="reviews">
+            <div class="reviews-carousel">
+              <div class="reviews-carousel-item">
+                <div class="reviews-carousel-item__name">Lorem ipsum.</div>
+                <div class="reviews-carousel-item__txt">
+                  <p>«Уважаемый Дмитрий Леонидович, компания ООО «Мираж Синема» выражает свою благодарность компании ООО
+                    «Бизнес.Оптима» за выполненные работы по внутренней отделке кинотеатра «Мираж Синема». Желаем
+                    процветания Вашему бизнесу и надеемся на дальнейшее сотрудничество!»</p>
+                </div>
+              </div>
+              <div class="reviews-carousel-item">
+                <div class="reviews-carousel-item__name">Lorem ipsum.</div>
+                <div class="reviews-carousel-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa dolor ducimus eligendi
+                    eveniet facere fuga iste itaque labore, laudantium minima molestias tempora tenetur. Culpa dolor ex
+                    expedita nostrum officiis perspiciatis possimus quam repudiandae, sint velit! Accusantium commodi
+                    corporis debitis delectus, fuga minima numquam odit sed vitae voluptatem. Delectus, ullam!</p>
+                </div>
+              </div>
+              <div class="reviews-carousel-item">
+                <div class="reviews-carousel-item__name">Lorem ipsum.</div>
+                <div class="reviews-carousel-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa dolor ducimus eligendi
+                    eveniet facere fuga iste itaque labore, laudantium minima molestias tempora tenetur. Culpa dolor ex
+                    expedita nostrum officiis perspiciatis possimus quam repudiandae, sint velit! Accusantium commodi
+                    corporis debitis delectus, fuga minima numquam odit sed vitae voluptatem. Delectus, ullam!</p>
+                </div>
+              </div>
+              <div class="reviews-carousel-item">
+                <div class="reviews-carousel-item__name">Lorem ipsum.</div>
+                <div class="reviews-carousel-item__txt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa dolor ducimus eligendi
+                    eveniet facere fuga iste itaque labore, laudantium minima molestias tempora tenetur. Culpa dolor ex
+                    expedita nostrum officiis perspiciatis possimus quam repudiandae, sint velit! Accusantium commodi
+                    corporis debitis delectus, fuga minima numquam odit sed vitae voluptatem. Delectus, ullam!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3>Lorem</h3>
+          <div class="partners d-flex flex-row flex-wrap">
+            <div class="partners-item order-0 order-md-0"><img src="img/partners-1.png" alt=""></div>
+            <div class="partners-item order-1 order-md-0"><img src="img/partners-2.png" alt=""></div>
+            <div class="partners-item order-3 order-md-0"><img src="img/partners-3.png" alt=""></div>
+            <div class="partners-item order-2 order-md-0"><img src="img/partners-1.png" alt=""></div>
+            <div class="partners-item order-4 order-md-0"><img src="img/partners-2.png" alt=""></div>
+            <div class="partners-item order-5 order-md-0"><img src="img/partners-3.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-consultation">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+          <h2>Получите бесплатную консультацию!</h2>
+          <div role="form" class="wpcf7" id="wpcf7-f2167-o1" lang="ru-RU" dir="ltr">
+            <div class="screen-reader-response"></div>
+            <form action="/#wpcf7-f2167-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+              <div style="display: none;">
+                <input type="hidden" name="_wpcf7" value="2167">
+                <input type="hidden" name="_wpcf7_version" value="5.0.1">
+                <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2167-o1">
+                <input type="hidden" name="_wpcf7_container_post" value="0">
+              </div>
+              <p>
+                <label for="consultation-form__field-1" class="special-field consultation-form__label"><br>
+                <span class="wpcf7-form-control-wrap my_name"><input type="text" name="my_name" value="" size="40"
+                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                                                     id="consultation-form__field-1"
+                                                                     aria-required="true"
+                                                                     aria-invalid="false"></span><br>
+                <span class="special-field__placeholder">Имя <sup>*</sup></span><br>
+              </label><br>
+                <label for="consultation-form__field-2" class="special-field consultation-form__label"><br>
+                  <span class="wpcf7-form-control-wrap mobile"><input type="tel" name="mobile" value="" size="40"
+                                                                      class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control"
+                                                                      id="consultation-form__field-2"
+                                                                      aria-required="true"
+                                                                      aria-invalid="false"></span><br>
+                  <span class="special-field__placeholder">Телефон <sup>*</sup></span><br>
+                </label><br>
+                <label for="consultation-form__field-3" class="special-field consultation-form__label"><br>
+                  <span class="wpcf7-form-control-wrap mail"><input type="email" name="mail" value="" size="40"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
+                                                                    id="consultation-form__field-3" aria-required="true"
+                                                                    aria-invalid="false"></span><br>
+                  <span class="special-field__placeholder">E-mail <sup>*</sup></span><br>
+                </label><br>
+                <label for="consultation-form__textarea" class="special-textarea consultation-form__field consultation-form__label consultation-form__label_textarea"><br>
+                  <span class="wpcf7-form-control-wrap question">
+                    <textarea name="question" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" id="consultation-form__textarea" aria-invalid="false"></textarea>
+                  </span><br>
+                  <span class="special-field__placeholder">Ваш вопрос</span><br>
+                </label><br>
+                <label for="consultation-form__checkbox-field" class="special-checkbox consultation-form__label-checkbox"><br>
+                  <span class="wpcf7-form-control-wrap acceptance-341"><span class="wpcf7-form-control wpcf7-acceptance">
+                    <span class="wpcf7-list-item">
+                      <input type="checkbox" name="acceptance-341" value="1" aria-invalid="false" id="consultation-form__checkbox-field">
+                    </span>
+                  </span>
+                  </span>
+                  <span class="special-checkbox__label">Нажимая кнопку "Отправить", я даю согласие на обработку моих персональных данных на условиях и для целей, определенных в<br>
+Согласии на обработку персональных данных</span><br>
+                </label>
+              </p>
+
+              <div class="text-center w-100">
+                <input type="submit" value="Отправить заявку"
+                       class="wpcf7-form-control wpcf7-submit accent-btn accent-btn_invert consultation-form__submit"
+                       disabled=""><span class="ajax-loader"></span>
+              </div>
+              <div class="wpcf7-response-output wpcf7-display-none"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 col-xl-9">
+          <div class="row h-100 align-items-start">
+            <div class="col-12 col-md-6 col-xl-3 pl-3 pl-xl-0">
+              <a href="#" class="footer__heading">Numquam!</a>
+              <ul class="list-unstyled">
+                <li><a href="#">Пассажирские лифты</a></li>
+                <li><a href="#">Коттеджные лифты</a></li>
+                <li><a href="#">Грузовые лифты</a></li>
+                <li><a href="#">Малогабаритные лифты</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a href="#" class="footer__heading">Numquam!</a>
+              <ul class="list-unstyled">
+                <li><a href="#">Шахты для грузовых лифтов</a></li>
+                <li><a href="#">Монолитные шахты лифтов</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-xl-2">
+              <a href="#" class="footer__heading">Эскалаторы</a>
+              <a href="#" class="footer__heading">Траволаторы</a>
+              <a href="#" class="footer__heading">Услуги</a>
+              <a href="#" class="footer__heading">О компании</a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <a href="#" class="footer__heading">Технологии</a>
+              <a href="#" class="footer__heading">Поддержка</a>
+              <a href="#" class="footer__heading">Новости</a>
+              <a href="#" class="footer__heading">Контакты</a>
+            </div>
+            <div class="col-12 pl-xl-0">
+              <p class="footer__attention mt-0"><span>Attention!</span> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Ad animi aperiam corporis exercitationem, nisi quidem recusandae reprehenderit sit?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3 pr-3 pr-lg-0">
+          <div class="footer__heading">Главный офис</div>
+          <p class="footer__address">115487, г. Москва, <br> 2-ой Нагатинский проезд, д. 6А</p>
+          <p class="footer__email"><a href="mailto:tor-lift@yandex.ru">E-mail: tor-lift@yandex.ru</a></p>
+          <p class="footer__phone"><span>Тел:</span> <a href="tel:+74957976404">+7 (495) 797-64-04</a></p>
+          <div class="footer-form">
+            <div role="form" class="wpcf7" id="wpcf7-f2168-o2" lang="ru-RU" dir="ltr">
+              <div class="screen-reader-response"></div>
+              <form action="/#wpcf7-f2168-o2" method="post" class="wpcf7-form" novalidate="novalidate">
+                <div style="display: none;">
+                  <input type="hidden" name="_wpcf7" value="2168">
+                  <input type="hidden" name="_wpcf7_version" value="5.0.1">
+                  <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                  <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2168-o2">
+                  <input type="hidden" name="_wpcf7_container_post" value="0">
+                </div>
+                <p><label class="footer__heading">Начать сотрудничество</label></p>
+                <div class="footer-form-group d-flex flex-row w-100">
+                  <span class="wpcf7-form-control-wrap mail"><input type="email" name="mail" value="Ваша почта"
+                                                                    size="40"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control footer-form__field"
+                                                                    aria-required="true" aria-invalid="false"></span>
+                  <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit accent-btn accent-btn_invert footer-form__submit"><span class="ajax-loader"></span>
+                </div>
+                <div class="wpcf7-form-control-wrap"><div data-sitekey="6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr" class="wpcf7-form-control g-recaptcha wpcf7-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr&amp;co=aHR0cHM6Ly93d3cudG9yLWxpZnQucnU6NDQz&amp;hl=ru&amp;v=v1542004393985&amp;size=normal&amp;cb=bt5e4jwq2qk5" width="304" height="78" role="presentation" name="a-gnz3tpv9e5xp" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-3" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                  <noscript>
+                    <div style="width: 302px; height: 422px;">
+                      <div style="width: 302px; height: 422px; position: relative;">
+                        <div style="width: 302px; height: 422px; position: absolute;">
+                          <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;">
+                          </iframe>
+                        </div>
+                        <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+				<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
+				</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </noscript>
+                </div>
+                <br>
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright"><span>&copy;</span> Все права защищены "ТОР ЛИФТ", 2006-2018</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="up-btn"><i class="icon-triangle-up"></i><span>Вверх</span></button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="callBackModal" tabindex="-1" role="dialog" aria-labelledby="callBackModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="callBackModalLabel">Заказать звонок</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div role="form" class="wpcf7" id="wpcf7-f2169-o3" lang="ru-RU" dir="ltr">
+          <div class="screen-reader-response"></div>
+          <form action="/#wpcf7-f2169-o3" method="post" class="wpcf7-form" novalidate="novalidate">
+            <div style="display: none;">
+              <input type="hidden" name="_wpcf7" value="2169">
+              <input type="hidden" name="_wpcf7_version" value="5.0.1">
+              <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2169-o3">
+              <input type="hidden" name="_wpcf7_container_post" value="0">
+            </div>
+            <p>
+              <label for="callback-form__input-1" class="callback-form__label"><span>Организация: <sup>*</sup></span><br>
+                <span class="wpcf7-form-control-wrap text-34"><input type="text" name="text-34" value="" size="40"
+                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control callback-form__input"
+                                                                     id="callback-form__input-1" aria-required="true"
+                                                                     aria-invalid="false"></span><br>
+              </label>
+              <br>
+              <label for="callback-form__input-2" class="callback-form__label"><span>Контактное лицо: <sup>*</sup></span><br>
+                <span class="wpcf7-form-control-wrap text-35"><input type="text" name="text-35" value="" size="40"
+                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control callback-form__input"
+                                                                     id="callback-form__input-2" aria-required="true"
+                                                                     aria-invalid="false"></span><br>
+              </label><br>
+              <label for="callback-form__input-3" class="callback-form__label"><span>Телефон: <sup>*</sup></span><br>
+                <span class="wpcf7-form-control-wrap tel-902"><input type="tel" name="tel-902" value="" size="40"
+                                                                     class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control callback-form__input"
+                                                                     id="callback-form__input-3" aria-required="true"
+                                                                     aria-invalid="false"></span><br>
+              </label><br>
+              <label for="callback-form__input-4" class="callback-form__label"><span>E-mail: <sup>*</sup></span><br>
+                <span class="wpcf7-form-control-wrap email-405"><input type="email" name="email-405" value="" size="40"
+                                                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control callback-form__input"
+                                                                       id="callback-form__input-4" aria-required="true"
+                                                                       aria-invalid="false"></span><br>
+              </label></p>
+            <div class="wpcf7-form-control-wrap"><div data-sitekey="6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr" class="wpcf7-form-control g-recaptcha wpcf7-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr&amp;co=aHR0cHM6Ly93d3cudG9yLWxpZnQucnU6NDQz&amp;hl=ru&amp;v=v1542004393985&amp;size=normal&amp;cb=bt5e4jwq2qk5" width="304" height="78" role="presentation" name="a-gnz3tpv9e5xp" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-3" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+              <noscript>
+                <div style="width: 302px; height: 422px;">
+                  <div style="width: 302px; height: 422px; position: relative;">
+                    <div style="width: 302px; height: 422px; position: absolute;">
+                      <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeHwHsUAAAAADWakJZqYhbJYsMugdCkYnltjtAr" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;">
+                      </iframe>
+                    </div>
+                    <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+				<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
+				</textarea>
+                    </div>
+                  </div>
+                </div>
+              </noscript>
+            </div>
+            <p class="callback-form__agreement">Нажимая на кнопку «Отправить», Вы соглашаетесь с <a href="/soglashenie-obrabotke-personalnyh-dannyh">правилами обработки персональных данных.</a></p>
+            <div class="text-center w-100">
+              <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit accent-btn accent-btn_invert callback-form__submit"><span class="ajax-loader"></span>
+            </div>
+            <div class="wpcf7-response-output wpcf7-display-none"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal END -->
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<!-- Scripts END -->
+
+</body>
+</html>

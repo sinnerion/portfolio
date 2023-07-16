@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Главная</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <link rel="stylesheet" href="css/css-purge/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/selectric.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/flipclock.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button class="request-modal-btn" data-toggle="modal" data-target="#request-modal">Заявка на ремонт</button>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row header-top-row align-items-center">
+        <div class="header-top__toggle col-1 pl-0 pr-0 pr-lg-3 d-block d-lg-none">
+          <button class="main-nav-toggle"><span></span></button>
+        </div>
+        <div class="header-top__logo col-2 col-lg-3">
+          <a href="#" class="logo">
+            <img src="img/logo-mobile.png" alt="">
+            <span>Автотехцентр</span>
+          </a>
+        </div>
+        <div class="header-top__address d-none d-md-block col-4 col-lg-3 pl-0">
+          <div class="header-address">
+            <div class="header-address__title">Маршал кар</div>
+            <p>г. Москва, Нагорный проезд, владение 2<br><a href="tel:89150631010">8 (915) 063-10-10</a></p>
+          </div>
+        </div>
+        <div class="header-top__address d-none d-md-block col-4 col-lg-3 pl-0">
+          <div class="header-address">
+            <div class="header-address__title">Маршал клуб</div>
+            <p>г. Москва, ул. Кантемировская д. 64<br><a href="tel:89851904111">8 (985) 190-41-11</a></p>
+          </div>
+        </div>
+        <div class="header-top__call d-flex flex-row justify-content-between col-1 pl-0 pl-lg-3 col-lg-3">
+          <button class="header-address__btn d-inline-block d-md-none"><img src="img/location-icon.png" alt=""></button>
+          <button class="custom-btn accent-btn header-callback-btn" data-toggle="modal" data-target="#callback-modal">Обратный звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-address_mobile">
+    <div class="header-top__address">
+      <div class="header-address">
+        <div class="header-address__title">Маршал кар</div>
+        <p>г. Москва, Нагорный проезд, владение 2<br><a href="tel:89150631010">8 (915) 063-10-10</a></p>
+      </div>
+    </div>
+    <div class="header-top__address">
+      <div class="header-address">
+        <div class="header-address__title">Маршал клуб</div>
+        <p>г. Москва, ул. Кантемировская д. 64<br><a href="tel:89851904111">8 (985) 190-41-11</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav-wrapper">
+    <div class="main-nav">
+      <div class="container">
+        <div class="row">
+          <nav class="col-12" role="navigation">
+            <ul class="list-unstyled">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li class="menu-item-has-children"><a href="#" class="d-none d-xl-block">Услуги</a><span class="d-block d-xl-none">Услуги</span>
+                <ul class="list-unstyled sub-menu">
+                  <li class="d-block d-xl-none"><a href="#">Все услуги</a></li>
+                  <li><a href="#">Ремонт микроавтобусов</a></li>
+                  <li class="menu-item-has-children"><a href="#">Ремонт корейских авто</a>
+                    <ul class="list-unstyled sub-menu sub-menu_inner">
+                      <li><a href="/kia/">Ремонт KIA (КИА)</a></li>
+                      <li><a href="/remont-hyundai/">Ремонт Hyundai (Хендай)</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"><a href="#">Ремонт японских авто</a>
+                    <ul class="list-unstyled sub-menu sub-menu_inner">
+                      <li><a href="/remont-toyota/">Ремонт Тoyota (Тойота)</a></li>
+                      <li><a href="/remont-nissan/">Ремонт Nissan (Ниссан)</a></li>
+                      <li><a href="/remont-mitsubishi/">Ремонт Mitsubishi (Мицубиси)</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children"><a href="#">Ремонт французских авто</a>
+                    <ul class="list-unstyled sub-menu sub-menu_inner">
+                      <li><a href="/remont-peugeot/">Ремонт PEUGEOT (Пежо)</a></li>
+                      <li><a href="/renault/">Ремонт Renault (Рено)</a></li>
+                      <li><a href="/remont-citroen/">Ремонт Citroen (Ситроен)</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Слесарный ремонт</a></li>
+                  <li><a href="#">Сезонное хранение шин</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Корпоративным клиентам</a></li>
+              <li><a href="#">Наши клиенты</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" role="main">
+  <div class="banner-carousel swiper-container">
+    <div class="swiper-wrapper">
+      <div class="banner-carousel-item swiper-slide position-relative">
+        <img src="img/banner-carousel-1.jpg" alt="">
+        <div class="container">
+          <div class="row">
+            <div class="banner-carousel-item__caption col-10 col-sm-8 col-md-5 col-lg-4">
+              <div class="banner-carousel-item__title banner-active">20 лет</div>
+              <div class="banner-carousel-item__subtitle banner-active">безупречной работы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item swiper-slide position-relative">
+        <img src="img/banner-carousel-2.jpg" alt="">
+        <div class="container">
+          <div class="row">
+            <div class="banner-carousel-item__caption col-10 col-sm-8 col-md-5 col-lg-4">
+              <div class="banner-carousel-item__title">2</div>
+              <div class="banner-carousel-item__subtitle">автосервиса</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item swiper-slide position-relative">
+        <img src="img/banner-carousel-3.jpg" alt="">
+        <div class="container">
+          <div class="row">
+            <div class="banner-carousel-item__caption col-10 col-sm-8 col-md-5 col-lg-4">
+              <div class="banner-carousel-item__title">21</div>
+              <div class="banner-carousel-item__subtitle">сервисный<br>пост</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item swiper-slide position-relative">
+        <img src="img/banner-carousel-4.jpg" alt="">
+        <div class="container">
+          <div class="row">
+            <div class="banner-carousel-item__caption col-10 col-sm-8 col-md-5 col-lg-4">
+              <div class="banner-carousel-item__title">более 200</div>
+              <div class="banner-carousel-item__subtitle">моделей</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item swiper-slide position-relative">
+        <img src="img/banner-carousel-5.jpg" alt="">
+        <div class="container">
+          <div class="row">
+            <div class="banner-carousel-item__caption col-10 col-sm-8 col-md-5 col-lg-4">
+              <div class="banner-carousel-item__title">10 000</div>
+              <div class="banner-carousel-item__subtitle">запчастей</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="container main-content">
+    <div class="row">
+      <aside class="col-12 col-lg-3 pr-lg-5">
+        <div class="sidebar">
+          <form class="search-form d-flex flex-row">
+            <input type="search" class="form-control search-form__field" placeholder="Поиск...">
+            <button class="search-form__submit" type="submit"><img src="img/search-icon.png" alt=""></button>
+          </form>
+          <nav id="sidebar-nav" class="sidebar-nav">
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-1">
+                <a href="#">Peugeot</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-1" aria-expanded="true" aria-controls="sidebar-nav-collapse-1"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-1" class="collapse" aria-labelledby="sidebar-nav-heading-1" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-2">
+                <a href="#">Renault</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-2" aria-expanded="true" aria-controls="sidebar-nav-collapse-2"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-2" class="collapse" aria-labelledby="sidebar-nav-heading-2" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-3">
+                <a href="#">Citroen</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-3" aria-expanded="true" aria-controls="sidebar-nav-collapse-3"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-3" class="collapse" aria-labelledby="sidebar-nav-heading-3" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-4">
+                <a href="#">Fiat</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-4" aria-expanded="true" aria-controls="sidebar-nav-collapse-4"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-4" class="collapse" aria-labelledby="sidebar-nav-heading-4" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-5">
+                <a href="#">Ford</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-5" aria-expanded="true" aria-controls="sidebar-nav-collapse-5"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-5" class="collapse" aria-labelledby="sidebar-nav-heading-5" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-6">
+                <a href="#">KIA</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-6" aria-expanded="true" aria-controls="sidebar-nav-collapse-6"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-6" class="collapse" aria-labelledby="sidebar-nav-heading-6" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-7">
+                <a href="#">Hyundai</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-7" aria-expanded="true" aria-controls="sidebar-nav-collapse-7"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-7" class="collapse" aria-labelledby="sidebar-nav-heading-7" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-8">
+                <a href="#">Toyota</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-8" aria-expanded="true" aria-controls="sidebar-nav-collapse-8"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-8" class="collapse" aria-labelledby="sidebar-nav-heading-8" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-9">
+                <a href="#">Nissan</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-9" aria-expanded="true" aria-controls="sidebar-nav-collapse-9"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-9" class="collapse" aria-labelledby="sidebar-nav-heading-9" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-10">
+                <a href="#">Mitsubishi</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-10" aria-expanded="true" aria-controls="sidebar-nav-collapse-10"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-10" class="collapse" aria-labelledby="sidebar-nav-heading-10" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-11">
+                <a href="#">Infiniti</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-11" aria-expanded="true" aria-controls="sidebar-nav-collapse-11"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-11" class="collapse" aria-labelledby="sidebar-nav-heading-11" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-12">
+                <a href="#">Lexus</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-12" aria-expanded="true" aria-controls="sidebar-nav-collapse-12"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-12" class="collapse" aria-labelledby="sidebar-nav-heading-12" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-13">
+                <a href="#">Микроавтобусы</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-13" aria-expanded="true" aria-controls="sidebar-nav-collapse-13"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-13" class="collapse" aria-labelledby="sidebar-nav-heading-13" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex flex-row" id="sidebar-nav-heading-14">
+                <a href="#">Автокемпер</a>
+                <button class="btn collapsed" data-toggle="collapse" data-target="#sidebar-nav-collapse-14" aria-expanded="true" aria-controls="sidebar-nav-collapse-14"></button>
+              </div>
+
+              <div id="sidebar-nav-collapse-14" class="collapse" aria-labelledby="sidebar-nav-heading-14" data-parent="#sidebar-nav">
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Quasi!</a></li>
+                    <li><a href="#">Maiores.</a></li>
+                    <li><a href="#">Rem!</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="sidebar-card sidebar-card_1">
+            <div class="sidebar-card__heading">Автосервис МАРШАЛ КАР ст.м. Нагатинская</div>
+            <div class="sidebar-card__subheading">г. Москва, Нагорный проезд, владение 2</div>
+            <div class="sidebar-card__info">
+              <p>Телефоны:</p>
+              <p>8 (915) 063-10-10</p>
+              <p>8 (915) 076-30-30</p>
+              <p>8 (915) 314-20-20</p>
+            </div>
+            <div class="sidebar-card__info">
+              <p>E-mail:</p>
+              <p>marchalcar@mail.ru</p>
+            </div>
+          </div>
+          <div class="sidebar-card sidebar-card_2">
+            <div class="sidebar-card__heading">Автосервис МАРШАЛ КЛУБ ст.м. Кантемировская</div>
+            <div class="sidebar-card__subheading">г. Москва, ул. Кантемировская д. 64</div>
+            <div class="sidebar-card__info">
+              <p>Телефоны:</p>
+              <p>8 (985) 190-41-11</p>
+              <p>8 (985) 191-32-22</p>
+              <p>8 (985) 983-74-06</p>
+            </div>
+            <div class="sidebar-card__info">
+              <p>E-mail:</p>
+              <p>marchal-club@mail.ru</p>
+            </div>
+          </div>
+          <div class="sidebar-counter text-center">
+            <p>Мы отремонтировали</p>
+            <div class="flip-clock-wrapper counter"></div>
+            <p>машин</p>
+          </div>
+          <script type="text/template" id="main-example-template">
+            <div class="time <%= label %>">
+              <span class="count curr top"><%= curr %></span>
+              <span class="count next top"><%= next %></span>
+              <span class="count next bottom"><%= next %></span>
+              <span class="count curr bottom"><%= curr %></span>
+              <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+            </div>
+          </script>
+        </div>
+      </aside>
+      <div class="col-12 col-lg-9 pl-lg-0">
+        <h1>Автосервисы Маршал кар и Маршал клуб: качественный ремонт, обслуживание и диагностика автомобилей</h1>
+        <p>Автосервисы Маршал Кар и Маршал Клуб зарекомендовали себя на рынке автоуслуг как надежные партнеры. Специалисты, рабaотающие у нас, выслушают проблемы клиента и предложат несколько вариантов решений. В автосервисе проводится ремонт, обслуживание, диагностика легковых автомобилей, микроавтобусов и коммерческого транспорта</p>
+        <h2 class="gray-bg">Мы обслуживаем</h2>
+        <div class="catalog d-flex flex-row flex-wrap justify-content-between w-100">
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-1.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Peugeot</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-2.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Peugeot Boxer</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-3.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Renault</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-4.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Renault Master</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-5.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Citroen</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-6.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Citroen Jumper</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-7.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">FIAT Ducato</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-8.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Ford Focus</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-9.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Ford Transit</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-10.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Kia</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-12.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Hyundai</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-11.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Toyota</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-13.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Nissan</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-14.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Mitsubishi</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-15.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Infiniti</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-16.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Lexus</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-17.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Iveco Daily</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-18.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Volkswagen Crafter</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item">
+            <div class="catalog-item__img"><img src="img/catalog-19.png" alt=""></div>
+            <div class="d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Mercedes Sprinter</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+          <a href="#" class="catalog-item catalog-item_big">
+            <div class="catalog-item__img"><img src="img/catalog-20.png" alt=""></div>
+            <div class="catalog-item__controls d-flex flex-row align-items-center w-100">
+              <div class="catalog-item__name">Автокемпер</div>
+              <div class="catalog-item__link">Перейти</div>
+            </div>
+          </a>
+        </div>
+        <h2 class="pink-bg">Преимущества наших автосервисов</h2>
+        <div class="advantages">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-2.png" alt="">
+                <p class="mb-0">Большой выбор запчастей</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-3.png" alt="">
+                <p class="mb-0">Приемлемая цена</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-4.png" alt="">
+                <p class="mb-0">Полный спектр качественных услуг</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-5.png" alt="">
+                <p class="mb-0">Высококвалифицированные специалисты</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-6.png" alt="">
+                <p class="mb-0">Многолетний профессиональный опыт</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-7.png" alt="">
+                <p class="mb-0">Сроки исполнения</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-8.png" alt="">
+                <p class="mb-0">Индивидуальный подход</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="advantages-item text-center">
+                <img src="img/advantages-1.png" alt="">
+                <p class="mb-0">Новые технологии</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Наши автосервисы могут похвастаться отлаженной системой работы, уровнем квалификации наших автослесарей, качеством запчастей, которые мы предлагаем при ремонте. У нас есть большие производственные мощности, что позволяет обслуживать клиентов быстро, независимо от того, была ли предварительная запись или понадобился, к примеру, срочный ремонт Пежо Боксер, Ситроен, Фиат и др.</p>
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="business-card">
+              <div class="business-card__heading">Автосервис МАРШАЛ КАР<br>на Нагатинской</div>
+              <p class="business-card__subheading">Техцентр МАРШАЛ Кар</p>
+              <div class="business-card__info">
+                <p><span>Наш адрес:</span></p>
+                <p>г. Москва, Нагорный проезд, владение 2 (м. Нагатинская)</p>
+              </div>
+              <div class="business-card__info">
+                <p><span>Телефоны:</span></p>
+                <p>8 (915) 063-10-10,</p>
+                <p>8 (915) 076-30-30,</p>
+                <p>8 (915) 314-20-20</p>
+              </div>
+              <div class="business-card__info">
+                <p><span>График работы автосервиса:</span></p>
+                <p>Пн-Пт: 10.00 – 20.00,<br>Сб: 10.00 – 18.00, Вс: 10.00 – 16.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="business-card">
+              <div class="business-card__heading">Автосервис МАРШАЛ КЛУБ<br>на Кантемировской</div>
+              <p class="business-card__subheading">Техцентр МАРШАЛ Клуб</p>
+              <div class="business-card__info">
+                <p><span>Наш адрес:</span></p>
+                <p>г. Москва, ул. Кантемировская д. 64 (м. Кантемировская)</p>
+              </div>
+              <div class="business-card__info">
+                <p><span>Телефоны:</span></p>
+                <p>8 (985) 190-41-11, 8 (985) 191-32-22,<br>8 (985) 983-74-06 (Whats App, Viber, Telegram, Skype, ICQ)</p>
+              </div>
+              <div class="business-card__info">
+                <p><span>График работы автосервиса:</span></p>
+                <p>Пн-Cб: 10.00 – 20.00,<br>Вс: 10.00 – 17.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="invite-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2 text-center">
+          <div class="invite-section__heading">ЖДЕМ ВАС ЕЖЕДНЕВНО</div>
+          <div class="invite-section__subheading text-uppercase"><p>МАРШАЛ КАР: ПН-ПТ: 10.00 — 20.00, СБ: 10.00 — 18.00, ВС: 10.00 — 16.00 РШАЛ КЛУБ: ПН-CБ: 10.00 — 20.00, ВС: 10.00 — 17.00</p></div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="invite-card text-center">
+                <div class="invite-card__heading">АВТОСЕРВИС НА НАГАТИНСКОЙ<br>МАРШАЛ КАР</div>
+                <div class="invite-card__subheading">НАГОРНЫЙ ПРОЕЗД, ВЛАДЕНИЕ 2</div>
+                <div class="invite-card__value">8 (915) 063-10-10</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="invite-card text-center">
+                <div class="invite-card__heading">АВТОСЕРВИС НА КАНТЕМИРОВСКОЙ<br>МАРШАЛ КЛУБ</div>
+                <div class="invite-card__subheading">УЛ. КАНТЕМИРОВСКАЯ Д. 64</div>
+                <div class="invite-card__value">8 (985) 190-41-11</div>
+              </div>
+            </div>
+            <div class="col-12"><button class="custom-btn accent-btn">Записаться на ремонт</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <nav class="footer-nav">
+            <ul class="list-unstyled">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Корпоративным клиентам</a></li>
+              <li><a href="#">Наши клиенты</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 pl-lg-0">
+          <nav class="footer-nav">
+            <ul class="list-unstyled">
+              <li><a href="#">Ремонт коммерческого транспорта</a></li>
+              <li><a href="#">Ситроен Джампер</a></li>
+              <li><a href="#">Пежо Боксер</a></li>
+              <li><a href="#">Фиат Дукато</a></li>
+              <li><a href="#">Хендай Портер</a></li>
+              <li><a href="#">Форд Транзит</a></li>
+              <li><a href="#">Пежо Партнер</a></li>
+              <li><a href="#">Ситроен Берлинго</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-address">
+            <div class="footer-address__heading">МАРШАЛ КАР</div>
+            <div class="footer-address__info">
+              <p>г. Москва,<br>Нагорный проезд, владение 2</p>
+            </div>
+            <div class="footer-address__info footer-address__phones">
+              <p>8 (915) 063-10-10</p>
+              <p>8 (915) 076-30-30</p>
+              <p>8 (915) 314-20-20</p>
+            </div>
+            <div class="footer-address__info">
+              <p>Мы в соц. сетях:</p>
+              <ul class="list-unstyled footer-social">
+                <li class="footer-social__vk"><a href="#"></a></li>
+                <li class="footer-social__inst"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-address">
+            <div class="footer-address__heading">МАРШАЛ КЛУБ</div>
+            <div class="footer-address__info">
+              <p>г. Москва,<br>ул. Кантемировская д. 64</p>
+            </div>
+            <div class="footer-address__info footer-address__phones">
+              <p>8 (985) 190-41-11<br>8 (985) 191-32-22<br>8 (985) 983-74-06 (Whats App, Viber, Telegram, Skype, ICQ)</p>
+            </div>
+            <div class="footer-address__info">
+              <p>Мы в соц. сетях:</p>
+              <ul class="list-unstyled footer-social">
+                <li class="footer-social__inst"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center"><div class="copyright">&copy; Маршалкар 2018</div></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Modals -->
+<div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callback-modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="callback-modalLabel">Обратный звонок</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="request-form callback-form d-flex flex-row flex-wrap justify-content-between w-100">
+          <label for="request-form__input-1" class="special-field request-form__field callback-form__field">
+            <input type="text" id="callback-form__input-1" class="form-control"><span>Ваше имя <sup>*</sup></span></label>
+          <label for="request-form__input-2" class="special-field request-form__field callback-form__field">
+            <input type="text" id="callback-form__input-2" class="form-control"><span>Телефон <sup>*</sup></span></label>
+          <div class="request-form__field callback-form__field">
+            <select name="request-form__select" class="selectric">
+              <option value="Автосервис">Автосервис</option>
+              <option value="Option-2">Option-2</option>
+              <option value="Option-3">Option-3</option>
+            </select>
+          </div>
+          <button class="custom-btn accent-btn request-form__submit callback-form__submit" type="submit">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal_big fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="request-modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="request-modalLabel">Онлайн заявка на ремонт</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="request-form d-flex flex-row flex-wrap justify-content-between w-100">
+          <label for="request-form__input-1" class="special-field  request-form__field request-form__field_small"><input type="text" id="request-form__input-1" class="form-control"><span>Ваше имя и фамилия <sup>*</sup></span></label>
+          <label for="request-form__input-2" class="special-field  request-form__field request-form__field_small"><input type="text" id="request-form__input-2" class="form-control"><span>Контактный телефон <sup>*</sup></span></label>
+          <div class="request-form__field request-form__field_small"><select name="request-form__select" class="selectric">
+            <option value="Автосервис">Автосервис</option>
+            <option value="Option-2">Option-2</option>
+            <option value="Option-3">Option-3</option>
+            <option value="Option-4">Option-4</option>
+            <option value="Option-5">Option-5</option>
+          </select></div>
+          <div class="request-form__field request-form__field_small"><select name="request-form__select" class="selectric">
+            <option value="Марка автомобиля">Марка автомобиля</option>
+            <option value="Option-2">Option-2</option>
+            <option value="Option-3">Option-3</option>
+            <option value="Option-4">Option-4</option>
+            <option value="Option-5">Option-5</option>
+          </select></div>
+          <div class="request-form__field request-form__field_small"><select name="request-form__select" class="selectric">
+            <option value="Модель автомобиля">Модель автомобиля</option>
+            <option value="Option-2">Option-2</option>
+            <option value="Option-3">Option-3</option>
+            <option value="Option-4">Option-4</option>
+            <option value="Option-5">Option-5</option>
+          </select></div>
+          <div class="request-form__field request-form__field_small"><select name="request-form__select" class="selectric">
+            <option value="Option-1">Option-1</option>
+            <option value="Option-2">Option-2</option>
+            <option value="Option-3">Option-3</option>
+            <option value="Option-4">Option-4</option>
+            <option value="Option-5">Option-5</option>
+          </select></div>
+          <label for="request-form__textarea" class="special-field special-textarea request-form__field">
+            <textarea id="request-form__textarea" class="form-control special-textarea"></textarea>
+            <span>Комментарий</span>
+          </label>
+          <button class="custom-btn accent-btn request-form__submit" type="submit">Отправить заявку</button>
+          <label for="request-form__date" class="request-form__date"><span>Дата записи</span><i><input type="text" id="request-form__date" class="form-control" data-toggle="datepicker"></i></label>
+          <label for="request-form__time" class="request-form__time"><span>Время</span><i><input type="text" id="request-form__time" class="form-control"></i></label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modals END -->
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/datepicker-ru.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.selectric.min.js"></script>
+<script src="js/flipclock.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
